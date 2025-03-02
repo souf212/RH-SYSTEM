@@ -1,0 +1,87 @@
+﻿@using HR_Management_System.Models
+@using HR_Management_System.ViewModels
+@model ContraintesPlanning
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Configuration des contraintes";
+} 
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-warning text-white">
+        <h5 class="mb-0"><i class="fas fa-calendar-alt"></i> Configuration des contraintes pour la génération du planning</h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Configuration" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="DateDebut" class="form-label fw-bold"><i class="fas fa-calendar"></i> Date de début</label>
+                <input asp-for="DateDebut" class="form-control" type="date" required />
+                <span asp-validation-for="DateDebut" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DateFin" class="form-label fw-bold"><i class="fas fa-calendar"></i> Date de fin</label>
+                <input asp-for="DateFin" class="form-control" type="date" required />
+                <span asp-validation-for="DateFin" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="HeureDebutJournee" class="form-label fw-bold"><i class="fas fa-clock"></i> Heure de début de journée</label>
+                <input asp-for="HeureDebutJournee" class="form-control" type="number" min="0" max="23" required />
+                <span asp-validation-for="HeureDebutJournee" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="HeureFinJournee" class="form-label fw-bold"><i class="fas fa-clock"></i> Heure de fin de journée</label>
+                <input asp-for="HeureFinJournee" class="form-control" type="number" min="0" max="23" required />
+                <span asp-validation-for="HeureFinJournee" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input asp-for="WeekEndInclus" class="form-check-input" type="checkbox" />
+                <label asp-for="WeekEndInclus" class="form-check-label fw-bold"><i class="fas fa-calendar-week"></i> Inclure les weekends</label>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DureeMaximaleJournaliere" class="form-label fw-bold"><i class="fas fa-hourglass-end"></i> Durée maximale journalière (heures)</label>
+                <input asp-for="DureeMaximaleJournaliere" class="form-control" type="number" min="1" max="24" required />
+                <span asp-validation-for="DureeMaximaleJournaliere" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DureeMinimaleJournaliere" class="form-label fw-bold"><i class="fas fa-hourglass-start"></i> Durée minimale journalière (heures)</label>
+                <input asp-for="DureeMinimaleJournaliere" class="form-control" type="number" min="1" max="24" required />
+                <span asp-validation-for="DureeMinimaleJournaliere" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="PauseMinimum" class="form-label fw-bold"><i class="fas fa-coffee"></i> Durée minimale de pause (heures)</label>
+                <input asp-for="PauseMinimum" class="form-control" type="number" min="0" max="5" required />
+                <span asp-validation-for="PauseMinimum" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="JoursFeries" class="form-label fw-bold"><i class="fas fa-glass-cheers"></i> Jours Fériés</label>
+                <input asp-for="JoursFeries" class="form-control" />
+                <span asp-validation-for="JoursFeries" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-success me-2">
+                    <i class="fas fa-arrow-right"></i> Suivant
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+    <link href="~/css/souf.css" rel="stylesheet" asp-append-version="true" />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

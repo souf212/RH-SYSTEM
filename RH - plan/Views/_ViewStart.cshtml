@@ -1,0 +1,10 @@
+﻿@using System.Security.Claims
+@{
+    var role = User.FindFirstValue(ClaimTypes.Role); // Retrieve role from claims
+    Layout = role switch
+    {
+        "Administrator" => "~/Views/Shared/_AdminLayout.cshtml",
+        "User" => "~/Views/Shared/_UserLayout.cshtml",
+        _ => "~/Views/Shared/_Layout.cshtml"
+    };
+}
