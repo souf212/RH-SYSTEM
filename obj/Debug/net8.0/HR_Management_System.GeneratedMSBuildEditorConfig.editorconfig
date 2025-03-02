@@ -17,123 +17,123 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HR_Management_System
 build_property.RootNamespace = HR_Management_System
-build_property.ProjectDir = C:\Users\top\Desktop\hr\
+build_property.ProjectDir = C:\Users\top\Desktop\RH-git\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\top\Desktop\hr
+build_property.MSBuildProjectDirectory = C:\Users\top\Desktop\RH-git
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/top/Desktop/hr/Views/Account/AccessDenied.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Account/Login.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/AdminDashboard/Index.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/AdminDashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/AdminDashboard/ManageUsers.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/AdminDashboard/ManageUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcTWFuYWdlVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/DemandeConge/AdminIndex.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/DemandeConge/AdminIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEFkbWluSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/DemandeConge/CreateConge.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/DemandeConge/CreateConge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXENyZWF0ZUNvbmdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/DemandeConge/Index.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/DemandeConge/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Planning/Index.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Planning/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Shared/_EmployeeLayout.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Shared/_EmployeeLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Taches/Basic1.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Taches/Basic1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Taches/Basic2.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Taches/Basic2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Taches/Create.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Taches/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Taches/Delete.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Taches/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Taches/Edit.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Taches/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Taches/EditStatus.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Taches/EditStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEVkaXRTdGF0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Test/Index.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Test/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/UserDashboard/Index.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/UserDashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/UserDashboard/Tasks.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/UserDashboard/Tasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Utilisateur/Create.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Utilisateur/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Utilisateur/Delete.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Utilisateur/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Utilisateur/Edit.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Utilisateur/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Utilisateur/Index.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Utilisateur/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/_Partials/_Macros.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/_Partials/_Macros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1BhcnRpYWxzXF9NYWNyb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/_ViewImports.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/_ViewStart.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/hr/Views/Shared/_Layout.cshtml]
+[C:/Users/top/Desktop/RH-git/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0bhtk2ggx1
