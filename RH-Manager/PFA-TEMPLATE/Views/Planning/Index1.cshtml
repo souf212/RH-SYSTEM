@@ -1,0 +1,55 @@
+﻿@model EmploiDuTemps
+@using PFA_TEMPLATE.Models
+@using PFA_TEMPLATE.ViewModels
+@{
+    ViewData["Title"] = "Emplois du temps générés"; 
+}
+@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<div class="schedule-container">
+    <!-- Employee info header -->
+    <div class="employee-card">
+        <h2>Planning de @Model.Employee.Utilisateur.Prenom @Model.Employee.Utilisateur.Nom</h2>
+
+        <h2>planning de @(Model.Employee?.Utilisateur?.Prenom ?? "Inconnu") @(Model.Employee?.Utilisateur?.Nom ?? "Inconnu")</h2>
+        <p>Généré le @Model.DateGeneration.ToString("dd/MM/yyyy à HH:mm")</p>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="action-row">
+        <a asp-action="Index1" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Retour à la liste
+        </a>
+        <a href="javascript:void(0)" onclick="exportPDF()" class="btn btn-primary">
+            <i class="fas fa-file-pdf"></i> Exporter PDF
+        </a>
+    </div>
+
+    <!-- Calendar card -->
+    <div class="calendar-card">
+        <div class="calendar-header">
+            <i class="far fa-calendar-alt"></i> Planning du @Model.ContraintesPlanning.DateDebut.ToString("dd/MM/yyyy") au @Model.ContraintesPlanning.DateFin.ToString("dd/MM/yyyy")
+        </div>
+        <div class="calendar-body">
+            <div id="calendar"></div>
+
+            <!-- Legend -->
+            <div class="activity-legend">
+                <h4>Légende</h4>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <div class="color-box travail"></div>
+                        <span>Travail</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box pause"></div>
+                        <span>Pause</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="~/css/souf.css" rel="stylesheet" asp-append-version="true" />
