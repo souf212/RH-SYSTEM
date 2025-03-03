@@ -1,0 +1,44 @@
+﻿@model PFA_TEMPLATE.ViewModels.DemandeCongeViewModels
+
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-warning text-white">
+        <h5 class="mb-0"><i class="fas fa-tasks"></i> Demande de Conge</h5>
+    </div>
+    <div class="card-body">
+    <form asp-action="CreateConge" method="post">
+        <div class="mb-3">
+                <label asp-for="Motif" class="form-label fw-bold"><i class="fas fa-heading"></i> Motif</label>
+            <input asp-for="Motif" class="form-control" />
+            <span asp-validation-for="Motif" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+                <label asp-for="DateDebut" class="form-label fw-bold"><i class="fas fa-heading"></i> Date de Début</label>
+            <input asp-for="DateDebut" class="form-control" type="date" />
+            <span asp-validation-for="DateDebut" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+                <label asp-for="DateFin" class="form-label fw-bold"><i class="fas fa-heading"></i> Date de Fin</label>
+            <input asp-for="DateFin" class="form-control" type="date" />
+            <span asp-validation-for="DateFin" class="text-danger"></span>
+        </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" asp-action="CreateConge" asp-controller="DemandeConge" class="btn btn-primary">Envoyer la Demande</button>
+                <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+            </div>
+        </form>
+    </div>
+   
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<link href="~/css/souf.css" rel="stylesheet" asp-append-version="true" />
