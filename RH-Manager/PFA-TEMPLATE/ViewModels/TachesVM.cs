@@ -13,7 +13,7 @@ namespace PFA_TEMPLATE.ViewModels
 
         [Required]
         [StringLength(50)]
-        public string AssignedTo { get; set; } = string.Empty; // Employé assigné
+        public string AssignedTo { get; set; } = string.Empty; // Employé assigné 
 
         [Required]
         public string Status { get; set; } = "Active"; // Statut

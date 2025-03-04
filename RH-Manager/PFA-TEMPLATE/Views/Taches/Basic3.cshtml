@@ -1,18 +1,16 @@
-@model IEnumerable<PFA_TEMPLATE.ViewModels.TachesVM>
+﻿@model IEnumerable<PFA_TEMPLATE.ViewModels.TachesVM>
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
+} 
 
 <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="h4 text-primary fw-bold mb-0">
-            <i class="fas fa-tasks"></i> Task Management
-        </h1>
-        <div>
-            <a asp-action="Create" class="btn btn-sm btn-primary shadow-sm">
-                <i class="fas fa-plus"></i> Add Task
+    <div class="page-header">
+        <h1 class="page-title">Task Management</h1>
+        <div class="action-buttons">
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> New Task
             </a>
-            <button class="btn btn-sm btn-outline-secondary">
+            <button class="btn btn-outline">
                 <i class="fas fa-file-export"></i> Export
             </button>
         </div>
@@ -93,7 +91,7 @@
                         @item.Description
                     </div>
                     <div class="task-footer">
-                        
+                       
                         <div class="task-actions">
                             <a asp-action="Edit" asp-route-id="@item.Id" class="icon-button edit" title="Edit">
                                 <i class="fas fa-edit"></i>
@@ -127,7 +125,8 @@
                         <th><i class="fas fa-heading"></i> Title</th>
                         <th><i class="fas fa-user"></i> Assigned To</th>
                         <th class="responsive-hide"><i class="fas fa-file-alt"></i> Description</th>
-                        <th><i class="fas fa-flag"></i> Status</th>  
+                        <th><i class="fas fa-flag"></i> Status</th> 
+                        <th><i class="fas fa-calendar-alt"></i> Due Date</th>
                         <th><i class="fas fa-tools"></i> Actions</th>
                     </tr>
                 </thead>
@@ -168,7 +167,7 @@
                                         <i class="fas fa-spinner fa-spin"></i> @item.Status
                                     </span>
                                 }
-                            </td>
+                            </td> 
                             <td>
                                 <div class="task-actions">
                                     <a asp-action="Edit" asp-route-id="@item.Id" class="icon-button edit" title="Edit">
@@ -219,90 +218,89 @@
         }
     </div>
 </div>
-
+ 
 @section Styles {
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
     <link href="~/css/taches.css" rel="stylesheet" asp-append-version="true" />
 }
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script> 
+  
 
 
+<!-- Add JavaScript for toggling between grid and list views -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle between grid and list views
+        const viewButtons = document.querySelectorAll('.view-button');
+        const cardContainer = document.querySelector('.card');
 
-    <!-- Add JavaScript for toggling between grid and list views -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Toggle between grid and list views
-            const viewButtons = document.querySelectorAll('.view-button');
-            const cardContainer = document.querySelector('.card');
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                viewButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
 
-            viewButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    viewButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
+                const viewType = this.getAttribute('data-view');
+                if (viewType === 'list') {
+                    cardContainer.classList.add('list-view');
+                } else {
+                    cardContainer.classList.remove('list-view');
+                }
+            });
+        });
 
-                    const viewType = this.getAttribute('data-view');
-                    if (viewType === 'list') {
-                        cardContainer.classList.add('list-view');
-                    } else {
-                        cardContainer.classList.remove('list-view');
-                    }
-                });
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const statusFilter = document.getElementById('statusFilter');
+        const assigneeFilter = document.getElementById('assigneeFilter');
+
+        const filterTasks = () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const statusTerm = statusFilter.value;
+            const assigneeTerm = assigneeFilter.value;
+
+            const cards = document.querySelectorAll('.task-card');
+            const rows = document.querySelectorAll('.task-table tbody tr');
+
+            // Filter grid items
+            cards.forEach(card => {
+                const title = card.querySelector('.task-title').textContent.toLowerCase();
+                const status = card.querySelector('.task-status').textContent.trim();
+                const assignee = card.querySelector('.task-assignee span').textContent;
+
+                const matchesSearch = title.includes(searchTerm);
+                const matchesStatus = statusTerm === '' || status.includes(statusTerm);
+                const matchesAssignee = assigneeTerm === '' || assignee === assigneeTerm;
+
+                if (matchesSearch && matchesStatus && matchesAssignee) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
             });
 
-            // Search functionality
-            const searchInput = document.getElementById('searchInput');
-            const statusFilter = document.getElementById('statusFilter');
-            const assigneeFilter = document.getElementById('assigneeFilter');
+            // Filter table rows
+            rows.forEach(row => {
+                const title = row.cells[0].textContent.toLowerCase();
+                const assignee = row.cells[1].textContent.trim();
+                const status = row.cells[3].textContent.trim();
 
-            const filterTasks = () => {
-                const searchTerm = searchInput.value.toLowerCase();
-                const statusTerm = statusFilter.value;
-                const assigneeTerm = assigneeFilter.value;
+                const matchesSearch = title.includes(searchTerm);
+                const matchesStatus = statusTerm === '' || status.includes(statusTerm);
+                const matchesAssignee = assigneeTerm === '' || assignee.includes(assigneeTerm);
 
-                const cards = document.querySelectorAll('.task-card');
-                const rows = document.querySelectorAll('.task-table tbody tr');
+                if (matchesSearch && matchesStatus && matchesAssignee) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        };
 
-                // Filter grid items
-                cards.forEach(card => {
-                    const title = card.querySelector('.task-title').textContent.toLowerCase();
-                    const status = card.querySelector('.task-status').textContent.trim();
-                    const assignee = card.querySelector('.task-assignee span').textContent;
-
-                    const matchesSearch = title.includes(searchTerm);
-                    const matchesStatus = statusTerm === '' || status.includes(statusTerm);
-                    const matchesAssignee = assigneeTerm === '' || assignee === assigneeTerm;
-
-                    if (matchesSearch && matchesStatus && matchesAssignee) {
-                        card.style.display = '';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-
-                // Filter table rows
-                rows.forEach(row => {
-                    const title = row.cells[0].textContent.toLowerCase();
-                    const assignee = row.cells[1].textContent.trim();
-                    const status = row.cells[3].textContent.trim();
-
-                    const matchesSearch = title.includes(searchTerm);
-                    const matchesStatus = statusTerm === '' || status.includes(statusTerm);
-                    const matchesAssignee = assigneeTerm === '' || assignee.includes(assigneeTerm);
-
-                    if (matchesSearch && matchesStatus && matchesAssignee) {
-                        row.style.display = '';
-                    } else {
-                        row.style.display = 'none';
-                    }
-                });
-            };
-
-            searchInput.addEventListener('input', filterTasks);
-            statusFilter.addEventListener('change', filterTasks);
-            assigneeFilter.addEventListener('change', filterTasks);
-        });
-    </script>
-}
+        searchInput.addEventListener('input', filterTasks);
+        statusFilter.addEventListener('change', filterTasks);
+        assigneeFilter.addEventListener('change', filterTasks);
+    });
+</script>}

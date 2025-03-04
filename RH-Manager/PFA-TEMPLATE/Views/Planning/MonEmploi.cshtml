@@ -10,15 +10,12 @@
 <div class="schedule-container">
     <!-- Employee info header -->
     <div class="employee-card">
-        <h2>Modification du planning de @(Model.Employee?.Utilisateur?.Prenom ?? "Inconnu") @(Model.Employee?.Utilisateur?.Nom ?? "Inconnu")</h2> 
+        <h2>Planning de @(Model.Employee?.Utilisateur?.Prenom ?? "Inconnu") @(Model.Employee?.Utilisateur?.Nom ?? "Inconnu")</h2> 
         <p>Généré le @Model.DateGeneration.ToString("dd/MM/yyyy à HH:mm")</p>
     </div>
 
     <!-- Action buttons -->
-    <div class="action-row"> 
-        <a asp-action="Index1" class="btn btn-secondary">
-            <i class="fas fa-arrow-left"></i> Retour à la liste
-        </a>
+    <div class="action-row">  
         <a href="javascript:void(0)" onclick="exportPDF()" class="btn btn-primary">
             <i class="fas fa-file-pdf"></i> Exporter PDF
         </a>

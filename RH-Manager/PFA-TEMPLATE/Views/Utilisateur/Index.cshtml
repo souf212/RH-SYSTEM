@@ -1,45 +1,59 @@
 ﻿@model IEnumerable<PFA_TEMPLATE.ViewModels.UserVM>
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
+} 
 
-<div class="card shadow-sm mt-4">
-    <div class="card-header bg-primary text-white">
-        <h5 class="mb-0"><i class="fas fa-users"></i> Liste des utilisateurs</h5>
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0"><i class="fas fa-calendar-alt"></i> User List</h5>
+        <a asp-action="Create" class="btn btn-light text-primary rounded-pill shadow-sm">
+            <i class="fas fa-plus"></i> Add User
+        </a>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive mt-3">
         <table class="table table-hover align-middle">
-            <thead class="table-dark">
+            <thead class="bg-light">
                 <tr>
-                    <th><i class="fas fa-user"></i> Nom</th>
-                    <th><i class="fas fa-user"></i> Prénom</th>
-                    <th><i class="fas fa-map-marker-alt"></i> Adresse</th>
-                    <th><i class="fas fa-id-card"></i> CIN</th>
-                    <th><i class="fas fa-phone"></i> Téléphone</th>
-                    <th><i class="fas fa-user-circle"></i> Login</th>
-                    <th><i class="fas fa-lock"></i> Password</th>
-                    <th><i class="fas fa-user-tag"></i> Rôle</th>
-                    <th><i class="fas fa-tools"></i> Actions</th>
+                    <th>Nom & Prénom</th>
+                    <th>Adresse</th>
+                    <th>CIN</th>
+                    <th>Téléphone</th>
+                    <th>Login</th>
+                    <th>Rôle</th>
+                    <th class="text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var user in Model)
                 {
                     <tr>
-                        <td>@user.Nom</td>
-                        <td>@user.Prenom</td>
-                        <td>@user.Adresse</td>
-                        <td>@user.CIN</td>
-                        <td>@user.Telephone</td>
-                        <td>@user.Login</td>
-                        <td>********</td> <!-- Placeholder for password -->
-                        <td>@user.Role</td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-sm btn-outline-warning" title="Edit">
-                                <i class="fas fa-edit"></i> Edit
+                            <div class="d-flex align-items-center">
+                                <div class="avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                                    @user.Nom.Substring(0,1)@user.Prenom.Substring(0,1)
+                                </div>
+                                <div>
+                                    <strong>@user.Nom @user.Prenom</strong>
+                                    <br>
+                                    <small class="text-muted">@user.Login</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>@user.Adresse</td>
+                        <td><span class="badge bg-secondary">@user.CIN</span></td>
+                        <td>@user.Telephone</td>
+                        <td><span class="text-muted">@user.Login</span></td>
+                        <td>
+                            <span class="badge @(user.Role == "Admin" ? "bg-danger" : "bg-success")">
+                                @user.Role
+                            </span>
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-sm btn-outline-warning me-2" title="Modifier">
+                                <i class="fas fa-edit"></i>
                             </a>
-                            <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-sm btn-outline-danger" title="Delete">
-                                <i class="fas fa-trash"></i> Delete
+                            <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-sm btn-outline-danger" title="Supprimer">
+                                <i class="fas fa-trash"></i>
                             </a>
                         </td>
                     </tr>
@@ -49,11 +63,5 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-center mt-3">
-    <a asp-action="Create" class="btn btn-lg btn-primary rounded-pill">
-        <i class="fas fa-plus"></i> Create new user
-    </a>
 
-</div>
-
-<link href="~/css/souf.css" rel="stylesheet" asp-append-version="true" />
+<link href="~/css/taches.css" rel="stylesheet" asp-append-version="true" />

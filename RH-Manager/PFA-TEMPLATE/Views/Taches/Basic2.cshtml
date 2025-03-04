@@ -3,9 +3,12 @@
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
-<div class="card shadow-sm mt-4">
-    <div class="card-header bg-info text-white">
-        <h5 class="mb-0"><i class="fas fa-tasks"></i> Employee - Tasks List</h5>
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0"><i class="fas fa-calendar-check"></i> Employee - Leave Requests</h5>
+        <a asp-action="Create" class="btn btn-light text-primary rounded-pill shadow-sm">
+            <i class="fas fa-plus"></i> Add Request
+        </a>
     </div>
 
     @if (ViewBag.Message != null)
@@ -16,14 +19,14 @@
     }
     else
     {
-        <div class="table-responsive">
+        <div class="table-responsive mt-3">
             <table class="table table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="bg-light">
                     <tr>
-                        <th><i class="fas fa-heading"></i> Task Title</th>
-                        <th><i class="fas fa-file-alt"></i> Description</th>
-                        <th><i class="fas fa-flag"></i> Status</th>
-                        <th><i class="fas fa-cogs"></i> Actions</th>
+                        <th>Task Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,8 +55,8 @@
                                     </span>
                                 }
                             </td>
-                            <td>
-                                <a asp-action="EditStatus" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                            <td class="text-center">
+                                <a asp-action="EditStatus" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary me-2">
                                     <i class="fas fa-sync-alt"></i> Update Status
                                 </a>
                             </td>
@@ -65,4 +68,4 @@
     }
 </div>
 
-<link href="~/css/souf.css" rel="stylesheet" asp-append-version="true" />
+<link href="~/css/taches.css" rel="stylesheet" asp-append-version="true" />
