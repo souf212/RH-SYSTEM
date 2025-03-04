@@ -13,14 +13,15 @@
     <div class="table-responsive mt-3">
         <table class="table table-hover align-middle">
             <thead class="bg-light">
-                <tr>
-                    <th>Nom & Prénom</th>
-                    <th>Adresse</th>
-                    <th>CIN</th>
-                    <th>Téléphone</th>
-                    <th>Login</th>
-                    <th>Rôle</th>
-                    <th class="text-center">Actions</th>
+                <tr> 
+                    <th><i class="fas fa-user"></i> Nom & Prénom</th>
+                    <th><i class="fas fa-map-marker-alt"></i> Adresse</th>
+                    <th><i class="fas fa-id-card"></i> CIN</th>
+                    <th><i class="fas fa-phone"></i> Téléphone</th>
+                    <th><i class="fas fa-user-circle"></i> Login</th>
+                    <th><i class="fas fa-key"></i> Password</th>
+                    <th><i class="fas fa-user-tag"></i> Rôle</th>
+                    <th class="text-center"><i class="fas fa-cogs"></i> Actions</th> 
                 </tr>
             </thead>
             <tbody>
@@ -40,9 +41,10 @@
                             </div>
                         </td>
                         <td>@user.Adresse</td>
-                        <td><span class="badge bg-secondary">@user.CIN</span></td>
+                        <td><span class="text-muted">@user.CIN</span></td>
                         <td>@user.Telephone</td>
                         <td><span class="text-muted">@user.Login</span></td>
+                        <td><span class="text-muted">**********</span></td>
                         <td>
                             <span class="badge @(user.Role == "Admin" ? "bg-danger" : "bg-success")">
                                 @user.Role

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\demandeconge\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\demandeconge\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\taches\\editstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\demandecongecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\demandecongecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\taches\\basic2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EditStatus.cshtml",
               "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\EditStatus.cshtml",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Taches\\EditStatus.cshtml",
@@ -82,12 +82,11 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\EditStatus.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:59:02.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:59:02.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CreateConge.cshtml",
               "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\CreateConge.cshtml",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\DemandeConge\\CreateConge.cshtml",
@@ -95,12 +94,11 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\DemandeConge\\CreateConge.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:58:48.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:58:48.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DemandeCongeController.cs",
               "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAIwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T01:56:34.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:56:34.357Z"
             },
             {
               "$type": "Document",
@@ -121,8 +118,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\Basic2.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:46:46.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:46:46.005Z"
             },
             {
               "$type": "Document",
@@ -132,7 +128,7 @@
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\DemandeConge\\Index.cshtml",
               "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\Index.cshtml",
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\DemandeConge\\Index.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAQwFMAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-04T01:44:36.952Z",
               "EditorCaption": ""
@@ -147,8 +143,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:40:54.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:40:54.433Z"
             },
             {
               "$type": "Document",
@@ -160,8 +155,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\wwwroot\\css\\souf.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-04T01:14:02.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:14:02.797Z"
             },
             {
               "$type": "Document",
@@ -173,12 +167,11 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\Basic3.cshtml",
               "ViewState": "AgIAAEsAAAAAAAAAAAAMwF0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:11:37.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:11:37.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_UserLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_UserLayout.cshtml",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Shared\\_UserLayout.cshtml",
@@ -199,8 +192,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAAKkAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:02:23.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:02:23.538Z"
             },
             {
               "$type": "Document",
@@ -212,18 +204,17 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:24:09.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:24:09.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEIAAABLAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml*",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-04T01:07:49.873Z",
               "EditorCaption": ""
@@ -238,8 +229,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\Basic1.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T01:01:43.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T01:01:43.621Z"
             }
           ]
         },
