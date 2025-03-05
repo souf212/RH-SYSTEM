@@ -25,6 +25,7 @@ namespace PFA_TEMPLATE.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
+
             if (!ModelState.IsValid)
             {
                 return View(model);

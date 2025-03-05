@@ -29,7 +29,8 @@ public class Program
         // Configure Entity Framework and connect to the database
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(8, 0, 33))));
+                new MySqlServerVersion(new Version(8, 0, 33))).EnableSensitiveDataLogging());
+
 
         // Configure authentication using cookies
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

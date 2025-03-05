@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Data;
 using PFA_TEMPLATE.Mappers;
+using PFA_TEMPLATE.Models;
 using PFA_TEMPLATE.ViewModels;
 
 namespace PFA_TEMPLATE.Controllers
@@ -13,11 +14,62 @@ namespace PFA_TEMPLATE.Controllers
         {
             _Context = context;
         }
-
         public async Task<IActionResult> Index()
         {
-            var demandes = await _Context.Conges.ToListAsync();
+            // Get the currently logged-in employee's ID
+            var currentEmployeeId = await GetCurrentEmployeeIdAsync();
+
+            // If no valid employee found, return an appropriate response
+            if (currentEmployeeId == -1)
+            {
+                // Option 1: Return an empty list with a message
+                TempData["EmployeeMessage"] = "Utilisateur non identifié.";
+                return View(new List<Conges>());
+
+                // Option 2: Redirect to login or error page
+                // return RedirectToAction("Login", "Account");
+            }
+
+            // Filter leave requests to show only for the current employee
+            var demandes = await _Context.Conges
+                .Where(c => c.IdEmploye == currentEmployeeId)
+                .OrderByDescending(c => c.DateDebut) // Optional: Sort by most recent first
+                .ToListAsync();
+
             return View(demandes);
+        }
+
+        // Helper method to get the current employee's ID
+        private async Task<int> GetCurrentEmployeeIdAsync()
+        {
+            var usernameClaim = User.Identity?.Name;
+            if (string.IsNullOrEmpty(usernameClaim))
+            {
+                return -1;
+            }
+
+            try
+            {
+                var utilisateur = await _Context.Utilisateurs
+                    .FirstOrDefaultAsync(u => u.Login == usernameClaim);
+
+                if (utilisateur == null)
+                {
+                    return -1;
+                }
+
+                // Find the associated employee
+                var employee = await _Context.Employes
+                    .FirstOrDefaultAsync(e => e.IdUtilisateur == utilisateur.Id);
+
+                return employee?.IdEmploye ?? -1;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                // _logger.LogError(ex, "Error retrieving employee ID");
+                return -1;
+            }
         }
 
         public IActionResult CreateConge()
