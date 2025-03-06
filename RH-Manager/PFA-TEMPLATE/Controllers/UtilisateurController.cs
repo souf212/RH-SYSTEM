@@ -1,6 +1,6 @@
-﻿using PFA_TEMPLATE.Services;
+﻿using Microsoft.AspNetCore.Mvc;
+using PFA_TEMPLATE.Services;
 using PFA_TEMPLATE.ViewModels;
-using Microsoft.AspNetCore.Mvc;
 
 namespace PFA_TEMPLATE.Controllers
 {

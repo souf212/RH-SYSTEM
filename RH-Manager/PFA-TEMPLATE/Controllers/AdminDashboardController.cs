@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Data;
+using PFA_TEMPLATE.ViewModels;
 
 namespace PFA_TEMPLATE.Controllers
 {
@@ -14,46 +15,11 @@ namespace PFA_TEMPLATE.Controllers
             _Context = context;
         }
 
-        public async Task<IActionResult> Dashboard()
-        {
-            // Get total number of employees
-            int totalEmployees = await _Context.Employes.CountAsync();
-
-            int lastPeriodEmployees = GetLastPeriodEmployeeCount();
-            double growthPercentage = CalculateGrowthPercentage(totalEmployees, lastPeriodEmployees);
-
-            var dashboardViewModel = new DashboardViewModel
-            {
-                TotalEmployees = totalEmployees,
-                EmployeeGrowthPercentage = growthPercentage
-            };
-
-            return View(dashboardViewModel);
-        }
-
-        // Helper method to calculate growth percentage
-        private double CalculateGrowthPercentage(int currentCount, int previousCount)
-        {
-            if (previousCount == 0) return 0;
-            return Math.Round(((double)(currentCount - previousCount) / previousCount) * 100, 1);
-        }
-
-        // Method to get previous period's employee count 
-        // You'll need to implement this based on your specific tracking method
-        private int GetLastPeriodEmployeeCount()
-        {
-            // Placeholder - replace with your actual logic
-            // This could be:
-            // - A stored value in a configuration table
-            // - A manual entry
-            // - A previous snapshot of employees
-            return 220; // Example hardcoded value
-        }
-
 
 
         public async Task<IActionResult> Index()
         {
+            // Fetch leave requests
             var demandes = await _Context.Conges
                 .Include(c => c.Employe)
                     .ThenInclude(e => e.Utilisateur) // Ensure user is loaded
@@ -62,7 +28,25 @@ namespace PFA_TEMPLATE.Controllers
             // Logging
             Console.WriteLine($"Total Leave Requests: {demandes.Count}");
 
-            return View(demandes);
+            // Get the total number of employees
+            int totalEmployees = await _Context.Employes.CountAsync();
+
+            // Get the total number of active tasks
+            int activeTasks = await _Context.Taches
+                .Where(t => t.Statut == "Active") // Filter active tasks
+                .CountAsync();
+
+            // Create the ViewModel
+            var viewModel = new IndexViewModel
+            {
+                LeaveRequests = demandes,
+                TotalEmployees = totalEmployees,
+                ActiveTasks = activeTasks,
+                TotalLeaveRequests = demandes.Count // Add leave requests count
+            };
+
+            // Pass the ViewModel to the view
+            return View(viewModel);
         }
 
         [HttpPost]
