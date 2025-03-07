@@ -1,0 +1,234 @@
+﻿@model PFA_TEMPLATE.viewModels.Utilisateur
+@{
+    ViewData["Title"] = "Mon Compte";
+    
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="flex-1 overflow-auto">
+    <!-- Top Navigation is usually in the layout -->
+    <!-- Page Content -->
+    <div class="p-6">
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">Mon Compte</h1>
+            <p class="text-gray-600">Gérez vos informations personnelles et vos paramètres</p>
+        </div>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 flex justify-between items-center" role="alert">
+                <span>@TempData["SuccessMessage"]</span>
+                <button class="text-green-700 hover:text-green-900" onclick="this.parentElement.style.display='none'">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        }
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6 flex justify-between items-center" role="alert">
+                <span>@TempData["ErrorMessage"]</span>
+                <button class="text-red-700 hover:text-red-900" onclick="this.parentElement.style.display='none'">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        }
+
+        <!-- Profile Section -->
+        <div class="bg-white rounded-lg shadow-sm mb-6">
+            <div class="p-6 border-b">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-lg font-medium">Informations Personnelles</h2>
+                    <button id="edit-profile-btn" class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none">
+                        <i class="fas fa-edit mr-1"></i> Modifier
+                    </button>
+                </div>
+            </div>
+
+            <!-- View Mode -->
+            <div id="profile-view" class="p-6">
+                <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Nom</p>
+                        <p class="font-medium">@Model.Nom</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Prénom</p>
+                        <p class="font-medium">@Model.Prenom</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">CIN</p>
+                        <p class="font-medium">@Model.CIN</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Téléphone</p>
+                        <p class="font-medium">@Model.Telephone</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Adresse</p>
+                        <p class="font-medium">@Model.Adresse</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Rôle</p>
+                        <p class="font-medium">@Model.Role</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Mode (Hidden by default) -->
+            <div id="profile-edit" class="p-6 hidden">
+                <form asp-action="UpdatePersonalInfo" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Login" />
+                    <input type="hidden" asp-for="Password" />
+                    <input type="hidden" asp-for="Role" />
+
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1" asp-for="Nom">Nom</label>
+                            <input type="text" asp-for="Nom" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" />
+                            <span asp-validation-for="Nom" class="text-xs text-red-500"></span>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1" asp-for="Prenom">Prénom</label>
+                            <input type="text" asp-for="Prenom" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" />
+                            <span asp-validation-for="Prenom" class="text-xs text-red-500"></span>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1" asp-for="CIN">CIN</label>
+                            <input type="text" asp-for="CIN" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" />
+                            <span asp-validation-for="CIN" class="text-xs text-red-500"></span>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1" asp-for="Telephone">Téléphone</label>
+                            <input type="text" asp-for="Telephone" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" />
+                            <span asp-validation-for="Telephone" class="text-xs text-red-500"></span>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1" asp-for="Adresse">Adresse</label>
+                            <input type="text" asp-for="Adresse" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" />
+                            <span asp-validation-for="Adresse" class="text-xs text-red-500"></span>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1" for="role">Rôle</label>
+                            <input type="text" id="role" value="@Model.Role" class="form-input w-full px-4 py-2 border rounded-md bg-gray-100 focus:outline-none" readonly>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-end space-x-3">
+                        <button type="button" id="cancel-edit-btn" class="px-4 py-2 border text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none">
+                            Annuler
+                        </button>
+                        <button type="submit" class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none">
+                            Enregistrer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Account Settings Section -->
+        <div class="bg-white rounded-lg shadow-sm mb-6">
+            <div class="p-6 border-b">
+                <h2 class="text-lg font-medium">Paramètres du Compte</h2>
+            </div>
+            <div class="p-6">
+                <form asp-action="ChangePassword" method="post">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <div asp-validation-summary="ModelOnly" class="text-red-500 mb-4"></div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-600 mb-1" for="login">Nom d'utilisateur</label>
+                        <input type="text" id="login" value="@Model.Login" class="form-input w-full px-4 py-2 border rounded-md bg-gray-100 focus:outline-none" readonly>
+                        <p class="text-xs text-gray-500 mt-1">Ce nom d'utilisateur est utilisé pour se connecter à votre compte.</p>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-600 mb-1" for="currentPassword">Mot de passe actuel</label>
+                        <input type="password" id="currentPassword" name="currentPassword" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-600 mb-1" for="newPassword">Nouveau mot de passe</label>
+                        <input type="password" id="newPassword" name="newPassword" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-600 mb-1" for="confirmPassword">Confirmer le mot de passe</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-input w-full px-4 py-2 border rounded-md focus:outline-none" required>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none">
+                            Mettre à jour le mot de passe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Notification Preferences -->
+        <div class="bg-white rounded-lg shadow-sm">
+            <div class="p-6 border-b">
+                <h2 class="text-lg font-medium">Préférences de Notification</h2>
+            </div>
+            <div class="p-6">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-medium">Notifications par e-mail</h3>
+                            <p class="text-sm text-gray-500">Recevez des notifications sur les nouvelles tâches</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-500"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-medium">Notifications dans l'application</h3>
+                            <p class="text-sm text-gray-500">Recevez des alertes dans l'application</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-500"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-medium">Notification de congés</h3>
+                            <p class="text-sm text-gray-500">Recevez des notifications sur les demandes de congés</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-500"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Edit Profile Toggle
+        const editProfileBtn = document.getElementById('edit-profile-btn');
+        const cancelEditBtn = document.getElementById('cancel-edit-btn');
+        const profileView = document.getElementById('profile-view');
+        const profileEdit = document.getElementById('profile-edit');
+
+        editProfileBtn.addEventListener('click', function() {
+            profileView.classList.add('hidden');
+            profileEdit.classList.remove('hidden');
+        });
+
+        cancelEditBtn.addEventListener('click', function() {
+            profileEdit.classList.add('hidden');
+            profileView.classList.remove('hidden');
+        });
+
+        // Auto-hide alerts after 5 seconds
+        setTimeout(function() {
+            const alerts = document.querySelectorAll('[role="alert"]');
+            alerts.forEach(alert => {
+                alert.style.display = 'none';
+            });
+        }, 5000);
+    </script>
+}

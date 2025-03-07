@@ -246,3 +246,79 @@
     overflow: hidden;
     border: 1px solid #e0e0e0;
 }
+/* Styles pour l'exportation PDF et l'impression */
+@media print {
+    body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+    }
+    
+    .action-row, .fc-toolbar-chunk, .fc-scrollgrid-section-header {
+        display: none !important;
+    }
+    
+    .schedule-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .calendar-card {
+        border: none;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+    
+    .employee-card {
+        text-align: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    
+    .legend-items {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .legend-item {
+        margin: 0 10px;
+    }
+    
+    .fc-view-harness {
+        height: auto !important;
+    }
+    
+    .fc .fc-timegrid-slot {
+        height: 1.5em;
+    }
+    
+    .fc-scrollgrid-sync-table, .fc-timegrid-body, .fc-timegrid-slots, .fc-timegrid-cols {
+        height: auto !important;
+    }
+    
+    .fc-timegrid-slot-minor {
+        border-top-style: none !important;
+    }
+
+    .fc-event-travail {
+        background-color: #9C27B0 !important;
+        border-color: #9C27B0 !important;
+        color: white !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .fc-event-pause {
+        background-color: #FF5722 !important;
+        border-color: #FF5722 !important;
+        color: black !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+ 

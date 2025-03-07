@@ -1,78 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\",
+  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\planning\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\planning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\services\\generationemploiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\generationemploiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\planningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\planningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\utilisateur\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\viewmodels\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\viewmodels\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\utilisateur\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\models\\taches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\taches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\models\\conges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\conges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\viewmodels\\indexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\viewmodels\\indexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\demandeconge\\adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\demandeconge\\adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\controllers\\demandecongecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\demandecongecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\models\\utilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\models\\utilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\utilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\admindashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\admindashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\userdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\userdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\models\\employes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\employes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,220 +78,167 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:22:35.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserMapper.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Mappers\\UserMapper.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Mappers\\UserMapper.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Mappers\\UserMapper.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Mappers\\UserMapper.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAUwCoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:20:45.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Services\\UserService.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Services\\UserService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwC4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:18:17.777Z",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAADwv1IAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T02:49:44.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UtilisateurController.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswDEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:16:18.529Z"
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T02:49:39.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "emploi.css",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "RelativeToolTip": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "ViewState": "AgIAADsBAAAAAAAAAAAAAEMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-07T01:53:49.303Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserVM.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\ViewModels\\UserVM.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\ViewModels\\UserVM.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\ViewModels\\UserVM.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\ViewModels\\UserVM.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCMAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:16:00.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwCcAAAASAAAAAAAAAA==",
+              "Title": "MonEmploi.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAABIAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-06T02:14:00.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Department.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Department.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:08:58.366Z"
+              "WhenOpened": "2025-03-07T01:48:59.03Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Position.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Position.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Position.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Position.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Title": "GenerationEmploiService.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T02:08:30.287Z"
+              "WhenOpened": "2025-03-07T01:48:20.548Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Taches.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Taches.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Taches.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Taches.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Taches.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAAcAAAAAAAAAA==",
+              "Title": "PlanningController.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\PlanningController.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\PlanningController.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\PlanningController.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\PlanningController.cs",
+              "ViewState": "AgIAAB8BAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:27:55.037Z"
+              "WhenOpened": "2025-03-07T01:47:37.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Conges.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Conges.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Conges.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Conges.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Conges.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:26:12.699Z"
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T15:12:14.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IndexViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\ViewModels\\IndexViewModel.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\ViewModels\\IndexViewModel.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\ViewModels\\IndexViewModel.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\ViewModels\\IndexViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\UserService.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T01:15:16.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T23:53:50.188Z"
+              "WhenOpened": "2025-03-06T15:09:12.401Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "DemandeCongeController.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\DemandeCongeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowC8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T23:38:54.289Z"
+              "WhenOpened": "2025-03-06T15:01:07.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\UserDashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\UserDashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\UserDashboard\\Index.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\UserDashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAALAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "UtilisateurController.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA8wCgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T14:59:56.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAKEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T23:14:40.486Z"
+              "WhenOpened": "2025-03-06T14:51:05.473Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Utilisateurs.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Utilisateurs.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Models\\Utilisateurs.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Utilisateurs.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Utilisateurs.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Models\\Utilisateurs.cs",
               "RelativeToolTip": "PFA-TEMPLATE\\Models\\Utilisateurs.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T23:08:39.665Z"
+              "WhenOpened": "2025-03-06T14:36:37.726Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "AdminDashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
               "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAACsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T23:07:45.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Employes.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Employes.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Employes.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Models\\Employes.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Employes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T23:05:00.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAwwAgBAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T23:04:19.006Z"
+              "WhenOpened": "2025-03-06T14:28:16.739Z"
             }
           ]
         },

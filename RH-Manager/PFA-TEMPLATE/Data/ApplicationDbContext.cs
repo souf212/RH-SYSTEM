@@ -39,6 +39,14 @@ namespace PFA_TEMPLATE.Data
             modelBuilder.Entity<Utilisateur>()
                 .HasKey(u => u.Id);
 
+            modelBuilder.Entity<Utilisateur>()
+                .HasIndex(u => u.Login)
+                .IsUnique();
+
+            modelBuilder.Entity<Utilisateur>()
+                .HasIndex(u => u.CIN)
+                .IsUnique();
+
             modelBuilder.Entity<Conges>()
         .HasOne(c => c.Employe) // Conges a un Employe
         .WithMany(e => e.Conges) // Employe a plusieurs Conges
