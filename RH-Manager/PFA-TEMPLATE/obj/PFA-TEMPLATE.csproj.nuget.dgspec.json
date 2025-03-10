@@ -1,31 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj": {}
+    "/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/PFA-TEMPLATE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj": {
+    "/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/PFA-TEMPLATE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
+        "projectUniqueName": "/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/PFA-TEMPLATE.csproj",
         "projectName": "PFA-TEMPLATE",
-        "projectPath": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
-        "packagesPath": "C:\\Users\\top\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\obj\\",
+        "projectPath": "/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/PFA-TEMPLATE.csproj",
+        "packagesPath": "/Users/minfo/.nuget/packages/",
+        "outputPath": "/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\top\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/minfo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +44,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -89,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

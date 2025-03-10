@@ -29,13 +29,13 @@ namespace PFA_TEMPLATE.Data
         public DbSet<ContraintesPlanning> ContraintesPlanning { get; set; }
         public DbSet<EmploiDuTemps> EmploiDuTemps { get; set; }
         public DbSet<PlageHoraire> PlageHoraire { get; set; }
-        public DbSet<CongeBalance> CongeBalances { get; set; } // Add the new entity
+        public DbSet<CongeBalance> CongeBalances { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Utilisateur
+            // ✅ Utilisateur
             modelBuilder.Entity<Utilisateur>()
                 .HasKey(u => u.Id);
 
@@ -47,49 +47,7 @@ namespace PFA_TEMPLATE.Data
                 .HasIndex(u => u.CIN)
                 .IsUnique();
 
-            modelBuilder.Entity<Conges>()
-        .HasOne(c => c.Employe) // Conges a un Employe
-        .WithMany(e => e.Conges) // Employe a plusieurs Conges
-        .HasForeignKey(c => c.IdEmploye); // Clé étrangère
-
-
-            modelBuilder.Entity<CongeBalance>()
-         .HasOne(cb => cb.Employe)
-         .WithMany()
-         .HasForeignKey(cb => cb.IdEmploye)
-         .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<CongeBalance>()
-                .HasIndex(cb => new { cb.IdEmploye, cb.Annee })
-                .IsUnique();
-            //planning
-
-            modelBuilder.Entity<EmploiDuTemps>()
-               .HasOne(e => e.Employee)
-               .WithMany()
-               .HasForeignKey(e => e.EmployeeId)
-               .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<EmploiDuTemps>()
-                .HasOne(e => e.ContraintesPlanning)
-                .WithMany()
-                .HasForeignKey(e => e.ContraintesPlanningId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<PlageHoraire>()
-                .HasOne(p => p.EmploiDuTemps)
-                .WithMany(e => e.PlagesHoraires)
-                .HasForeignKey(p => p.EmploiDuTempsId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<ContraintesPlanning>()
-           .Property(p => p.Id)
-           .ValueGeneratedOnAdd();
-            // Propriété de fitness pour l'algorithme génétique
-            modelBuilder.Entity<EmploiDuTemps>()
-                .Ignore(e => e.Fitness);
-
-            // Employes
+            // ✅ Employes (One-to-One with Utilisateur)
             modelBuilder.Entity<Employes>()
                 .HasKey(e => e.IdEmploye);
 
@@ -99,7 +57,52 @@ namespace PFA_TEMPLATE.Data
                 .HasForeignKey<Employes>(e => e.IdUtilisateur)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Taches
+            // ✅ Conges (One-to-Many with Employe)
+            modelBuilder.Entity<Conges>()
+                .HasOne(c => c.Employe)
+                .WithMany(e => e.Conges)
+                .HasForeignKey(c => c.IdEmploye);
+
+            // ✅ CongeBalance (One-to-Many with Employe)
+            modelBuilder.Entity<CongeBalance>()
+                .HasOne(cb => cb.Employe)
+                .WithMany()
+                .HasForeignKey(cb => cb.IdEmploye)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CongeBalance>()
+                .HasIndex(cb => new { cb.IdEmploye, cb.Annee })
+                .IsUnique();
+
+            // ✅ EmploiDuTemps (One-to-Many Planning)
+            modelBuilder.Entity<EmploiDuTemps>()
+                .HasOne(e => e.Employee)
+                .WithMany()
+                .HasForeignKey(e => e.EmployeeId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<EmploiDuTemps>()
+                .HasOne(e => e.ContraintesPlanning)
+                .WithMany()
+                .HasForeignKey(e => e.ContraintesPlanningId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // ✅ PlageHoraire (One-to-Many with EmploiDuTemps)
+            modelBuilder.Entity<PlageHoraire>()
+                .HasOne(p => p.EmploiDuTemps)
+                .WithMany(e => e.PlagesHoraires)
+                .HasForeignKey(p => p.EmploiDuTempsId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<ContraintesPlanning>()
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
+            // ✅ Ignore computed property in EmploiDuTemps
+            modelBuilder.Entity<EmploiDuTemps>()
+                .Ignore(e => e.Fitness);
+
+            // ✅ Taches (One-to-Many with Employes)
             modelBuilder.Entity<Taches>()
                 .HasKey(t => t.IdTaches);
 
@@ -109,7 +112,7 @@ namespace PFA_TEMPLATE.Data
                 .HasForeignKey(t => t.IdEmploye)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Administrateur
+            // ✅ Administrateur (One-to-One with Utilisateur)
             modelBuilder.Entity<Administrateur>()
                 .HasKey(a => a.IdAdmin);
 
@@ -118,7 +121,7 @@ namespace PFA_TEMPLATE.Data
                 .WithOne()
                 .HasForeignKey<Administrateur>(a => a.IdUtilisateur);
 
-            // Contrats
+            // ✅ Contrats (One-to-Many with Employes)
             modelBuilder.Entity<Contrat>()
                 .HasKey(c => c.IdContrat);
 
@@ -127,16 +130,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany(e => e.Contrats)
                 .HasForeignKey(c => c.IdEmploye);
 
-            // Conges
-            modelBuilder.Entity<Conges>()
-                .HasKey(c => c.IdConges);
-
-            modelBuilder.Entity<Conges>()
-                .HasOne(c => c.Employe)
-                .WithMany(e => e.Conges)
-                .HasForeignKey(c => c.IdEmploye);
-
-            // Absences
+            // ✅ Absences (One-to-Many with Employes)
             modelBuilder.Entity<Absences>()
                 .HasKey(a => a.IdAbsences);
 
@@ -145,7 +139,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany(e => e.Absences)
                 .HasForeignKey(a => a.IdEmploye);
 
-            // HistoriqueAbsences
+            // ✅ HistoriqueAbsences (One-to-One with Absences)
             modelBuilder.Entity<HistoriqueAbsences>()
                 .HasKey(h => h.IdHistoriqueAbsences);
 
@@ -154,7 +148,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany()
                 .HasForeignKey(h => h.IdAbsences);
 
-            // HistoriqueConges
+            // ✅ HistoriqueConges (One-to-One with Conges)
             modelBuilder.Entity<HistoriqueConges>()
                 .HasKey(h => h.IdHistoriqueConges);
 
@@ -163,7 +157,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany()
                 .HasForeignKey(h => h.IdConges);
 
-            // ReconnaissanceFaciale
+            // ✅ ReconnaissanceFaciale (One-to-Many with Employes)
             modelBuilder.Entity<ReconnaissanceFaciale>()
                 .HasKey(r => r.IdReconnaissanceFaciale);
 
@@ -172,7 +166,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany(e => e.ReconnaissanceFaciales)
                 .HasForeignKey(r => r.IdEmploye);
 
-            // Salaire
+            // ✅ Salaire (One-to-Many with Employes)
             modelBuilder.Entity<Salaire>()
                 .HasKey(s => s.IdSalaire);
 
@@ -181,7 +175,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany(e => e.Salaires)
                 .HasForeignKey(s => s.IdEmploye);
 
-            // FicheDePaie
+            // ✅ FicheDePaie (One-to-Many with Contrats)
             modelBuilder.Entity<FicheDePaie>()
                 .HasKey(f => f.IdFicheDePaie);
 
@@ -190,7 +184,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany(c => c.FichesDePaie)
                 .HasForeignKey(f => f.IdContrat);
 
-            // Planning
+            // ✅ Planning (One-to-Many with Employes)
             modelBuilder.Entity<Planning>()
                 .HasKey(p => p.IdPlanning);
 
@@ -199,7 +193,7 @@ namespace PFA_TEMPLATE.Data
                 .WithMany()
                 .HasForeignKey(p => p.IdEmploye);
 
-            // Pointage
+            // ✅ Pointage (One-to-Many with Employes)
             modelBuilder.Entity<Pointage>()
                 .HasKey(p => p.IdPointage);
 

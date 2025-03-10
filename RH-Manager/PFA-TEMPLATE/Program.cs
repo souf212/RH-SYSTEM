@@ -11,6 +11,7 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        var allowedOrigins = builder.Configuration.GetSection("CorsSettings:AllowedOrigins").Get<string[]>();
 
         // Add services to the container
         builder.Services.AddControllersWithViews();
@@ -48,6 +49,14 @@ public class Program
         });
 
         builder.Services.AddSession();
+        // Add CORS for API access from other applications
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAll",
+                builder => builder.AllowAnyOrigin()
+                                  .AllowAnyMethod()
+                                  .AllowAnyHeader());
+        });
 
         var app = builder.Build();
 
@@ -57,7 +66,7 @@ public class Program
             app.UseHsts();
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
         app.UseStaticFiles();
 
         app.UseRouting();
@@ -66,6 +75,17 @@ public class Program
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseSession();
+        // Enable MVC routes and API controllers
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers(); // Activate API routes
+            endpoints.MapDefaultControllerRoute(); // Activate MVC routes
+
+            foreach (var endpoint in endpoints.DataSources.SelectMany(ds => ds.Endpoints))
+            {
+                Console.WriteLine($" Route Active: {endpoint.DisplayName}");
+            }
+        });
 
         // Define the default routing pattern
 

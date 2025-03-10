@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PFA_TEMPLATE.Models
 {
+    // ✅ Employes Model (No direct Nom/Prenom properties, computed from Utilisateur)
     public class Employes
     {
         [Key]
@@ -12,23 +13,24 @@ namespace PFA_TEMPLATE.Models
         [ForeignKey("Utilisateurs")]
         public int IdUtilisateur { get; set; }
 
-        // Propriétés calculées
+        // ✅ Computed properties (No need to store in DB)
         public string Nom => Utilisateur?.Nom ?? "Nom non disponible";
         public string Prenom => Utilisateur?.Prenom ?? "Prénom non disponible";
         public string NomComplet => Utilisateur != null ? $"{Utilisateur.Prenom} {Utilisateur.Nom}" : "Employé non chargé";
 
-        // Navigation Property
+        // ✅ Navigation Property
         public virtual Utilisateur Utilisateur { get; set; }
 
-        // Collections
+        // ✅ Collections
         public virtual ICollection<Taches> Taches { get; set; }
         public virtual ICollection<Contrat> Contrats { get; set; }
         public virtual ICollection<Conges> Conges { get; set; }
         public virtual ICollection<Absences> Absences { get; set; }
         public virtual ICollection<ReconnaissanceFaciale> ReconnaissanceFaciales { get; set; }
         public virtual ICollection<Salaire> Salaires { get; set; }
+        public virtual ICollection<Pointage> Pointages { get; set; }
 
-        // Constructeur
+        // ✅ Constructor
         public Employes()
         {
             Taches = new HashSet<Taches>();
@@ -39,7 +41,7 @@ namespace PFA_TEMPLATE.Models
             Salaires = new HashSet<Salaire>();
         }
 
-        // Méthode utilitaire
+        // ✅ Utility method to assign Utilisateur
         public void AssignerUtilisateur(Utilisateur utilisateur)
         {
             if (utilisateur == null)
@@ -51,4 +53,5 @@ namespace PFA_TEMPLATE.Models
             IdUtilisateur = utilisateur.Id;
         }
     }
+
 }
