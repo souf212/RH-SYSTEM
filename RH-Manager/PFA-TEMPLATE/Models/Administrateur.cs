@@ -6,6 +6,7 @@ namespace PFA_TEMPLATE.viewModels
     public class Administrateur
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdAdmin { get; set; }
 
         [ForeignKey("Utilisateurs")]

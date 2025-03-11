@@ -1,58 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH-Manager\\",
+  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\taches\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\taches\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\planning\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\controllers\\userdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\userdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\planning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\utilisateur\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\taches\\basic1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\taches\\basic1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\taches\\basic2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\taches\\basic2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\planning\\configuration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\configuration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\planning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\services\\generationemploiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\generationemploiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\planningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\planningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\views\\utilisateur\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\models\\utilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\utilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-manager\\pfa-template\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh\u002Bfacial\\rh\\rh-manager\\pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,167 +82,179 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UserDashboardController.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\UserDashboardController.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UserDashboardController.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\UserDashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:30:52.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAADwv1IAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-07T02:49:44.246Z",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:30:16.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-07T02:49:39.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "emploi.css",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css*",
-              "RelativeToolTip": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css*",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAUwDIBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-07T01:53:49.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MonEmploi.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAABIAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-07T01:48:59.03Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:29:31.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GenerationEmploiService.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:26:28.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Program.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Program.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Program.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:48:20.548Z",
+              "WhenOpened": "2025-03-11T02:26:18.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PlanningController.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\PlanningController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\PlanningController.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\PlanningController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\PlanningController.cs",
-              "ViewState": "AgIAAB8BAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T01:47:37.71Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:25:44.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Details.cshtml",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-06T15:12:14.79Z",
+              "WhenOpened": "2025-03-11T02:25:41.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Services\\UserService.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T15:09:12.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAowC8AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T15:01:07.432Z"
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\Create.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Taches\\Create.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\Create.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:20:50.601Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "UtilisateurController.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA8wCgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:59:56.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAKEAAAAjAAAAAAAAAA==",
+              "Title": "Basic1.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\Basic1.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Taches\\Basic1.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\Basic1.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\Basic1.cshtml",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-06T14:51:05.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T02:20:00.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Utilisateurs.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Models\\Utilisateurs.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Utilisateurs.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Models\\Utilisateurs.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Utilisateurs.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:36:37.726Z"
+              "DocumentIndex": 10,
+              "Title": "Basic2.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\Basic2.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Taches\\Basic2.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Taches\\Basic2.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Taches\\Basic2.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:10:17.789Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AdminDashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\AdminDashboardController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:28:16.739Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:08:18.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MonEmploi.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:08:15.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Configuration.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Configuration.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Configuration.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Configuration.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Configuration.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAFEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:08:10.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH\u002Bfacial\\RH\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-11T02:04:08.2Z"
             }
           ]
         },

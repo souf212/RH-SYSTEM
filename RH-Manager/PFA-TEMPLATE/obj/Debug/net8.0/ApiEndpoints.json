@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
+    "Method": "RegisterPointage",
+    "RelativePath": "api/pointage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pointage",
+        "Type": "PFA_TEMPLATE.viewModels.Pointage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
+    "Method": "UpdatePointage",
+    "RelativePath": "api/pointage/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
+    "Method": "GetEmployeePointage",
+    "RelativePath": "api/pointage/history/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
+    "Method": "MapEmployeeToUser",
+    "RelativePath": "api/pointage/map_employee_to_user/{idEmploye}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmploye",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
+    "Method": "MapUserToEmployee",
+    "RelativePath": "api/pointage/map_user_to_employee/{idUtilisateur}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUtilisateur",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
+    "Method": "GetTodayPointage",
+    "RelativePath": "api/pointage/today",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

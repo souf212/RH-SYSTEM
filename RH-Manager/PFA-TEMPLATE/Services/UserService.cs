@@ -51,14 +51,16 @@ namespace PFA_TEMPLATE.Services
                 {
                     var admin = new Administrateur
                     {
+                        IdAdmin = userId, // Set the Id to match the Utilisateur Id
                         IdUtilisateur = userId
                     };
                     _context.Administrateurs.Add(admin);
                 }
-                else if (userVM.Role == "User")
+                else if (userVM.Role == "Employes")
                 {
                     var employe = new Employes
                     {
+                        IdEmploye = userId, // Set the Id to match the Utilisateur Id
                         IdUtilisateur = userId
                     };
                     _context.Employes.Add(employe);
@@ -126,7 +128,7 @@ namespace PFA_TEMPLATE.Services
                         }
                     }
                     // If old role was User, remove from Employes table
-                    else if (oldRole == "User")
+                    else if (oldRole == "Employes")
                     {
                         var employe = await _context.Employes
                             .FirstOrDefaultAsync(e => e.IdUtilisateur == existingUser.Id);
@@ -146,7 +148,7 @@ namespace PFA_TEMPLATE.Services
                         _context.Administrateurs.Add(admin);
                     }
                     // If new role is User, add to Employes table
-                    else if (newRole == "User")
+                    else if (newRole == "Employes")
                     {
                         var employe = new Employes
                         {
@@ -191,7 +193,7 @@ namespace PFA_TEMPLATE.Services
                         _context.Administrateurs.Remove(admin);
                     }
                 }
-                else if (utilisateur.Role == "User")
+                else if (utilisateur.Role == "Employes")
                 {
                     var employe = await _context.Employes
                         .FirstOrDefaultAsync(e => e.IdUtilisateur == id);

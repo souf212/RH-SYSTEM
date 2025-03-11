@@ -12,8 +12,8 @@ using PFA_TEMPLATE.Data;
 namespace PFA_TEMPLATE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250309221358_UpdateEmployesRelation")]
-    partial class UpdateEmployesRelation
+    [Migration("20250311013210_UpdateEmployesAndAdministrateurEntities")]
+    partial class UpdateEmployesAndAdministrateurEntities
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -164,10 +164,7 @@ namespace PFA_TEMPLATE.Migrations
             modelBuilder.Entity("PFA_TEMPLATE.Models.Employes", b =>
                 {
                     b.Property<int>("IdEmploye")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdEmploye"));
 
                     b.Property<int>("IdUtilisateur")
                         .HasColumnType("int");
@@ -279,10 +276,7 @@ namespace PFA_TEMPLATE.Migrations
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.Administrateur", b =>
                 {
                     b.Property<int>("IdAdmin")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdAdmin"));
 
                     b.Property<int>("IdUtilisateur")
                         .HasColumnType("int");

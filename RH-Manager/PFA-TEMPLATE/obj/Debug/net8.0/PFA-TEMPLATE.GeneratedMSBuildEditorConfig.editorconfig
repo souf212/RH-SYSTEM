@@ -9,159 +9,159 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PFA_TEMPLATE
 build_property.RootNamespace = PFA_TEMPLATE
-build_property.ProjectDir = /Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/
+build_property.ProjectDir = C:\Users\top\Desktop\RH+facial\RH\RH-Manager\PFA-TEMPLATE\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE
+build_property.MSBuildProjectDirectory = C:\Users\top\Desktop\RH+facial\RH\RH-Manager\PFA-TEMPLATE
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Account/AccessDenied.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9BY2Nlc3NEZW5pZWQuY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5EYXNoYm9hcmQvSW5kZXguY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/ManageUsers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5EYXNoYm9hcmQvTWFuYWdlVXNlcnMuY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/ManageUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcTWFuYWdlVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/AdminIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVtYW5kZUNvbmdlL0FkbWluSW5kZXguY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/AdminIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEFkbWluSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/CreateConge.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVtYW5kZUNvbmdlL0NyZWF0ZUNvbmdlLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/CreateConge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXENyZWF0ZUNvbmdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVtYW5kZUNvbmdlL0luZGV4LmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Planning/Configuration.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGxhbm5pbmcvQ29uZmlndXJhdGlvbi5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Planning/Configuration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcQ29uZmlndXJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Planning/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGxhbm5pbmcvRGV0YWlscy5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Planning/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Planning/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGxhbm5pbmcvRWRpdC5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Planning/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Planning/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGxhbm5pbmcvSW5kZXguY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Planning/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Planning/MonEmploi.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGxhbm5pbmcvTW9uRW1wbG9pLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Planning/MonEmploi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcTW9uRW1wbG9pLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Planning/SelectEmployees.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGxhbm5pbmcvU2VsZWN0RW1wbG95ZWVzLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Planning/SelectEmployees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcU2VsZWN0RW1wbG95ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/PointageMvc/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9pbnRhZ2VNdmMvSW5kZXguY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/PointageMvc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRhZ2VNdmNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Shared/_AdminLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BZG1pbkxheW91dC5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Shared/_UserLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Vc2VyTGF5b3V0LmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0Jhc2ljMS5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0Jhc2ljMi5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic3.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0Jhc2ljMy5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0NyZWF0ZS5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0RlbGV0ZS5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0VkaXQuY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Taches/EditStatus.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFjaGVzL0VkaXRTdGF0dXMuY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Taches/EditStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEVkaXRTdGF0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlckRhc2hib2FyZC9JbmRleC5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Tasks.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlckRhc2hib2FyZC9UYXNrcy5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Tasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGlzYXRldXIvQ3JlYXRlLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGlzYXRldXIvRGVsZXRlLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGlzYXRldXIvRGV0YWlscy5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGlzYXRldXIvRWRpdC5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXRpbGlzYXRldXIvSW5kZXguY3NodG1s
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/minfo/new_hr_project/RH-Manager/PFA-TEMPLATE/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-1poxd83p3n
+[C:/Users/top/Desktop/RH+facial/RH/RH-Manager/PFA-TEMPLATE/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hgw5rvvsh5

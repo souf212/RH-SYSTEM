@@ -33,6 +33,6 @@ namespace PFA_TEMPLATE.ViewModels
 
         public string Telephone { get; set; }
 
-        public string Role { get; set; } // e.g., Admin, Employee
+        public string Role { get; set; } // e.g., Admin, Employes
     }
 }

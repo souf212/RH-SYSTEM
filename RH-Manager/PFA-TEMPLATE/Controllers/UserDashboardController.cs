@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PFA_TEMPLATE.Controllers
 {
-    [Authorize(Roles = "User")] // Restrict access to standard users
+    [Authorize(Roles = "Employes")] // Restrict access to standard users
     public class UserDashboardController : Controller
     {
 

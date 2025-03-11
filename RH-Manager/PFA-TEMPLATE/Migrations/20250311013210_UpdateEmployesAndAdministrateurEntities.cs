@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PFA_TEMPLATE.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class UpdateEmployesAndAdministrateurEntities : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,8 +71,7 @@ namespace PFA_TEMPLATE.Migrations
                 name: "Administrateurs",
                 columns: table => new
                 {
-                    IdAdmin = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    IdAdmin = table.Column<int>(type: "int", nullable: false),
                     IdUtilisateur = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -91,8 +90,7 @@ namespace PFA_TEMPLATE.Migrations
                 name: "Employes",
                 columns: table => new
                 {
-                    IdEmploye = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    IdEmploye = table.Column<int>(type: "int", nullable: false),
                     IdUtilisateur = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -267,12 +265,18 @@ namespace PFA_TEMPLATE.Migrations
                     IdPointage = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     HeureEntree = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    HeureSortie = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    IdEmploye = table.Column<int>(type: "int", nullable: false)
+                    HeureSortie = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    IdEmploye = table.Column<int>(type: "int", nullable: false),
+                    EmployesIdEmploye = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Pointages", x => x.IdPointage);
+                    table.ForeignKey(
+                        name: "FK_Pointages_Employes_EmployesIdEmploye",
+                        column: x => x.EmployesIdEmploye,
+                        principalTable: "Employes",
+                        principalColumn: "IdEmploye");
                     table.ForeignKey(
                         name: "FK_Pointages_Employes_IdEmploye",
                         column: x => x.IdEmploye,
@@ -517,6 +521,11 @@ namespace PFA_TEMPLATE.Migrations
                 column: "IdEmploye");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Pointages_EmployesIdEmploye",
+                table: "Pointages",
+                column: "EmployesIdEmploye");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Pointages_IdEmploye",
                 table: "Pointages",
                 column: "IdEmploye");
@@ -535,6 +544,18 @@ namespace PFA_TEMPLATE.Migrations
                 name: "IX_Taches_IdEmploye",
                 table: "Taches",
                 column: "IdEmploye");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Utilisateurs_CIN",
+                table: "Utilisateurs",
+                column: "CIN",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Utilisateurs_Login",
+                table: "Utilisateurs",
+                column: "Login",
+                unique: true);
         }
 
         /// <inheritdoc />

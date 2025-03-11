@@ -78,7 +78,7 @@ namespace PFA_TEMPLATE.Controllers
             return user.Role switch
             {
                 "Admin" => RedirectToAction("Index", "AdminDashboard"),
-                "User" => RedirectToAction("Index", "UserDashboard"),
+                "Employes" => RedirectToAction("Index", "UserDashboard"),
                 _ => RedirectToAction("Login", "Account")
             };
         }

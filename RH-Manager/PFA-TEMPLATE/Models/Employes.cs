@@ -8,6 +8,7 @@ namespace PFA_TEMPLATE.Models
     public class Employes
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdEmploye { get; set; }
 
         [ForeignKey("Utilisateurs")]

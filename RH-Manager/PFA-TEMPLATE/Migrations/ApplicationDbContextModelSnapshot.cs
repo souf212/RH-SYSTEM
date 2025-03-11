@@ -161,10 +161,7 @@ namespace PFA_TEMPLATE.Migrations
             modelBuilder.Entity("PFA_TEMPLATE.Models.Employes", b =>
                 {
                     b.Property<int>("IdEmploye")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdEmploye"));
 
                     b.Property<int>("IdUtilisateur")
                         .HasColumnType("int");
@@ -276,10 +273,7 @@ namespace PFA_TEMPLATE.Migrations
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.Administrateur", b =>
                 {
                     b.Property<int>("IdAdmin")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdAdmin"));
 
                     b.Property<int>("IdUtilisateur")
                         .HasColumnType("int");

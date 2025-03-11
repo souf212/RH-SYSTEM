@@ -1,66 +1,76 @@
-﻿.schedule-container {
-    max-width: 1200px;
+﻿/* Professional Planning Style - Main container */
+.schedule-container {
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 24px;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #333;
+    background-color: #f8f9fc;
 }
 
+/* Employee card with improved design */
 .employee-card {
     background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 24px;
-    border-left: 5px solid #3f51b5;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    margin-bottom: 28px;
+    border-left: 4px solid #2c3e50;
+    transition: all 0.3s ease;
 }
 
     .employee-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
     .employee-card h2 {
-        color: #3f51b5;
+        color: #2c3e50;
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
+        font-weight: 600;
         display: flex;
         align-items: center;
+        letter-spacing: -0.3px;
     }
 
         .employee-card h2::before {
             content: '';
             display: inline-block;
-            background-color: #3f51b5;
-            width: 10px;
-            height: 25px;
-            margin-right: 10px;
-            border-radius: 2px;
+            background-color: #2c3e50;
+            width: 6px;
+            height: 24px;
+            margin-right: 14px;
+            border-radius: 3px;
         }
 
     .employee-card p {
-        color: #666;
+        color: #64748b;
         margin: 8px 0 0 0;
         font-weight: 500;
+        font-size: 0.95rem;
     }
 
+/* Action buttons with modern style */
 .action-row {
     display: flex;
-    gap: 15px;
-    margin-bottom: 24px;
+    gap: 16px;
+    margin-bottom: 28px;
 }
 
 .btn {
-    padding: 10px 18px;
+    padding: 11px 20px;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 0.9rem;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
     border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
     .btn i {
@@ -68,151 +78,173 @@
     }
 
 .btn-primary {
-    background-color: #3f51b5;
+    background-color: #2c3e50;
     color: white;
 }
 
 .btn-warning {
-    background-color: #FF9800;
+    background-color: #e67e22;
     color: white;
 }
 
 .btn-secondary {
-    background-color: #757575;
+    background-color: #64748b;
     color: white;
 }
 
 .btn:hover {
-    opacity: 0.9;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Calendar card with refined style */
 .calendar-card {
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
 }
 
     .calendar-card:hover {
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
     }
 
 .calendar-header {
-    background-color: #3f51b5;
+    background-color: #2c3e50;
     color: white;
-    padding: 18px 20px;
+    padding: 20px 24px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .calendar-body {
-    padding: 25px;
+    padding: 28px;
 }
 
+/* Legend styling */
 .activity-legend {
-    margin-top: 25px;
-    padding: 18px;
-    background-color: #f9f9f9;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fc;
     border-radius: 10px;
-    border: 1px solid #eee;
+    border: 1px solid #edf2f7;
 }
 
     .activity-legend h4 {
         margin-top: 0;
-        margin-bottom: 12px;
-        color: #3f51b5;
+        margin-bottom: 16px;
+        color: #2c3e50;
         font-weight: 600;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        position: relative;
+        padding-left: 14px;
     }
+
+        .activity-legend h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 18px;
+            background-color: #2c3e50;
+            border-radius: 2px;
+        }
 
 .legend-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 22px;
 }
 
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-weight: 500;
+    color: #4a5568;
 }
 
 .color-box {
-    width: 22px;
-    height: 22px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
     .color-box.travail {
-        background-color: #9C27B0;
+        background-color: #3949ab;
     }
 
     .color-box.pause {
-        background-color: #FF5722;
+        background-color: #f57c00;
     }
 
+/* Calendar styling */
 #calendar {
     min-height: 650px;
 }
 
 .fc-event {
     border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     border: none !important;
-    padding: 2px;
+    padding: 3px;
+    font-size: 0.92rem;
 }
 
 .fc-event-travail {
-    background-color: #9C27B0 !important;
-    border-color: #9C27B0 !important;
+    background-color: #3949ab !important;
+    border-color: #3949ab !important;
 }
 
 .fc-event-pause {
-    background-color: #FF5722 !important;
-    border-color: #FF5722 !important;
+    background-color: #f57c00 !important;
+    border-color: #f57c00 !important;
 }
 
 .fc .fc-button-primary {
-    background-color: #3f51b5;
-    border-color: #3f51b5;
-    padding: 8px 12px;
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+    padding: 9px 14px;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
     .fc .fc-button-primary:hover {
-        background-color: #303f9f;
-        border-color: #303f9f;
+        background-color: #1e2a37;
+        border-color: #1e2a37;
     }
 
     .fc .fc-button-primary:not(:disabled).fc-button-active,
     .fc .fc-button-primary:not(:disabled):active {
-        background-color: #1a237e;
-        border-color: #1a237e;
+        background-color: #15202b;
+        border-color: #15202b;
     }
 
 .fc-event-time, .fc-event-title {
-    padding: 3px 6px;
+    padding: 4px 7px;
     white-space: normal;
     font-weight: 500;
-    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 .fc-col-header-cell {
-    background-color: #3f51b5;
+    background-color: #2c3e50;
     color: white;
-    padding: 12px 0;
+    padding: 14px 0;
 }
 
 .fc-col-header-cell-cushion {
@@ -223,102 +255,116 @@
 }
 
 .fc-timegrid-slot {
-    height: 45px;
-    border-bottom: 1px dashed #eee;
+    height: 50px;
+    border-bottom: 1px solid #edf2f7;
 }
 
 .fc-day-today {
-    background-color: rgba(63, 81, 181, 0.05) !important;
+    background-color: rgba(44, 62, 80, 0.04) !important;
 }
 
 .fc-timegrid-event {
     border-radius: 6px;
-    padding: 4px;
+    padding: 5px;
 }
 
 .fc-timegrid-now-indicator-line {
-    border-color: #f44336;
+    border-color: #e53e3e;
     border-width: 2px;
 }
 
 .fc-theme-standard .fc-scrollgrid {
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e2e8f0;
 }
-/* Styles pour l'exportation PDF et l'impression */
+
+.fc-day-other .fc-daygrid-day-top {
+    opacity: 0.6;
+}
+
+.fc-day-other {
+    background-color: #fafbfd;
+}
+
+/* Print styles for exports */
 @media print {
     body {
         background-color: white;
-        font-family: Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
     }
-    
-    .action-row, .fc-toolbar-chunk, .fc-scrollgrid-section-header {
-        display: none !important;
-    }
-    
+
     .schedule-container {
         width: 100%;
         max-width: 100%;
-        padding: 0;
+        padding: 10px;
         margin: 0;
         box-shadow: none;
     }
-    
+
     .calendar-card {
         border: none;
         box-shadow: none;
         margin-bottom: 0;
     }
-    
+
     .employee-card {
         text-align: center;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eaecef;
+        padding-bottom: 15px;
+        border-left: none;
     }
-    
+
+        .employee-card h2::before {
+            display: none;
+        }
+
     .legend-items {
         display: flex;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 15px;
     }
-    
+
     .legend-item {
-        margin: 0 10px;
+        margin: 0 12px;
     }
-    
-    .fc-view-harness {
-        height: auto !important;
+
+    .fc-col-header-cell, .fc-timegrid-col {
+        width: 14.28% !important;
+        max-width: none !important;
+        display: table-cell !important;
     }
-    
-    .fc .fc-timegrid-slot {
+
+    #calendar {
+        width: 100% !important;
+    }
+
+    .action-row, .fc-toolbar-chunk:not(.fc-toolbar-chunk:first-child) {
+        display: none !important;
+    }
+
+    .fc-timegrid-slot {
         height: 1.5em;
     }
-    
-    .fc-scrollgrid-sync-table, .fc-timegrid-body, .fc-timegrid-slots, .fc-timegrid-cols {
-        height: auto !important;
-    }
-    
+
     .fc-timegrid-slot-minor {
         border-top-style: none !important;
     }
 
     .fc-event-travail {
-        background-color: #9C27B0 !important;
-        border-color: #9C27B0 !important;
+        background-color: #3949ab !important;
+        border-color: #3949ab !important;
         color: white !important;
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
     }
 
     .fc-event-pause {
-        background-color: #FF5722 !important;
-        border-color: #FF5722 !important;
-        color: black !important;
+        background-color: #f57c00 !important;
+        border-color: #f57c00 !important;
+        color: white !important;
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
     }
 }
-
- 
