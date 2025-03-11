@@ -143,6 +143,7 @@ namespace PFA_TEMPLATE.Services
                     {
                         var admin = new Administrateur
                         {
+                            IdAdmin = existingUser.Id, // Set the Id to match the Utilisateur Id
                             IdUtilisateur = existingUser.Id
                         };
                         _context.Administrateurs.Add(admin);
@@ -152,6 +153,7 @@ namespace PFA_TEMPLATE.Services
                     {
                         var employe = new Employes
                         {
+                            IdEmploye = existingUser.Id, // Set the Id to match the Utilisateur Id
                             IdUtilisateur = existingUser.Id
                         };
                         _context.Employes.Add(employe);

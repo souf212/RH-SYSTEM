@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PFA_TEMPLATE.viewModels;
 using System.Diagnostics;
 namespace PFA_TEMPLATE.Controllers
