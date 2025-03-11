@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.pdb
+*.dll
+*.nuget.cache
+*.json
+.DS_Store
