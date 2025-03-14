@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IA4HdSL7kJg=",
+  "dgSpecHash": "+mW+g0ijCEs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\top\\Desktop\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
+  "projectFilePath": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\top\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\top\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

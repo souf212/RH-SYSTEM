@@ -32,6 +32,8 @@ public class Program
                 new MySqlServerVersion(new Version(8, 0, 33))).EnableSensitiveDataLogging());
 
 
+
+
         // Configure authentication using cookies
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
