@@ -161,10 +161,7 @@ namespace PFA_TEMPLATE.Migrations
             modelBuilder.Entity("PFA_TEMPLATE.Models.Employes", b =>
                 {
                     b.Property<int>("IdEmploye")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdEmploye"));
 
                     b.Property<int>("IdUtilisateur")
                         .HasColumnType("int");
@@ -276,10 +273,7 @@ namespace PFA_TEMPLATE.Migrations
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.Administrateur", b =>
                 {
                     b.Property<int>("IdAdmin")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdAdmin"));
 
                     b.Property<int>("IdUtilisateur")
                         .HasColumnType("int");
@@ -419,16 +413,21 @@ namespace PFA_TEMPLATE.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdPointage"));
 
+                    b.Property<int?>("EmployesIdEmploye")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("HeureEntree")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("HeureSortie")
+                    b.Property<DateTime?>("HeureSortie")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("IdEmploye")
                         .HasColumnType("int");
 
                     b.HasKey("IdPointage");
+
+                    b.HasIndex("EmployesIdEmploye");
 
                     b.HasIndex("IdEmploye");
 
@@ -537,6 +536,12 @@ namespace PFA_TEMPLATE.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CIN")
+                        .IsUnique();
+
+                    b.HasIndex("Login")
+                        .IsUnique();
 
                     b.ToTable("Utilisateurs");
                 });
@@ -694,6 +699,10 @@ namespace PFA_TEMPLATE.Migrations
 
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.Pointage", b =>
                 {
+                    b.HasOne("PFA_TEMPLATE.Models.Employes", null)
+                        .WithMany("Pointages")
+                        .HasForeignKey("EmployesIdEmploye");
+
                     b.HasOne("PFA_TEMPLATE.Models.Employes", "Employe")
                         .WithMany()
                         .HasForeignKey("IdEmploye")
@@ -737,6 +746,8 @@ namespace PFA_TEMPLATE.Migrations
                     b.Navigation("Conges");
 
                     b.Navigation("Contrats");
+
+                    b.Navigation("Pointages");
 
                     b.Navigation("ReconnaissanceFaciales");
 

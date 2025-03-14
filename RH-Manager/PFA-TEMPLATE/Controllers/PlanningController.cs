@@ -310,6 +310,37 @@ namespace planning.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var contraintePlanning = await _context.ContraintesPlanning
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (contraintePlanning == null)
+            {
+                return NotFound();
+            }
+
+            return View(contraintePlanning);
+        }
+
+        // POST: Planning/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var contraintePlanning = await _context.ContraintesPlanning.FindAsync(id);
+            if (contraintePlanning != null)
+            {
+                _context.ContraintesPlanning.Remove(contraintePlanning);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
 
 
 

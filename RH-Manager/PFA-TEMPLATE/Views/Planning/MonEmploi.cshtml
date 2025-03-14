@@ -2,20 +2,21 @@
 @using PFA_TEMPLATE.Models
 @using PFA_TEMPLATE.ViewModels
 @{
-    ViewData["Title"] = "Mon emploi du temps";
-}@{
     Layout = "~/Views/Shared/_UserLayout.cshtml";
-}
+    ViewData["Title"] = "Mon emploi du temps";
+} 
+<!-- Main container -->
 <!-- Main container -->
 <div class="schedule-container">
     <!-- Employee info header -->
     <div class="employee-card">
-        <h2>Planning de @(Model.Employee?.Utilisateur?.Prenom ?? "Inconnu") @(Model.Employee?.Utilisateur?.Nom ?? "Inconnu")</h2> 
+        <h2>Planning de @Model.Employee.Utilisateur.Prenom @Model.Employee.Utilisateur.Nom</h2>
         <p>Généré le @Model.DateGeneration.ToString("dd/MM/yyyy à HH:mm")</p>
     </div>
 
     <!-- Action buttons -->
-    <div class="action-row">  
+    <div class="action-row">
+       
         <a href="javascript:void(0)" onclick="exportPDF()" class="btn btn-primary">
             <i class="fas fa-file-pdf"></i> Exporter PDF
         </a>
@@ -55,7 +56,6 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
- 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <script>
@@ -79,6 +79,7 @@
 
             calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'timeGridWeek',
+                weekends: true,
                 headerToolbar: {
                     left: 'prev,next today',
                     center: 'title',
@@ -88,6 +89,7 @@
                 slotMinTime: '@Model.ContraintesPlanning.HeureDebutJournee:00',
                 slotMaxTime: '@Model.ContraintesPlanning.HeureFinJournee:00',
                 allDaySlot: false,
+                weekends: true,
                 height: 'auto',
                 events: modelEvents,
                 eventTimeFormat: {
@@ -95,96 +97,32 @@
                     minute: '2-digit',
                     hour12: false
                 }
+
             });
 
             calendar.render();
         });
 
-        // Fonction pour l'impression directe de l'emploi du temps
-        function printSchedule() {
-            // Créer un élément temporaire pour l'impression
-            const printContent = document.createElement('div');
-            printContent.classList.add('print-container');
-
-            // Titre simple pour l'impression
-            const title = document.createElement('h2');
-            title.textContent = document.querySelector('.employee-card h2').textContent;
-            title.style.textAlign = 'center';
-            title.style.marginBottom = '10px';
-            printContent.appendChild(title);
-
-            // Ajouter des informations sur la période
-            const periodInfo = document.createElement('p');
-            periodInfo.classList.add('period-info');
-            periodInfo.textContent = document.querySelector('.calendar-header').textContent.trim();
-            periodInfo.style.textAlign = 'center';
-            periodInfo.style.marginBottom = '15px';
-            printContent.appendChild(periodInfo);
-
-            // Préparer les données du calendrier pour l'impression
-            const printCalendar = document.createElement('div');
-            printCalendar.id = 'print-calendar';
-            printCalendar.classList.add('print-calendar');
-            printContent.appendChild(printCalendar);
-
-            // Ajouter un conteneur pour la légende en bas
-            const legendContainer = document.createElement('div');
-            legendContainer.style.marginTop = '10px';
-            legendContainer.style.display = 'flex';
-            legendContainer.style.justifyContent = 'center';
-            
-            // Ajouter les éléments de légende
-            const travailLegend = document.createElement('div');
-            travailLegend.style.marginRight = '20px';
-            travailLegend.innerHTML = '<span style="display: inline-block; width: 15px; height: 15px; background-color: #4caf50; margin-right: 5px;"></span> Travail';
-            
-            const pauseLegend = document.createElement('div');
-            pauseLegend.innerHTML = '<span style="display: inline-block; width: 15px; height: 15px; background-color: #ff9800; margin-right: 5px;"></span> Pause';
-            
-            legendContainer.appendChild(travailLegend);
-            legendContainer.appendChild(pauseLegend);
-            printContent.appendChild(legendContainer);
-
-            // Ajouter le contenu temporaire au body
-            document.body.appendChild(printContent);
-
-            // Initialiser un nouveau calendrier optimisé pour l'impression
-            const printCalendarEl = document.getElementById('print-calendar');
-            const printView = new FullCalendar.Calendar(printCalendarEl, {
-                initialView: 'timeGridWeek',
-                headerToolbar: false, // Pas d'en-tête de navigation
-                locale: 'fr',
-                slotMinTime: calendar.getOption('slotMinTime'),
-                slotMaxTime: calendar.getOption('slotMaxTime'),
-                allDaySlot: false,
-                height: 'auto',
-                events: calendar.getEvents(),
-                eventTimeFormat: {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    hour12: false
-                },
-                // Options spécifiques pour l'impression
-                contentHeight: 'auto',
-                timeZone: 'local'
-            });
-
-            printView.render();
-
-            // Attendre que le calendrier soit complètement rendu
-            setTimeout(() => {
-                window.print();
-
-                // Nettoyer après l'impression
-                setTimeout(() => {
-                    document.body.removeChild(printContent); 
-                }, 1000);
-            }, 500);
-        }
-
-        // Remplacer la fonction exportPDF existante pour imprimer directement
+        // Fonction pour exporter uniquement la partie .calendar-card en PDF
         function exportPDF() {
-            printSchedule();
+               const element = document.querySelector('.calendar-card');
+                document.body.classList.add('exporting-pdf');
+
+        const opt = {
+            margin: 10,
+            filename: 'calendar.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: {
+                scale: 2,
+                width: 1000, // Set a wider width
+                windowWidth: 1100 // Match window width to capture entire calendar
+            },
+            jsPDF: { unit: 'mm', format: 'a3', orientation: 'landscape' } // Use A3 landscape for more space
+        };
+              html2pdf().set(opt).from(element).save().then(() => { 
+            document.body.classList.remove('exporting-pdf');
+        });
+       
         }
     </script>
 }

@@ -49,10 +49,11 @@
                                 </form>
                                 <form method="post" asp-action="Decision" asp-route-id="@conge.IdConges" class="d-inline">
                                     <input type="hidden" name="status" value="Refusé" />
-                                    <input type="text" name="comment" placeholder="Commentaire" class="form-control form-control-sm mb-2" />
                                     <button type="submit" class="btn btn-sm btn-outline-danger" title="Refuser">
                                         <i class="fas fa-times"></i> Refuser
                                     </button>
+                                    
+                                    <input type="text" name="comment" placeholder="Commentaire" class="form-control form-control-sm mb-2" />
                                 </form>
                             }
                             else

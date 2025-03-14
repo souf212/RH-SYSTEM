@@ -57,17 +57,20 @@
 @section Styles {
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
-    <link href="~/css/emploi.css" rel="stylesheet" asp-append-version="true" />
-}
-@section Scripts {
+    <link href="~/css/emploi.css" rel="stylesheet" asp-append-version="true" />}
+    @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script> 
- <script>
-             document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
+    <script>
+        var calendar; // Déclarer calendar au niveau global pour y accéder dans exportPDF
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
             // Create an array of events from the model
             var modelEvents = [];
+
         @foreach (var plage in Model.PlagesHoraires)
         {
             @: modelEvents.push({
@@ -79,34 +82,52 @@
             @:});
         }
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'timeGridWeek',
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            locale: 'fr',
-            slotMinTime: '@Model.ContraintesPlanning.HeureDebutJournee:00',
-            slotMaxTime: '@Model.ContraintesPlanning.HeureFinJournee:00',
-            allDaySlot: false,
-            height: 'auto',
-            events: modelEvents,
-            eventTimeFormat: {
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: false
-            }
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                weekends: true,
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                locale: 'fr',
+                slotMinTime: '@Model.ContraintesPlanning.HeureDebutJournee:00',
+                slotMaxTime: '@Model.ContraintesPlanning.HeureFinJournee:00',
+                allDaySlot: false,
+                weekends: true,
+                height: 'auto',
+                events: modelEvents,
+                eventTimeFormat: {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false
+                }
+
+            });
+
+            calendar.render();
         });
 
-        calendar.render();
-
-                });
-
-        // Simple PDF export placeholder function
+        // Fonction pour exporter uniquement la partie .calendar-card en PDF
         function exportPDF() {
-            alert('Fonctionnalité d\'export PDF à implémenter');
-            // You would implement actual PDF export here
+               const element = document.querySelector('.calendar-card');
+                document.body.classList.add('exporting-pdf');
+
+        const opt = {
+            margin: 10,
+            filename: 'calendar.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: {
+                scale: 2,
+                width: 1000, // Set a wider width
+                windowWidth: 1100 // Match window width to capture entire calendar
+            },
+            jsPDF: { unit: 'mm', format: 'a3', orientation: 'landscape' } // Use A3 landscape for more space
+        };
+              html2pdf().set(opt).from(element).save().then(() => { 
+            document.body.classList.remove('exporting-pdf');
+        });
+       
         }
- </script>
+    </script>
 }

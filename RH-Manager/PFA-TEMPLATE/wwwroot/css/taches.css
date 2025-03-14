@@ -43,7 +43,41 @@ body {
     display: flex;
     gap: 12px;
 }
+}
 
+.info-item {
+    transition: all 0.3s ease;
+}
+
+    .info-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+.avatar {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.icon-circle {
+    transition: all 0.3s ease;
+}
+
+.info-item:hover .icon-circle {
+    transform: rotate(360deg);
+}
 .btn {
     padding: 10px 16px;
     border-radius: var(--border-radius);

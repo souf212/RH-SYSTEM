@@ -129,7 +129,7 @@ namespace PFA_TEMPLATE.Services
                     while (heuresRestantes > 0 && heureActuelle < heuresFin)
                     {
                         // Durée de ce créneau
-                        int duree = Math.Min(_random.Next(2, 4), heuresRestantes);
+                        int duree = Math.Max(2, Math.Min(_random.Next(2, 4), heuresRestantes));
 
                         // Ajouter le créneau
                         emploi.PlagesHoraires.Add(new PlageHoraire
@@ -149,19 +149,9 @@ namespace PFA_TEMPLATE.Services
                             int dureePause = Math.Min(contraintes.PauseMinimum, 1);
                             string commentairePause;
 
-                            if (heureActuelle < 12)
-                            {
-                                commentairePause = "Pause cafe";
-                                pauseMatinPrise = true;
-                            }
-                            else if (heureActuelle >= 12 && heureActuelle < 14)
-                            {
-                                commentairePause = "Pause dejeuner";
-                            }
-                            else
-                            {
-                                commentairePause = "Pause recuperation";
-                            }
+
+                            commentairePause = "";
+
 
                             emploi.PlagesHoraires.Add(new PlageHoraire
                             {
@@ -207,6 +197,14 @@ namespace PFA_TEMPLATE.Services
                     g => g.Key,
                     g => g.Sum(p => (p.DateFin - p.DateDebut).TotalHours)
                 );
+            foreach (var plage in plagesTravail)
+            {
+                double duree = (plage.DateFin - plage.DateDebut).TotalHours;
+                if (duree < 2.0)
+                {
+                    score -= 25.0; // Strong penalty for work periods less than 2 hours
+                }
+            }
 
             // Pénaliser les journées trop courtes ou trop longues
             foreach (var jour in dureeParJour)
@@ -315,8 +313,10 @@ namespace PFA_TEMPLATE.Services
                 case 0:
                     // Modifier l'heure de début d'une plage
                     var plageAModifier = emploi.PlagesHoraires.ElementAt(_random.Next(emploi.PlagesHoraires.Count));
+                    double minDuree = plageAModifier.TypeActivite == "Travail" ? 2.0 : 1.0;
+
                     var duree = (plageAModifier.DateFin - plageAModifier.DateDebut).TotalHours;
-                    var nouvelleHeure = _random.Next(contraintes.HeureDebutJournee, contraintes.HeureFinJournee - (int)duree);
+                    var nouvelleHeure = _random.Next(contraintes.HeureDebutJournee, contraintes.HeureFinJournee - (int)Math.Ceiling(duree));
 
                     plageAModifier.DateDebut = new DateTime(
                         plageAModifier.DateDebut.Year,
@@ -334,14 +334,17 @@ namespace PFA_TEMPLATE.Services
                     if (dateDisponible.HasValue)
                     {
                         var heureDebut = _random.Next(contraintes.HeureDebutJournee, contraintes.HeureFinJournee - 1);
-                        var dureeCreneau = _random.Next(1, 3);
+                        bool isWorkPeriod = _random.NextDouble() < 0.8;
+                        var dureeCreneau = isWorkPeriod ? Math.Max(2, _random.Next(2, 4)) : _random.Next(1, 2);
 
                         emploi.PlagesHoraires.Add(new PlageHoraire
                         {
                             DateDebut = new DateTime(dateDisponible.Value.Year, dateDisponible.Value.Month, dateDisponible.Value.Day, heureDebut, 0, 0),
                             DateFin = new DateTime(dateDisponible.Value.Year, dateDisponible.Value.Month, dateDisponible.Value.Day, heureDebut + dureeCreneau, 0, 0),
-                            TypeActivite = _random.NextDouble() < 0.8 ? "Travail" : "Pause",
-                            Commentaire = "Mutation"
+
+                            TypeActivite = isWorkPeriod ? "Travail" : "Pause",
+                            Commentaire = isWorkPeriod ? ObtenirCommentaireSelonHeure(heureDebut) : ""
+
                         });
                     }
                     break;
