@@ -8,6 +8,7 @@ namespace PFA_TEMPLATE.ViewModels
         public int TotalEmployees { get; set; }
         public int ActiveTasks { get; set; }
         public int TotalLeaveRequests { get; set; }
+        public List<TachesVM> CompletedTasks { get; set; }
 
     }
 }

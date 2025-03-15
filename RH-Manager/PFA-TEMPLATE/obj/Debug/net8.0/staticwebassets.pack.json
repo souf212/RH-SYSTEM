@@ -417,6 +417,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\taches.js",
+      "PackagePath": "staticwebassets\\js\\taches.js"
+    },
+    {
       "Id": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

@@ -36,15 +36,29 @@ namespace PFA_TEMPLATE.Controllers
                 .Where(t => t.Statut == "Active") // Filter active tasks
                 .CountAsync();
 
+
+            var tasks = await _Context.Taches
+        .Include(t => t.Employe) // Include Employes
+            .ThenInclude(e => e.Utilisateur) // Include Utilisateurs
+        .Where(t => t.Statut == "Completed") // Filter completed tasks
+        .Select(t => new TachesVM
+        {
+            Id = t.IdTaches,
+            Title = t.Titre,
+            Description = t.Description,
+            AssignedTo = t.Employe.Utilisateur.Nom + " " + t.Employe.Utilisateur.Prenom, // Combine Nom and Prenom
+            Status = t.Statut
+        })
+        .ToListAsync();
             // Create the ViewModel
             var viewModel = new IndexViewModel
             {
                 LeaveRequests = demandes,
                 TotalEmployees = totalEmployees,
                 ActiveTasks = activeTasks,
-                TotalLeaveRequests = demandes.Count // Add leave requests count
+                TotalLeaveRequests = demandes.Count,
+                CompletedTasks = tasks  // Add leave requests count
             };
-
             // Pass the ViewModel to the view
             return View(viewModel);
         }

@@ -55,63 +55,40 @@
         <div class="col-lg-8 mb-4">
             <div class="dashboard-card">
                 <div class="d-flex justify-content-between mb-4">
-                    <h5 class="mb-0">Recent Tasks</h5>
+                    <h5 class="mb-0">Completed Tasks</h5>
                     <a href="/Taches/Basic1" class="btn btn-sm btn-primary">View All</a>
                 </div>
                 <div class="table-responsive">
-                    <table class="table align-middle data-table">
-                        <thead>
-                            <tr>
-                                <th>Task Name</th>
-                                <th>Assigned To</th>
-                                <th>Due Date</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Annual employee reviews</td>
-                                <td>Sarah Johnson</td>
-                                <td>Mar 10, 2025</td>
-                                <td><span class="status-badge bg-warning bg-opacity-25 text-warning">Pending</span></td>
-                                <td>
-                                    <a href="#" class="btn-action btn-primary-soft"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn-action btn-danger-soft"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Onboarding materials update</td>
-                                <td>Mike Peters</td>
-                                <td>Mar 15, 2025</td>
-                                <td><span class="status-badge bg-success bg-opacity-25 text-success">Completed</span></td>
-                                <td>
-                                    <a href="#" class="btn-action btn-primary-soft"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn-action btn-danger-soft"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Quarterly budget planning</td>
-                                <td>Lisa Anderson</td>
-                                <td>Mar 5, 2025</td>
-                                <td><span class="status-badge bg-danger bg-opacity-25 text-danger">Overdue</span></td>
-                                <td>
-                                    <a href="#" class="btn-action btn-primary-soft"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn-action btn-danger-soft"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Team building event</td>
-                                <td>John Smith</td>
-                                <td>Mar 25, 2025</td>
-                                <td><span class="status-badge bg-info bg-opacity-25 text-info">Pending</span></td>
-                                <td>
-                                    <a href="#" class="btn-action btn-primary-soft"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn-action btn-danger-soft"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    @if (Model.CompletedTasks == null || Model.CompletedTasks.Count == 0)
+                    {
+                        <p>No completed tasks found.</p>
+                    }
+                    else
+                    {
+                        <table class="table align-middle data-table">
+                            <thead>
+                                <tr>
+                                    <th>Task Name</th>
+                                    <th>Assigned To</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CompletedTasks)
+                                {
+                                    <tr>
+                                        <td>@item.Title</td>
+                                        <td>@item.AssignedTo</td> <!-- Display the full name of the assigned employee -->
+                                        <td>@item.Description</td>
+                                        <td><span class="status-badge bg-success bg-opacity-25 text-success">@item.Status</span></td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
                 </div>
             </div>
         </div>
@@ -143,20 +120,7 @@
                                     @demande.Motif
                                 </div>
                             </div>
-                            <div>
-                                <form method="post" asp-action="Decision" asp-route-id="@demande.IdConges" class="d-inline">
-                                    <input type="hidden" name="IdConges" value="Accepté" />
-                                    <button type="submit" class="btn btn-sm btn-success me-1" title="Approve">
-                                        <i class="fas fa-check"></i>
-                                    </button>
-                                </form>
-                                <form method="post" asp-action="Decision" asp-route-id="@demande.IdConges" class="d-inline">
-                                    <input type="hidden" name="IdConges" value="Refusé" />
-                                    <button type="submit" class="btn btn-sm btn-danger" title="Refuser">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </form>
-                            </div>
+                            
                         </div>
                     }
                 </div>

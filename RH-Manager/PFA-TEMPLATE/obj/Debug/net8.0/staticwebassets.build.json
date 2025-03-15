@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7ljggJmOVmc6TkOBrswHJACiNyt8aQEyGtPnWdFpVWY=",
+  "Hash": "DNJVOzWV8evOwAzI0ZAJZr42t9rN66dB5dibY/owxjs=",
   "Source": "PFA-TEMPLATE",
   "BasePath": "_content/PFA-TEMPLATE",
   "Mode": "Default",
@@ -2220,6 +2220,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\taches.js",
+      "SourceId": "PFA-TEMPLATE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\",
+      "BasePath": "_content/PFA-TEMPLATE",
+      "RelativePath": "js/taches#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rxgow3rt5u",
+      "Integrity": "QZgpXNJoVweYGjqc9x/HEWbTJ5Rcurhh79EA+Maxlss=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\taches.js"
     },
     {
       "Identity": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -8824,7 +8845,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 00:21:24 GMT"
+          "Value": "Sat, 15 Mar 2025 20:25:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8861,7 +8882,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 00:21:24 GMT"
+          "Value": "Sat, 15 Mar 2025 20:25:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16588,6 +16609,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-LA2rBaLWnSrCYfhEHXOXMD4CzZSjRpzUH/kmd3f82IA="
+        }
+      ]
+    },
+    {
+      "Route": "js/taches.js",
+      "AssetFile": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\taches.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2962"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QZgpXNJoVweYGjqc9x/HEWbTJ5Rcurhh79EA+Maxlss=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:28:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QZgpXNJoVweYGjqc9x/HEWbTJ5Rcurhh79EA+Maxlss="
+        }
+      ]
+    },
+    {
+      "Route": "js/taches.rxgow3rt5u.js",
+      "AssetFile": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\taches.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2962"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QZgpXNJoVweYGjqc9x/HEWbTJ5Rcurhh79EA+Maxlss=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:28:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rxgow3rt5u"
+        },
+        {
+          "Name": "label",
+          "Value": "js/taches.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QZgpXNJoVweYGjqc9x/HEWbTJ5Rcurhh79EA+Maxlss="
         }
       ]
     },
