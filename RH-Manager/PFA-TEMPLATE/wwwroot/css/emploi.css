@@ -182,11 +182,11 @@
 }
 
     .color-box.travail {
-        background-color: #3949ab;
+        background-color: #483D8B;
     }
 
     .color-box.pause {
-        background-color: #f57c00;
+        background-color: #D3D3D3;
     }
 
 /* Calendar styling */
@@ -203,12 +203,12 @@
 }
 
 .fc-event-travail {
-    background-color: #3949ab !important;
+    background-color: #483D8B !important;
     border-color: #3949ab !important;
 }
 
 .fc-event-pause {
-    background-color: #f57c00 !important;
+    background-color: #D3D3D3 !important;
     border-color: #f57c00 !important;
 }
 

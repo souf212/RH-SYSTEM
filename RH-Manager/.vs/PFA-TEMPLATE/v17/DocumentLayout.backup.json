@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\utilisateur\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\utilisateur\\edit1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\edit1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\generationemploiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\wwwroot\\css\\emploi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-nv-git\\rh-manager\\pfa-template\\views\\demandeconge\\adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\demandeconge\\adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -34,8 +50,131 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Edit.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Edit.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T20:14:19.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit1.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Edit1.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Edit1.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Edit1.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Edit1.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T20:14:15.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Utilisateur\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswEQAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T20:11:55.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_UserLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_UserLayout.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Shared\\_UserLayout.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Shared\\_UserLayout.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Shared\\_UserLayout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T20:06:27.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MonEmploi.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAHEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T22:41:48.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GenerationEmploiService.cs",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAA8wEkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T22:24:06.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAJkAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T22:07:09.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADIAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T22:06:57.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "emploi.css",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "RelativeToolTip": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAAANIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-14T22:04:04.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAD4v3gAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T22:03:43.838Z"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -55,79 +194,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MonEmploi.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-14T22:41:48.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GenerationEmploiService.cs",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Services\\GenerationEmploiService.cs",
-              "ViewState": "AgIAAC4BAAAAAAAAAAA8wEkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T22:24:06.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\AdminDashboard\\Index.cshtml",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAAAJkAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-14T22:07:09.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\DemandeConge\\AdminIndex.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADIAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-14T22:06:57.899Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "emploi.css",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
-              "RelativeToolTip": "PFA-TEMPLATE\\wwwroot\\css\\emploi.css",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAAAPIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-14T22:04:04.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\Details.cshtml",
-              "ViewState": "AgIAAFMAAAAAAAAAAAD4v3gAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-14T22:03:43.838Z"
             }
           ]
         },

@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nowirikz4o</Fingerprint>
-      <Integrity>CQdrO3ycyiepdloOenkTievjRXYwP/yG2KI1u10djdc=</Integrity>
+      <Fingerprint>qck2c6dy4d</Fingerprint>
+      <Integrity>dng6MYiH/zHVSq1Tz16YcadgG/10cO5ep3tR+OrSmTg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\emploi.css'))</OriginalItemSpec>
