@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj": {}
+    "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj": {
+    "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
+        "projectUniqueName": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
         "projectName": "PFA-TEMPLATE",
-        "projectPath": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
+        "projectPath": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\PFA-TEMPLATE.csproj",
         "packagesPath": "C:\\Users\\top\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\",
+        "outputPath": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

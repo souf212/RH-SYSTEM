@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\",
+  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\git\\rh-nv-git\\rh-manager\\pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\planning\\monemploi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\top\\desktop\\git\\rh-nv-git\\rh-manager\\pfa-template\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MonEmploi.cshtml",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ToolTip": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Planning\\MonEmploi.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T23:19:03.281Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -38,11 +55,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\appsettings.json",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\appsettings.json",
-              "ToolTip": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\appsettings.json",
+              "ToolTip": "C:\\Users\\top\\Desktop\\GIT\\RH-nv-git\\RH-Manager\\PFA-TEMPLATE\\appsettings.json",
               "RelativeToolTip": "PFA-TEMPLATE\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",

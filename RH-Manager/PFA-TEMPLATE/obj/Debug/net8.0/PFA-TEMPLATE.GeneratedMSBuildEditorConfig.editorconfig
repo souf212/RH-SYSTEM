@@ -9,165 +9,165 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PFA_TEMPLATE
 build_property.RootNamespace = PFA_TEMPLATE
-build_property.ProjectDir = C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\
+build_property.ProjectDir = C:\Users\top\Desktop\GIT\RH-nv-git\RH-Manager\PFA-TEMPLATE\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE
+build_property.MSBuildProjectDirectory = C:\Users\top\Desktop\GIT\RH-nv-git\RH-Manager\PFA-TEMPLATE
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Account/AccessDenied.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Account/Login.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/ManageUsers.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/AdminDashboard/ManageUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcTWFuYWdlVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/AdminIndex.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/AdminIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEFkbWluSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/CreateConge.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/CreateConge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXENyZWF0ZUNvbmdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Home/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Home/Privacy.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Planning/Configuration.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Planning/Configuration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcQ29uZmlndXJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Planning/Details.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Planning/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Planning/Edit.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Planning/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Planning/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Planning/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Planning/MonEmploi.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Planning/MonEmploi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcTW9uRW1wbG9pLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Planning/SelectEmployees.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Planning/SelectEmployees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm5pbmdcU2VsZWN0RW1wbG95ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/PointageMvc/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/PointageMvc/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRhZ2VNdmNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Shared/Error.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Shared/_UserLayout.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Shared/_UserLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic1.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic2.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic3.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/Basic3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEJhc2ljMy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/Create.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/Delete.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/Edit.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Taches/EditStatus.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Taches/EditStatus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFjaGVzXEVkaXRTdGF0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Tasks.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/UserDashboard/Tasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Create.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Delete.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Details.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Edit.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Edit1.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Edit1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcRWRpdDEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Index.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Utilisateur/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/_ViewImports.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/_ViewStart.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/top/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Shared/_Layout.cshtml]
+[C:/Users/top/Desktop/GIT/RH-nv-git/RH-Manager/PFA-TEMPLATE/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hgw5rvvsh5
