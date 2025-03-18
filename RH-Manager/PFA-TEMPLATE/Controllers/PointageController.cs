@@ -20,28 +20,69 @@ namespace PFA_TEMPLATE.Controllers
             _context = context;
         }
 
-        /// ✅ **[POST] Register Employee Attendance (Check-in)**
+        /// ✅ **[POST] Enregistrer le Pointage (Check-in)**
         [HttpPost]
         public async Task<IActionResult> RegisterPointage([FromBody] Pointage pointage)
         {
             if (pointage == null || pointage.IdEmploye <= 0)
             {
-                return BadRequest(new { message = "Invalid employee ID" });
+                return BadRequest(new { message = "Invalid employee ID or missing data." });
             }
 
-            pointage.HeureEntree = DateTime.Now;  // Set current time as entry time
-            pointage.HeureSortie = null;          // Initialize sortie as null
+            // ✅ Vérifier si l'employé existe
+            var employeExists = await _context.Employes.AnyAsync(e => e.IdEmploye == pointage.IdEmploye);
+            if (!employeExists)
+            {
+                return NotFound(new { message = $"❌ Employee with ID {pointage.IdEmploye} not found." });
+            }
 
-            _context.Pointages.Add(pointage);
+            // ✅ Vérifier s'il y a un pointage en attente de sortie
+            var lastPointage = await _context.Pointages
+                .Where(p => p.IdEmploye == pointage.IdEmploye && p.HeureSortie == null)
+                .OrderByDescending(p => p.HeureEntree)
+                .FirstOrDefaultAsync();
+
+            if (lastPointage != null)
+            {
+                // ✅ **MODIFICATION : Temps réduit à 1 minute au lieu de 30 minutes**
+                if ((DateTime.Now - lastPointage.HeureEntree).TotalMinutes > 1)
+                {
+                    lastPointage.HeureSortie = DateTime.Now;
+                    await _context.SaveChangesAsync();
+                    return Ok(new { message = "✅ Sortie enregistrée avec succès.", lastPointage.IdPointage });
+                }
+                else
+                {
+                    return BadRequest(new { message = "⚠ Pointage déjà en cours. Sortie non enregistrée." });
+                }
+            }
+
+            // ✅ Sinon, créer un nouveau pointage (entrée)
+            var newPointage = new Pointage
+            {
+                IdEmploye = pointage.IdEmploye,
+                HeureEntree = DateTime.Now,
+                HeureSortie = null
+            };
+
+            _context.Pointages.Add(newPointage);
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Pointage enregistré avec succès." });
+            return Ok(new { message = "✅ Pointage enregistré avec succès.", newPointage.IdPointage });
         }
 
-        /// ✅ **[PUT] Update Employee Checkout Time (Check-out)**
+        /// ✅ **[PUT] Enregistrer l'Heure de Sortie (Check-out)**
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePointage(int id)
         {
+            // ✅ Vérifier si l'employé existe
+            var employeExists = await _context.Employes.AnyAsync(e => e.IdEmploye == id);
+            if (!employeExists)
+            {
+                return NotFound(new { message = $"❌ Employee with ID {id} does not exist." });
+            }
+
+            // ✅ Trouver le dernier pointage sans HeureSortie
             var pointage = await _context.Pointages
                 .Where(p => p.IdEmploye == id && p.HeureSortie == null)
                 .OrderByDescending(p => p.HeureEntree)
@@ -49,93 +90,58 @@ namespace PFA_TEMPLATE.Controllers
 
             if (pointage == null)
             {
-                return NotFound(new { message = "No active entry found for checkout." });
+                return NotFound(new { message = "⚠ No active entry found for checkout." });
             }
 
             pointage.HeureSortie = DateTime.Now;
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Sortie enregistrée avec succès." });
+            return Ok(new { message = "✅ Checkout recorded successfully." });
         }
 
-        /// ✅ **[GET] Retrieve Today's Attendance for All Employees**
+        /// ✅ **[GET] Récupérer les Pointages d'Aujourd'hui**
         [HttpGet("today")]
-        public IActionResult GetTodayPointage()
+        public async Task<IActionResult> GetTodayPointage()
         {
             var today = DateTime.Today;
-            var pointages = _context.Pointages
+            var pointages = await _context.Pointages
                 .Where(p => p.HeureEntree.Date == today)
-                .Include(p => p.Employe)
                 .Select(p => new
                 {
                     p.IdEmploye,
-                    Employe = p.Employe != null ? p.Employe.Nom : "Nom non disponible", // 🔥 Fix Null Reference
                     p.HeureEntree,
                     HeureSortie = p.HeureSortie.HasValue ? p.HeureSortie.Value.ToString("yyyy-MM-dd HH:mm:ss") : "En cours"
                 })
-                .ToList();
+                .ToListAsync();
+
+            if (!pointages.Any())
+            {
+                return NotFound(new { message = "⚠ No attendance records found for today." });
+            }
 
             return Ok(pointages);
         }
 
-
-        /// ✅ **[GET] Retrieve Attendance History for a Specific Employee**
-        /// ✅ **[GET] Retrieve Attendance History for a Specific Employee**
-        [HttpGet("history/{id}")]
-        public IActionResult GetEmployeePointage(int id)
+        /// ✅ **[GET] Récupérer Tous les Pointages**
+        [HttpGet]
+        public async Task<IActionResult> GetAllPointages()
         {
-            var historique = _context.Pointages
-                .Where(p => p.IdEmploye == id)
-                .OrderByDescending(p => p.HeureEntree)
+            var pointages = await _context.Pointages
                 .Select(p => new
                 {
+                    p.IdPointage,
+                    p.IdEmploye,
                     p.HeureEntree,
-                    HeureSortie = p.HeureSortie.HasValue ? p.HeureSortie.Value.ToString("yyyy-MM-dd HH:mm:ss") : "En cours",
-                    Statut = p.HeureSortie == null ? "Présent" : "Sorti"
+                    HeureSortie = p.HeureSortie.HasValue ? p.HeureSortie.Value.ToString("yyyy-MM-dd HH:mm:ss") : "En cours"
                 })
-                .ToList();
+                .ToListAsync();
 
-            if (!historique.Any())
+            if (!pointages.Any())
             {
-                return NotFound(new { message = "No pointage history found for this employee." });
+                return NotFound(new { message = "⚠ No pointage records found." });
             }
 
-            return Ok(historique);
-        }
-
-
-        /// ✅ **[GET] Map `IdUtilisateur` to `IdEmploye`**
-        [HttpGet("map_user_to_employee/{idUtilisateur}")]
-        public IActionResult MapUserToEmployee(int idUtilisateur)
-        {
-            var employe = _context.Employes
-                .Where(e => e.IdUtilisateur == idUtilisateur)
-                .Select(e => new { e.IdEmploye })
-                .FirstOrDefault();
-
-            if (employe == null)
-            {
-                return NotFound(new { message = $"❌ No employee found with IdUtilisateur = {idUtilisateur}" });
-            }
-
-            return Ok(employe);
-        }
-
-        /// ✅ **[GET] Map `IdEmploye` to `IdUtilisateur`**
-        [HttpGet("map_employee_to_user/{idEmploye}")]
-        public IActionResult MapEmployeeToUser(int idEmploye)
-        {
-            var utilisateur = _context.Employes
-                .Where(e => e.IdEmploye == idEmploye)
-                .Select(e => new { e.IdUtilisateur })
-                .FirstOrDefault();
-
-            if (utilisateur == null)
-            {
-                return NotFound(new { message = $"❌ No user found for IdEmploye = {idEmploye}" });
-            }
-
-            return Ok(utilisateur);
+            return Ok(pointages);
         }
     }
 }

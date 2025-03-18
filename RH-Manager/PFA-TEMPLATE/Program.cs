@@ -75,7 +75,6 @@ public class Program
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseSession();
-
         // Enable MVC routes and API controllers
         app.UseEndpoints(endpoints =>
         {
