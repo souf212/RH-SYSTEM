@@ -48,25 +48,30 @@ frame_skip = 3
 frame_count = 0
 
 def get_employee_id_from_name(name):
-    """Extract the correct `IdEmploye` from the detected name (moe_8 → 8)."""
+    """Extracts `IdEmploye` from the detected name (e.g., moe_8 → 8)."""
     try:
         parts = name.split("_")
         if len(parts) == 2 and parts[1].isdigit():
-            return int(parts[1])  # Returns `IdEmploye`
+            return int(parts[1])  # Extracts `IdEmploye`
     except ValueError:
         return None
     return None
 
 def send_pointage(employee_id):
-    """Send check-in time if not already recorded."""
+    """Send check-in or update check-out based on last recorded entry."""
     if employee_id in recognized_today and (time.time() - recognized_today[employee_id]) < 30:
         print(f"⚠️ Employee {employee_id} was detected recently. Skipping duplicate entry.")
         return
 
     timestamp = datetime.now().replace(second=0, microsecond=0).isoformat()
-    data = {"HeureEntree": timestamp, "IdEmploye": employee_id}
 
-    print(f"📡 Sending API Request: {data}")  
+    # ✅ Envoyer seulement l'ID employé et l'heure d'entrée
+    data = {
+        "IdEmploye": employee_id,
+        "HeureEntree": timestamp
+    }
+
+    print(f"📡 Sending API Request: {data}")
 
     try:
         response = requests.post(API_URL, json=data)
@@ -80,6 +85,7 @@ def send_pointage(employee_id):
 
     except requests.exceptions.RequestException as e:
         print(f"❌ API Error: {e}")
+
 
 while True:
     ret, frame = video_capture.read()
@@ -110,20 +116,16 @@ while True:
                 name = known_names[best_match_index]
                 print(f"🔍 Detected face name: {name}")
 
-                # ✅ Extract `IdEmploye` directly from the name (moe_8 → 8)
+                # ✅ Extract `IdEmploye` directly from the name
                 employee_id = get_employee_id_from_name(name)
 
                 if not employee_id:
                     print(f"⚠️ Warning: Could not extract valid employee ID from '{name}'")
                     continue  # Skip if no valid ID
 
-                send_pointage(employee_id)  # ✅ Now using IdEmploye instead of IdUtilisateur
+                send_pointage(employee_id)  # ✅ Now using `IdEmploye`
             else:
                 print(f"⚠️ Warning: No face match found for detected person.")
-
-        top, right, bottom, left = [coord * 2 for coord in face_location]
-        cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
-        cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
     cv2.imshow("Facial Recognition", frame)
 

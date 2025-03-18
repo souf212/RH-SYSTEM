@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Models;
 using PFA_TEMPLATE.viewModels;
+using PFA_TEMPLATE.ViewModels;
 
 namespace PFA_TEMPLATE.Data
 {
@@ -11,7 +12,7 @@ namespace PFA_TEMPLATE.Data
         {
         }
 
-        // DbSets for each table
+        // ✅ DbSets for each table
         public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Employes> Employes { get; set; }
         public DbSet<Administrateur> Administrateurs { get; set; }
@@ -29,11 +30,11 @@ namespace PFA_TEMPLATE.Data
         public DbSet<ContraintesPlanning> ContraintesPlanning { get; set; }
         public DbSet<EmploiDuTemps> EmploiDuTemps { get; set; }
         public DbSet<PlageHoraire> PlageHoraire { get; set; }
-        public DbSet<CongeBalance> CongeBalances { get; set; }
+        public DbSet<CongeBalance> CongeBalances { get; set; } // ✅ Added entity
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder); // ✅ Ensure base method is called
 
             // ✅ Utilisateur
             modelBuilder.Entity<Utilisateur>()
@@ -76,10 +77,11 @@ namespace PFA_TEMPLATE.Data
 
             // ✅ EmploiDuTemps (One-to-Many Planning)
             modelBuilder.Entity<EmploiDuTemps>()
-                .HasOne(e => e.Employee)
+                .HasOne(e => e.Employee) // ✅ Use Employee (not Employe)
                 .WithMany()
                 .HasForeignKey(e => e.EmployeeId)
                 .OnDelete(DeleteBehavior.Cascade);
+
 
             modelBuilder.Entity<EmploiDuTemps>()
                 .HasOne(e => e.ContraintesPlanning)
@@ -94,6 +96,7 @@ namespace PFA_TEMPLATE.Data
                 .HasForeignKey(p => p.EmploiDuTempsId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            // ✅ ContraintesPlanning ID Auto-Increment
             modelBuilder.Entity<ContraintesPlanning>()
                 .Property(p => p.Id)
                 .ValueGeneratedOnAdd();
@@ -183,15 +186,6 @@ namespace PFA_TEMPLATE.Data
                 .HasOne(f => f.Contrat)
                 .WithMany(c => c.FichesDePaie)
                 .HasForeignKey(f => f.IdContrat);
-
-            // ✅ Planning (One-to-Many with Employes)
-            modelBuilder.Entity<Planning>()
-                .HasKey(p => p.IdPlanning);
-
-            modelBuilder.Entity<Planning>()
-                .HasOne(p => p.Employe)
-                .WithMany()
-                .HasForeignKey(p => p.IdEmploye);
 
             // ✅ Pointage (One-to-Many with Employes)
             modelBuilder.Entity<Pointage>()

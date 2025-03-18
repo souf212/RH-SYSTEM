@@ -1,6 +1,7 @@
-﻿using PFA_TEMPLATE.Models;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using PFA_TEMPLATE.Models;
 
 namespace PFA_TEMPLATE.viewModels
 {
@@ -15,9 +16,10 @@ namespace PFA_TEMPLATE.viewModels
         public DateTime? HeureSortie { get; set; }
 
         [ForeignKey("Employe")]
+        [Required]
         public int IdEmploye { get; set; }
 
-        public virtual Employes Employe { get; set; }  // ✅ Ensure it's correctly mapped
+        // 🔥 **Change: Make `Employe` Optional**
+        public virtual Employes? Employe { get; set; }
     }
-
 }
