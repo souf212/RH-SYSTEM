@@ -76,16 +76,7 @@ public class Program
         app.UseAuthorization();
         app.UseSession();
         // Enable MVC routes and API controllers
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers(); // Activate API routes
-            endpoints.MapDefaultControllerRoute(); // Activate MVC routes
 
-            foreach (var endpoint in endpoints.DataSources.SelectMany(ds => ds.Endpoints))
-            {
-                Console.WriteLine($" Route Active: {endpoint.DisplayName}");
-            }
-        });
 
         // Define the default routing pattern
 
