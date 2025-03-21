@@ -846,3 +846,11 @@ C:\Users\top\Desktop\GIT\RH-nv-git\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\refi
 C:\Users\top\Desktop\GIT\RH-nv-git\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.pdb
 C:\Users\top\Desktop\GIT\RH-nv-git\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.genruntimeconfig.cache
 C:\Users\top\Desktop\GIT\RH-nv-git\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\ref\PFA-TEMPLATE.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

@@ -6,11 +6,12 @@ namespace PFA_TEMPLATE.Services
     {
         List<TachesVM> GetAllTaches();
         List<TachesVM> GetTachesByEmployee(string loggedInUser);
-        void CreateTache(TachesVM tachesVM);
+        public Task CreateTache(TachesVM tachesVM);
         TachesVM GetTacheById(int id);
-        void UpdateTache(TachesVM tachesVM);
-        void UpdateTacheStatus(TachesVM model);
-        void DeleteTache(int id);
+        public Task UpdateTache(TachesVM tachesVM);
+        public Task UpdateTacheStatus(TachesVM model);
+        public Task DeleteTache(int id);
+
         List<EmployeDropdownVM> GetEmployesForDropdown();
     }
 }

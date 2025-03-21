@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PFA_TEMPLATE.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateEmployesAndAdministrateurEntities : Migration
+    public partial class Add : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -244,14 +244,15 @@ namespace PFA_TEMPLATE.Migrations
                     DateFin = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Statut = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    IdEmploye = table.Column<int>(type: "int", nullable: false)
+                    IdEmploye = table.Column<int>(type: "int", nullable: false),
+                    EmployeIdEmploye = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Plannings", x => x.IdPlanning);
                     table.ForeignKey(
-                        name: "FK_Plannings_Employes_IdEmploye",
-                        column: x => x.IdEmploye,
+                        name: "FK_Plannings_Employes_EmployeIdEmploye",
+                        column: x => x.EmployeIdEmploye,
                         principalTable: "Employes",
                         principalColumn: "IdEmploye",
                         onDelete: ReferentialAction.Cascade);
@@ -452,6 +453,36 @@ namespace PFA_TEMPLATE.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Notifications",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Message = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    IsRead = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    IdEmploye = table.Column<int>(type: "int", nullable: false),
+                    IdTache = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Notifications", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Notifications_Employes_IdEmploye",
+                        column: x => x.IdEmploye,
+                        principalTable: "Employes",
+                        principalColumn: "IdEmploye",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Notifications_Taches_IdTache",
+                        column: x => x.IdTache,
+                        principalTable: "Taches",
+                        principalColumn: "IdTaches");
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Absences_IdEmploye",
                 table: "Absences",
@@ -511,14 +542,24 @@ namespace PFA_TEMPLATE.Migrations
                 column: "IdConges");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Notifications_IdEmploye",
+                table: "Notifications",
+                column: "IdEmploye");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Notifications_IdTache",
+                table: "Notifications",
+                column: "IdTache");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PlageHoraire_EmploiDuTempsId",
                 table: "PlageHoraire",
                 column: "EmploiDuTempsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Plannings_IdEmploye",
+                name: "IX_Plannings_EmployeIdEmploye",
                 table: "Plannings",
-                column: "IdEmploye");
+                column: "EmployeIdEmploye");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pointages_EmployesIdEmploye",
@@ -577,6 +618,9 @@ namespace PFA_TEMPLATE.Migrations
                 name: "HistoriqueConges");
 
             migrationBuilder.DropTable(
+                name: "Notifications");
+
+            migrationBuilder.DropTable(
                 name: "PlageHoraire");
 
             migrationBuilder.DropTable(
@@ -592,9 +636,6 @@ namespace PFA_TEMPLATE.Migrations
                 name: "Salaires");
 
             migrationBuilder.DropTable(
-                name: "Taches");
-
-            migrationBuilder.DropTable(
                 name: "Contrats");
 
             migrationBuilder.DropTable(
@@ -602,6 +643,9 @@ namespace PFA_TEMPLATE.Migrations
 
             migrationBuilder.DropTable(
                 name: "Conges");
+
+            migrationBuilder.DropTable(
+                name: "Taches");
 
             migrationBuilder.DropTable(
                 name: "EmploiDuTemps");

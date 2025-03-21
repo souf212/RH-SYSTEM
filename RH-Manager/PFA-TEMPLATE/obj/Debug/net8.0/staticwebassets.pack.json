@@ -361,6 +361,10 @@
       "PackagePath": "staticwebassets\\img\\vr-bg.jpg"
     },
     {
+      "Id": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\Notification.js",
+      "PackagePath": "staticwebassets\\js\\Notification.js"
+    },
+    {
       "Id": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\core\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\core\\bootstrap.bundle.min.js"
     },

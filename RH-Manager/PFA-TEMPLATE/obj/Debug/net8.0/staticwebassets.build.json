@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G++yn1lX7PWHZlg4ER9d0F6QcN9XmcLFVdaVyfpO2EQ=",
+  "Hash": "wHYrUhizyNfhv/YpYaXLX0wSQavBbwd8r9dn2zGdo+4=",
   "Source": "PFA-TEMPLATE",
   "BasePath": "_content/PFA-TEMPLATE",
   "Mode": "Default",
@@ -2052,6 +2052,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\material-dashboard.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\Notification.js",
+      "SourceId": "PFA-TEMPLATE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\",
+      "BasePath": "_content/PFA-TEMPLATE",
+      "RelativePath": "js/Notification#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cemsk07hup",
+      "Integrity": "nFuNdo08cI+n5yZAgoK/YKrt2X0W0ufgdlUB3CnYxCE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Notification.js"
     },
     {
       "Identity": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\plugins\\bootstrap-notify.js",
@@ -15932,6 +15953,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-kTyYHn4QPCvlEldUw/8t2Vvf4yS/EnbhRUGJBS59+L4="
+        }
+      ]
+    },
+    {
+      "Route": "js/Notification.cemsk07hup.js",
+      "AssetFile": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\Notification.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7637"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nFuNdo08cI+n5yZAgoK/YKrt2X0W0ufgdlUB3CnYxCE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 01:23:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cemsk07hup"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Notification.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nFuNdo08cI+n5yZAgoK/YKrt2X0W0ufgdlUB3CnYxCE="
+        }
+      ]
+    },
+    {
+      "Route": "js/Notification.js",
+      "AssetFile": "C:\\Users\\top\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\Notification.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7637"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nFuNdo08cI+n5yZAgoK/YKrt2X0W0ufgdlUB3CnYxCE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 01:23:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nFuNdo08cI+n5yZAgoK/YKrt2X0W0ufgdlUB3CnYxCE="
         }
       ]
     },

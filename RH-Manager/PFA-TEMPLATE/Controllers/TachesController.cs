@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PFA_TEMPLATE.Services;
 using PFA_TEMPLATE.ViewModels;
+
 namespace PFA_TEMPLATE.Controllers
 {
     public class TachesController : Controller
@@ -25,16 +26,13 @@ namespace PFA_TEMPLATE.Controllers
             {
                 return Unauthorized();
             }
-
             var taches = _tacheService.GetTachesByEmployee(loggedInUser);
             if (!taches.Any())
             {
                 ViewBag.Message = "No tasks assigned to you.";
             }
-
             return View(taches);
         }
-
 
         public IActionResult Create()
         {
@@ -43,13 +41,14 @@ namespace PFA_TEMPLATE.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(TachesVM tachesVM)
+        public async Task<IActionResult> Create(TachesVM tachesVM)
         {
             if (ModelState.IsValid)
             {
-                _tacheService.CreateTache(tachesVM);
+                await _tacheService.CreateTache(tachesVM);
                 return RedirectToAction("Basic1");
             }
+            ViewData["Employes"] = _tacheService.GetEmployesForDropdown();
             return View(tachesVM);
         }
 
@@ -57,19 +56,19 @@ namespace PFA_TEMPLATE.Controllers
         {
             var tache = _tacheService.GetTacheById(id);
             if (tache == null) return NotFound();
-
             ViewData["Employes"] = _tacheService.GetEmployesForDropdown();
             return View(tache);
         }
 
         [HttpPost]
-        public IActionResult Edit(TachesVM tachesVM)
+        public async Task<IActionResult> Edit(TachesVM tachesVM)
         {
             if (ModelState.IsValid)
             {
-                _tacheService.UpdateTache(tachesVM);
+                await _tacheService.UpdateTache(tachesVM);
                 return RedirectToAction("Basic1");
             }
+            ViewData["Employes"] = _tacheService.GetEmployesForDropdown();
             return View(tachesVM);
         }
 
@@ -77,16 +76,15 @@ namespace PFA_TEMPLATE.Controllers
         {
             var tache = _tacheService.GetTacheById(id);
             if (tache == null) return NotFound();
-
             return View(tache);
         }
 
         [HttpPost]
-        public IActionResult EditStatus(TachesVM model)
+        public async Task<IActionResult> EditStatus(TachesVM model)
         {
             if (ModelState.IsValid)
             {
-                _tacheService.UpdateTacheStatus(model);
+                await _tacheService.UpdateTacheStatus(model);
                 return RedirectToAction("Basic2");
             }
             return View(model);
@@ -96,15 +94,14 @@ namespace PFA_TEMPLATE.Controllers
         {
             var tache = _tacheService.GetTacheById(id);
             if (tache == null) return NotFound();
-
             return View(tache);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _tacheService.DeleteTache(id);
+            await _tacheService.DeleteTache(id);
             return RedirectToAction("Basic1");
         }
     }

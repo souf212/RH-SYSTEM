@@ -12,8 +12,8 @@ using PFA_TEMPLATE.Data;
 namespace PFA_TEMPLATE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250311013210_UpdateEmployesAndAdministrateurEntities")]
-    partial class UpdateEmployesAndAdministrateurEntities
+    [Migration("20250321005034_Add")]
+    partial class Add
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -175,6 +175,39 @@ namespace PFA_TEMPLATE.Migrations
                         .IsUnique();
 
                     b.ToTable("Employes");
+                });
+
+            modelBuilder.Entity("PFA_TEMPLATE.Models.Notification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("IdEmploye")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdTache")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdEmploye");
+
+                    b.HasIndex("IdTache");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("PFA_TEMPLATE.Models.PlageHoraire", b =>
@@ -394,6 +427,9 @@ namespace PFA_TEMPLATE.Migrations
                     b.Property<DateTime>("DateFin")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int>("EmployeIdEmploye")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdEmploye")
                         .HasColumnType("int");
 
@@ -403,7 +439,7 @@ namespace PFA_TEMPLATE.Migrations
 
                     b.HasKey("IdPlanning");
 
-                    b.HasIndex("IdEmploye");
+                    b.HasIndex("EmployeIdEmploye");
 
                     b.ToTable("Plannings");
                 });
@@ -601,6 +637,23 @@ namespace PFA_TEMPLATE.Migrations
                     b.Navigation("Utilisateur");
                 });
 
+            modelBuilder.Entity("PFA_TEMPLATE.Models.Notification", b =>
+                {
+                    b.HasOne("PFA_TEMPLATE.Models.Employes", "Employe")
+                        .WithMany()
+                        .HasForeignKey("IdEmploye")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PFA_TEMPLATE.Models.Taches", "Tache")
+                        .WithMany()
+                        .HasForeignKey("IdTache");
+
+                    b.Navigation("Employe");
+
+                    b.Navigation("Tache");
+                });
+
             modelBuilder.Entity("PFA_TEMPLATE.Models.PlageHoraire", b =>
                 {
                     b.HasOne("PFA_TEMPLATE.Models.EmploiDuTemps", "EmploiDuTemps")
@@ -693,7 +746,7 @@ namespace PFA_TEMPLATE.Migrations
                 {
                     b.HasOne("PFA_TEMPLATE.Models.Employes", "Employe")
                         .WithMany()
-                        .HasForeignKey("IdEmploye")
+                        .HasForeignKey("EmployeIdEmploye")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

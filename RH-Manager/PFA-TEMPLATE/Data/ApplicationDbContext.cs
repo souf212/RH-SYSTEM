@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Models;
 using PFA_TEMPLATE.viewModels;
-using PFA_TEMPLATE.ViewModels;
 
 namespace PFA_TEMPLATE.Data
 {
@@ -13,6 +12,7 @@ namespace PFA_TEMPLATE.Data
         }
 
         // ✅ DbSets for each table
+        public DbSet<Notification> Notifications { get; set; }
         public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Employes> Employes { get; set; }
         public DbSet<Administrateur> Administrateurs { get; set; }
@@ -34,6 +34,11 @@ namespace PFA_TEMPLATE.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Notification>()
+      .HasOne(n => n.Tache)
+      .WithMany() // Replace with your navigation property if it exists
+      .HasForeignKey(n => n.IdTache)
+      .OnDelete(DeleteBehavior.Cascade);
             base.OnModelCreating(modelBuilder); // ✅ Ensure base method is called
 
             // ✅ Utilisateur

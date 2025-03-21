@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Data; // For ApplicationDbContext
+using PFA_TEMPLATE.Hubs;
 using PFA_TEMPLATE.Repositories;
 using PFA_TEMPLATE.Services;
 using System.Text.Json.Serialization;
@@ -14,9 +15,14 @@ public class Program
         var allowedOrigins = builder.Configuration.GetSection("CorsSettings:AllowedOrigins").Get<string[]>();
 
         // Add services to the container
+        builder.Services.AddSignalR();
+        builder.Services.AddAuthorization();
+
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<IPlanningRepository, PlanningRepository>();
         builder.Services.AddScoped<IUserService, UserService>();
+
+        builder.Services.AddScoped<NotificationService>();
         builder.Services.AddScoped<ITacheService, TacheService>();
         builder.Services.AddScoped<GenerationEmploiService>();
         builder.Services.AddHttpContextAccessor();
@@ -83,7 +89,7 @@ public class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Account}/{action=Login}/{id?}");
-
+        app.MapHub<NotificationHub>("/notificationHub");
         app.Run();
     }
 }
