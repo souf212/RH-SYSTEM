@@ -3,17 +3,21 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using PFA_TEMPLATE.Data;
 using PFA_TEMPLATE.ViewModels;
+using System.Net.Mail;
+using System.Net;
 using System.Security.Claims;
+using PFA_TEMPLATE.Interfaces;
 
 namespace PFA_TEMPLATE.Controllers
 {
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public AccountController(ApplicationDbContext context)
+        private readonly IEmailService _emailService;
+        public AccountController(ApplicationDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         [HttpGet]
@@ -31,7 +35,7 @@ namespace PFA_TEMPLATE.Controllers
                 return View(model);
             }
 
-            // Vérification insensible à la casse
+            // Query the database using the Login field
             var user = _context.Utilisateurs
                 .FirstOrDefault(u => u.Login.ToLower() == model.Username.ToLower());
 
@@ -95,6 +99,53 @@ namespace PFA_TEMPLATE.Controllers
         public IActionResult AccessDenied()
         {
             return View();
+        }
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View(new ForgotPasswordViewModel());
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Retrieve the user from the database
+            var user = _context.Utilisateurs.FirstOrDefault(u => u.Email == model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "No user found with this email address.");
+                return View(model);
+            }
+
+            try
+            {
+                // Prepare the email content
+                var subject = "Your Password";
+                var body = $"Your password is: {user.Password}"; // Send the password (not recommended for production)
+
+                // Send the email to the user's email address
+                await _emailService.SendEmailAsync(user.Email, subject, body);
+
+                ViewBag.Message = "Your password has been sent to your email address.";
+                return View();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception details
+                Console.WriteLine($"Error sending email: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+                }
+                Console.WriteLine($"Stack Trace: {ex.StackTrace}");
+
+                ModelState.AddModelError(string.Empty, "An error occurred while sending the email. Please try again later.");
+                return View(model);
+            }
         }
     }
 }

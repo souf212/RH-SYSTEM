@@ -12,8 +12,8 @@ using PFA_TEMPLATE.Data;
 namespace PFA_TEMPLATE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250323204239_first")]
-    partial class first
+    [Migration("20250324031329_email")]
+    partial class email
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -546,6 +546,10 @@ namespace PFA_TEMPLATE.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Login")
                         .IsRequired()

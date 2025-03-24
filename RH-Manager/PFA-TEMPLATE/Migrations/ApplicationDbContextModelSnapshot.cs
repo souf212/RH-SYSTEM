@@ -544,6 +544,10 @@ namespace PFA_TEMPLATE.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Login")
                         .IsRequired()
                         .HasMaxLength(50)

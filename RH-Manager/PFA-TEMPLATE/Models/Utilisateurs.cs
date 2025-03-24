@@ -31,6 +31,10 @@ namespace PFA_TEMPLATE.viewModels
         [Column(TypeName = "VARCHAR(255)")]
         public string Password { get; set; }
 
+        [Required]  
+        [EmailAddress] 
+        public string Email { get; set; }
+
 
         public string Telephone { get; set; }
 

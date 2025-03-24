@@ -1,13 +1,16 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PFA_TEMPLATE.Data; // For ApplicationDbContext
+using PFA_TEMPLATE.Interfaces;
 using PFA_TEMPLATE.Repositories;
 using PFA_TEMPLATE.Services;
+using PFA_TEMPLATE.ViewModels;
 using System.Text.Json.Serialization;
 namespace PFA_TEMPLATE;
 
 public class Program
-{
+{ 
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -20,10 +23,11 @@ public class Program
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<IPlanningRepository, PlanningRepository>();
         builder.Services.AddScoped<IUserService, UserService>();
-         
+        builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddScoped<ITacheService, TacheService>();
         builder.Services.AddScoped<GenerationEmploiService>();
         builder.Services.AddHttpContextAccessor();
+        builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
         // API configuration
         builder.Services.AddControllers()
             .AddJsonOptions(options =>
