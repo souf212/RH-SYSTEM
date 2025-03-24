@@ -12,8 +12,8 @@ using PFA_TEMPLATE.Data;
 namespace PFA_TEMPLATE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250321005034_Add")]
-    partial class Add
+    [Migration("20250323204239_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -647,7 +647,8 @@ namespace PFA_TEMPLATE.Migrations
 
                     b.HasOne("PFA_TEMPLATE.Models.Taches", "Tache")
                         .WithMany()
-                        .HasForeignKey("IdTache");
+                        .HasForeignKey("IdTache")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Employe");
 

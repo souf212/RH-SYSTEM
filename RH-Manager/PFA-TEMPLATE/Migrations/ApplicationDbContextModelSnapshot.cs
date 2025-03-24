@@ -644,7 +644,8 @@ namespace PFA_TEMPLATE.Migrations
 
                     b.HasOne("PFA_TEMPLATE.Models.Taches", "Tache")
                         .WithMany()
-                        .HasForeignKey("IdTache");
+                        .HasForeignKey("IdTache")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Employe");
 

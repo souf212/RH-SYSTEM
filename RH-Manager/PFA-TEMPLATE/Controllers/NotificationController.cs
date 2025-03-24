@@ -1,104 +1,131 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Data;
-using PFA_TEMPLATE.Services;
+using PFA_TEMPLATE.Models;
 using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PFA_TEMPLATE.Controllers
 {
+    [Authorize]
     public class NotificationController : Controller
     {
-        private readonly NotificationService _notificationService;
-        private readonly ApplicationDbContext _context; // Add DbContext
+        private readonly ApplicationDbContext _context;
 
-        public NotificationController(NotificationService notificationService, ApplicationDbContext context)
+        public NotificationController(ApplicationDbContext context)
         {
-            _notificationService = notificationService;
-            _context = context; // Inject the DbContext
+            _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            // Get employee ID from the logged-in user
-            int employeeId = await GetLoggedInEmployeeId();
-            var notifications = await _notificationService.GetEmployeeNotifications(employeeId);
-            return View(notifications);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> MarkAsRead(int id)
-        {
-            await _notificationService.MarkNotificationAsRead(id);
-            return RedirectToAction("Index");
-        }
-
-        // Fix the method to be async and use the correct parameter and return type
-        private async Task<int> GetLoggedInEmployeeId()
-        {
+            // Approach 1: If you're using ASP.NET Identity and the Utilisateur.Id is stored in the claim
             if (User.Identity.IsAuthenticated)
             {
-                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
-                if (userIdClaim != null)
+                // Try to get the user ID
+                var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (!string.IsNullOrEmpty(userIdString) && int.TryParse(userIdString, out int userId))
                 {
-                    var userId = userIdClaim.Value;
-                    var employee = await _context.Employes
-                        .FirstOrDefaultAsync(e => e.IdUtilisateur.ToString() == userId);
-                    return employee?.IdEmploye ?? 0;
+                    // Find the corresponding employee ID
+                    var employeeId = await _context.Employes
+                        .Where(e => e.IdUtilisateur == userId)
+                        .Select(e => e.IdEmploye)
+                        .FirstOrDefaultAsync();
+
+                    if (employeeId != 0) // If we found the employee
+                    {
+                        // Get notifications for this employee
+                        var notifications = await _context.Notifications
+                            .Where(n => n.IdEmploye == employeeId)
+                            .OrderByDescending(n => n.CreatedAt)
+                            .ToListAsync();
+
+                        return View(notifications);
+                    }
                 }
             }
-            return 0;
+
+            // Approach 2: Direct query for testing - use this to verify if there are notifications
+            // Remove or comment this out in production
+            var allNotifications = await _context.Notifications
+                .OrderByDescending(n => n.CreatedAt)
+                .ToListAsync();
+
+            return View(allNotifications);
+
+            // If no notifications found or user not authenticated properly
+            // return View(new List<Notification>());
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetUnreadCount()
         {
-            int employeeId = await GetLoggedInEmployeeId();
-            var notifications = await _notificationService.GetEmployeeNotifications(employeeId);
-            int unreadCount = notifications.Count(n => !n.IsRead);
-            return Json(unreadCount);
-        }
+            if (User.Identity.IsAuthenticated)
+            {
+                Console.WriteLine("✅ User is authenticated.");
+                var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                Console.WriteLine($"🔍 User ID from claims: {userIdString}");
 
-        [HttpGet]
-        public async Task<IActionResult> GetLatestNotifications()
-        {
-            int employeeId = await GetLoggedInEmployeeId();
-            var notifications = await _notificationService.GetEmployeeNotifications(employeeId);
-            var latestNotifications = notifications
-                .OrderByDescending(n => n.CreatedAt)
-                .Take(5)
-                .Select(n => new
+                if (!string.IsNullOrEmpty(userIdString) && int.TryParse(userIdString, out int userId))
                 {
-                    id = n.Id,
-                    message = n.Message,
-                    createdAt = n.CreatedAt,
-                    isRead = n.IsRead,
-                    tacheId = n.IdTache
-                })
-                .ToList();
+                    Console.WriteLine($"🔍 Parsed User ID: {userId}");
+                    var employeeId = await _context.Employes
+                        .Where(e => e.IdUtilisateur == userId)
+                        .Select(e => e.IdEmploye)
+                        .FirstOrDefaultAsync();
 
-            return Json(latestNotifications);
+                    Console.WriteLine($"🔍 Employee ID: {employeeId}");
+
+                    if (employeeId != 0)
+                    {
+                        var count = await _context.Notifications
+                            .Where(n => n.IdEmploye == employeeId && !n.IsRead)
+                            .CountAsync();
+
+                        Console.WriteLine($"🔍 Unread notifications count: {count}");
+                        return Json(new { count });
+                    }
+                }
+            }
+
+            Console.WriteLine("❌ User is not authenticated or no unread notifications.");
+            return Json(new { count = 0 });
         }
-
-        [HttpGet]
-        public async Task<IActionResult> GoToNotification(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MarkAllAsRead()
         {
-            var notification = await _context.Notifications.FindAsync(id);
-            if (notification == null)
+            if (User.Identity.IsAuthenticated)
             {
-                return NotFound();
+                var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (!string.IsNullOrEmpty(userIdString) && int.TryParse(userIdString, out int userId))
+                {
+                    var employeeId = await _context.Employes
+                        .Where(e => e.IdUtilisateur == userId)
+                        .Select(e => e.IdEmploye)
+                        .FirstOrDefaultAsync();
+
+                    if (employeeId != 0)
+                    {
+                        var notifications = await _context.Notifications
+                            .Where(n => n.IdEmploye == employeeId && !n.IsRead)
+                            .ToListAsync();
+
+                        foreach (var notification in notifications)
+                        {
+                            notification.IsRead = true;
+                        }
+
+                        await _context.SaveChangesAsync();
+                        return Json(new { success = true });
+                    }
+                }
             }
 
-            // Mark as read
-            await _notificationService.MarkNotificationAsRead(id);
-
-            // Redirect to the task if available
-            if (notification.IdTache.HasValue)
-            {
-                return RedirectToAction("Details", "Tache", new { id = notification.IdTache.Value });
-            }
-
-            // If no task is associated, redirect to notifications page
-            return RedirectToAction("Index");
+            return Json(new { success = false });
         }
     }
-}
+    }

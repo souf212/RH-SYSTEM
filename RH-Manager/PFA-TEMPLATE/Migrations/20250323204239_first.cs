@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PFA_TEMPLATE.Migrations
 {
     /// <inheritdoc />
-    public partial class Add : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -479,7 +479,8 @@ namespace PFA_TEMPLATE.Migrations
                         name: "FK_Notifications_Taches_IdTache",
                         column: x => x.IdTache,
                         principalTable: "Taches",
-                        principalColumn: "IdTaches");
+                        principalColumn: "IdTaches",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

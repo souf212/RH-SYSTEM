@@ -6,12 +6,10 @@ using PFA_TEMPLATE.ViewModels;
 
 public class TacheService : ITacheService
 {
-    private readonly ApplicationDbContext _context;
-    private readonly NotificationService _notificationService;
-    public TacheService(ApplicationDbContext context, NotificationService notificationService)
+    private readonly ApplicationDbContext _context; 
+    public TacheService(ApplicationDbContext context)
     {
-        _context = context;
-        _notificationService = notificationService;
+        _context = context; 
     }
 
     public List<TachesVM> GetAllTaches()
@@ -77,14 +75,22 @@ public class TacheService : ITacheService
             CreatedAt = DateTime.Now,
             LastModified = DateTime.Now
         };
-
         _context.Taches.Add(tache);
         await _context.SaveChangesAsync();
 
-        // Send notification when task is created
-        await _notificationService.CreateTaskNotification(tache);
-    }
+        // Create notification for the employee - make sure we're using the correct employee ID
+        var notification = new Notification
+        {
+            Message = $"You have been assigned a new task: {tachesVM.Title}",
+            CreatedAt = DateTime.Now,
+            IsRead = false,
+            IdEmploye = int.Parse(tachesVM.AssignedTo), // This should be the Employes.IdEmploye
+            IdTache = tache.IdTaches
+        };
 
+        _context.Notifications.Add(notification);
+        await _context.SaveChangesAsync();
+    }
     public TachesVM GetTacheById(int id)
     {
         var tache = _context.Taches.Find(id);
