@@ -74,6 +74,9 @@ namespace PFA_TEMPLATE.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
+            // ✅ 🔥 Stockage de l’ID utilisateur dans la session
+            HttpContext.Session.SetInt32("IdUtilisateur", user.Id);
+
             // Redirection basée sur le rôle
             return user.Role switch
             {

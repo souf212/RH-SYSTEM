@@ -33,25 +33,23 @@ namespace PFA_TEMPLATE.Services
             // Hash the password
             userVM.Password = HasherProgram.HashPassword(userVM.Password);
 
-            // Begin transaction
             using var transaction = await _context.Database.BeginTransactionAsync();
 
             try
             {
-                // Create user
+                // Créer l'utilisateur
                 var utilisateur = UserMapper.MapToUtilisateur(userVM);
                 _context.Utilisateurs.Add(utilisateur);
                 await _context.SaveChangesAsync();
 
-                // Get the new user ID
                 int userId = utilisateur.Id;
 
-                // Based on role, add to the appropriate table
+                // 🔄 Création spécifique selon le rôle
                 if (userVM.Role == "Admin")
                 {
                     var admin = new Administrateur
                     {
-                        IdAdmin = userId, // Set the Id to match the Utilisateur Id
+                        IdAdmin = userId,
                         IdUtilisateur = userId
                     };
                     _context.Administrateurs.Add(admin);
@@ -60,25 +58,41 @@ namespace PFA_TEMPLATE.Services
                 {
                     var employe = new Employes
                     {
-                        IdEmploye = userId, // Set the Id to match the Utilisateur Id
+                        IdEmploye = userId,
                         IdUtilisateur = userId
                     };
                     _context.Employes.Add(employe);
+                    await _context.SaveChangesAsync(); // ⬅️ Important pour récupérer l’employé
+
+                    // ✅ Initialiser le solde de congés
+                    var congeBalance = new CongeBalance
+                    {
+                        IdEmploye = employe.IdEmploye,
+                        Annee = DateTime.Now.Year,
+                        JoursCongesPayesTotal = 30,
+                        JoursCongesPayesUtilises = 0,
+                        JoursMaladieTotal = 10,
+                        JoursMaladieUtilises = 0
+                    };
+
+                    _context.CongeBalances.Add(congeBalance);
+                    await _context.SaveChangesAsync(); // ⬅️ Manquait ici
                 }
 
-                await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
 
-                // Update the ID from the database
                 userVM.Id = userId;
                 return userVM;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                await transaction.RollbackAsync();
-                throw;
+                // Affiche l'erreur complète dans la console
+                Console.WriteLine("Erreur EF : " + ex.InnerException?.Message);
+                throw; // pour que le contrôleur la reçoive
             }
+
         }
+
 
         public async Task<bool> UpdateUserAsync(UserVM userVM)
         {

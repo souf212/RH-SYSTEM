@@ -58,8 +58,14 @@ namespace PFA_TEMPLATE.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", $"Une erreur est survenue: {ex.Message}");
+                    var inner = ex.InnerException != null ? ex.InnerException.ToString() : ex.ToString();
+
+                    ModelState.AddModelError("", "❌ Une erreur est survenue. Détail :");
+                    ModelState.AddModelError("", inner); // Montre l’exception complète
+
+                    Console.WriteLine("💥 Exception complète : " + inner);
                 }
+
             }
             return View(userVM);
         }

@@ -11,6 +11,8 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Views\PointageMvc\" />
+    <None Remove="Views\Conges\" />
+    <None Remove="Views\CongesAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PasswordHasher\PasswordHasher.csproj" />
@@ -24,6 +26,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -33,5 +36,7 @@
 
   <ItemGroup>
     <Folder Include="Views\PointageMvc\" />
+    <Folder Include="Views\Conges\" />
+    <Folder Include="Views\CongesAdmin\" />
   </ItemGroup>
 </Project>

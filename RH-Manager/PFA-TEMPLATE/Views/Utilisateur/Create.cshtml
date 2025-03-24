@@ -1,7 +1,22 @@
 ﻿@model PFA_TEMPLATE.ViewModels.UserVM
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
 
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
 }
 
 
@@ -47,14 +62,14 @@
             </div>
             <div class="mb-3">
                 <label asp-for="Password" class="form-label fw-bold"><i class="fas fa-lock"></i> Password</label>
-                <input asp-for="Password" class="form-control"/>
+                <input asp-for="Password" class="form-control" />
             </div>
-           
+
             <div class="mb-3">
                 <label asp-for="Role" class="form-label fw-bold"><i class="fas fa-heading"></i> Role</label>
                 <select asp-for="Role" class="form-select">
                     <option value="Employes">Employes</option>
-                    <option value="Admin">Admin</option> 
+                    <option value="Admin">Admin</option>
                 </select>
             </div>
             <div class="d-flex justify-content-end">

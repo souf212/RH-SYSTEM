@@ -42,7 +42,7 @@
                             <i class="material-symbols-rounded opacity-5">t</i>
                             <span class="nav-link-text ms-1">Verifier vos Tâches</span>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Planning" asp-action="MonEmploi">
                             <i class="material-symbols-rounded opacity-5">receipt_long</i>
@@ -50,11 +50,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-controller="DemandeConge" asp-action="Index">
-                            <i class="material-symbols-rounded opacity-5">view_in_ar</i>
-                            <span class="nav-link-text ms-1">Demander Conge</span>
+                        <a class="nav-link text-dark d-flex align-items-center" asp-controller="Conges" asp-action="Index">
+                            <i class="material-symbols-rounded me-2 opacity-75">view_in_ar</i>
+                            <span class="nav-link-text">Demander Congé</span>
                         </a>
                     </li>
+
+
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Pointage" asp-action="Index">
                             <i class="material-symbols-rounded opacity-5">format_textdirection_r_to_l</i>
@@ -68,7 +70,7 @@
                             <span class="badge rounded-pill bg-danger ms-auto">4</span>
                         </a>
                     </li>
-                   
+
                 </ul>
                 <hr class="horizontal dark my-3">
                 <ul class="navbar-nav">

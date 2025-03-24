@@ -4,22 +4,28 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PFA_TEMPLATE.Models
 {
-    // ✅ Employes Model (No direct Nom/Prenom properties, computed from Utilisateur)
     public class Employes
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdEmploye { get; set; }
 
-        [ForeignKey("Utilisateurs")]
+        [ForeignKey("Utilisateur")]
         public int IdUtilisateur { get; set; }
 
-        // ✅ Computed properties (No need to store in DB)
+        // 🟩 Nouveau champ : l'ID du responsable
+        public int? ResponsableUtilisateurId { get; set; }
+
+        [ForeignKey("ResponsableUtilisateurId")]
+        public virtual Utilisateur? ResponsableUtilisateur { get; set; }
+
+
+        // ✅ Propriétés calculées
         public string Nom => Utilisateur?.Nom ?? "Nom non disponible";
         public string Prenom => Utilisateur?.Prenom ?? "Prénom non disponible";
         public string NomComplet => Utilisateur != null ? $"{Utilisateur.Prenom} {Utilisateur.Nom}" : "Employé non chargé";
 
-        // ✅ Navigation Property
+        // ✅ Navigation vers l'utilisateur lié
         public virtual Utilisateur Utilisateur { get; set; }
 
         // ✅ Collections
@@ -31,7 +37,6 @@ namespace PFA_TEMPLATE.Models
         public virtual ICollection<Salaire> Salaires { get; set; }
         public virtual ICollection<Pointage> Pointages { get; set; }
 
-        // ✅ Constructor
         public Employes()
         {
             Taches = new HashSet<Taches>();
@@ -40,9 +45,9 @@ namespace PFA_TEMPLATE.Models
             Absences = new HashSet<Absences>();
             ReconnaissanceFaciales = new HashSet<ReconnaissanceFaciale>();
             Salaires = new HashSet<Salaire>();
+            Pointages = new HashSet<Pointage>();
         }
 
-        // ✅ Utility method to assign Utilisateur
         public void AssignerUtilisateur(Utilisateur utilisateur)
         {
             if (utilisateur == null)
@@ -54,5 +59,4 @@ namespace PFA_TEMPLATE.Models
             IdUtilisateur = utilisateur.Id;
         }
     }
-
 }
