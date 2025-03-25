@@ -72,11 +72,6 @@
                                         <input asp-for="Password" class="form-control" type="password" placeholder="Password">
                                         <span asp-validation-for="Password" class="text-danger"></span>
                                     </div>
-                                    <div class="form-check form-switch d-flex align-items-center mb-3">
-                                        <input class="form-check-input" type="checkbox" id="rememberMe" name="RememberMe">
-                                        <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
-                                    </div> 
-
                                     <p class="mt-4 text-sm text-center">
                                         Forgot your password?
                                         <a asp-action="ForgotPassword" asp-controller="Account" class="text-primary text-gradient font-weight-bold">Reset it here</a>
@@ -85,10 +80,6 @@
                                     <div class="text-center">
                                         <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign in</button>
                                     </div>
-                                    <p class="mt-4 text-sm text-center">
-                                        Don't have an account?
-                                        <a asp-action="Register" asp-controller="Account" class="text-primary text-gradient font-weight-bold">Sign up</a>
-                                    </p>
                                 </form>
                             </div>
                         </div>

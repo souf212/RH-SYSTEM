@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\congesadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\congesadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\congescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\congescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\services\\tacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\tacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\tachescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\tachescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\passwordhasher\\passwordhasher\\hasherprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\passwordhasher\\passwordhasher\\hasherprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,47 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TacheService.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Services\\TacheService.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\TacheService.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Services\\TacheService.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Services\\TacheService.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAIwBYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:28:12.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TachesController.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\TachesController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\TachesController.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\TachesController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\TachesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:27:57.921Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CongesAdminController.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\CongesAdminController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\CongesAdminController.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\CongesAdminController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\CongesAdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\appsettings.json",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\appsettings.json",
+              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\appsettings.json",
+              "RelativeToolTip": "PFA-TEMPLATE\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-25T22:00:24.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HasherProgram.cs",
+              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
+              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:22:42.081Z",
+              "WhenOpened": "2025-03-25T21:56:57.453Z",
               "EditorCaption": ""
             },
             {
@@ -86,56 +55,17 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UtilisateurController.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\UtilisateurController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:27:41.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Models\\Notification.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Models\\Notification.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Models\\Notification.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Models\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:26:15.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NotificationController.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\NotificationController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\NotificationController.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\NotificationController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAgwA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:23:36.086Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CongesController.cs",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\CongesController.cs",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\CongesController.cs",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\CongesController.cs",
-              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\CongesController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:22:36.572Z"
+              "WhenOpened": "2025-03-25T21:55:54.868Z",
+              "EditorCaption": ""
             }
           ]
         }

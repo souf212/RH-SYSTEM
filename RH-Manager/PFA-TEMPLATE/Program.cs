@@ -8,6 +8,7 @@ using PFA_TEMPLATE.Repositories;
 using PFA_TEMPLATE.Services;
 using PFA_TEMPLATE.ViewModels;
 using System.Text.Json.Serialization;
+
 namespace PFA_TEMPLATE;
 
 public class Program
@@ -21,8 +22,7 @@ public class Program
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<IPlanningRepository, PlanningRepository>();
         builder.Services.AddScoped<IUserService,UserService>(); 
-        builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>();
-        builder.Services.AddScoped<IEmailService, EmailService>();
+        builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>(); 
         builder.Services.AddScoped<ITacheService, TacheService>();
         builder.Services.AddScoped<GenerationEmploiService>();
         builder.Services.AddHttpContextAccessor();

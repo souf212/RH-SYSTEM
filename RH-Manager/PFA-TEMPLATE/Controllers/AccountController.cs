@@ -3,21 +3,28 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using PFA_TEMPLATE.Data;
 using PFA_TEMPLATE.ViewModels;
-using System.Net.Mail;
-using System.Net;
+using PFA_TEMPLATE.Services;
 using System.Security.Claims;
 using PFA_TEMPLATE.Interfaces;
-
+using Microsoft.EntityFrameworkCore;
+using Twilio; 
+using Twilio.Types;
+using Twilio.Rest.Api.V2010.Account; 
 namespace PFA_TEMPLATE.Controllers
 {
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IEmailService _emailService;
-        public AccountController(ApplicationDbContext context, IEmailService emailService)
+        private readonly string _twilioAccountSid;
+        private readonly string _twilioAuthToken;
+        private readonly string _twilioPhoneNumber;
+        public AccountController(ApplicationDbContext context, IConfiguration configuration)
         {
             _context = context;
-            _emailService = emailService;
+            _twilioAccountSid = configuration["Twilio:AccountSid"];
+            _twilioAuthToken = configuration["Twilio:AuthToken"];
+            _twilioPhoneNumber = configuration["Twilio:PhoneNumber"];
+            TwilioClient.Init(_twilioAccountSid, _twilioAuthToken);
         }
 
         [HttpGet]
@@ -103,49 +110,62 @@ namespace PFA_TEMPLATE.Controllers
         [HttpGet]
         public IActionResult ForgotPassword()
         {
-            return View(new ForgotPasswordViewModel());
+            return View();
         }
-        [HttpPost]
-        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
 
-            // Retrieve the user from the database
-            var user = _context.Utilisateurs.FirstOrDefault(u => u.Email == model.Email);
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string telephone)
+        {
+            // Find user by telephone number
+            var user = await _context.Utilisateurs
+                .FirstOrDefaultAsync(u => u.Telephone == telephone);
+
             if (user == null)
             {
-                ModelState.AddModelError(string.Empty, "No user found with this email address.");
-                return View(model);
+                ModelState.AddModelError("", "Aucun utilisateur trouvé avec ce numéro de téléphone.");
+                return View();
             }
 
+            // Generate a new random password
+            string newPassword = GenerateRandomPassword();
+
+            // Hash the new password
+            string hashedNewPassword = HasherProgram.HashPassword(newPassword);
+            // Update user's password in database
+            user.Password = hashedNewPassword;
+            await _context.SaveChangesAsync();
+
+            // Send SMS with new password
             try
             {
-                // Prepare the email content
-                var subject = "Your Password";
-                var body = $"Your password is: {user.Password}"; // Send the password (not recommended for production)
-
-                // Send the email to the user's email address
-                await _emailService.SendEmailAsync(user.Email, subject, body);
-
-                ViewBag.Message = "Your password has been sent to your email address.";
-                return View();
+                SendPasswordViaSMS(user.Telephone, newPassword);
+                return View("PasswordResetConfirmation");
             }
             catch (Exception ex)
             {
-                // Log the exception details
-                Console.WriteLine($"Error sending email: {ex.Message}");
-                if (ex.InnerException != null)
-                {
-                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
-                }
-                Console.WriteLine($"Stack Trace: {ex.StackTrace}");
-
-                ModelState.AddModelError(string.Empty, "An error occurred while sending the email. Please try again later.");
-                return View(model);
+                // Log the exception
+                ModelState.AddModelError("", "Erreur lors de l'envoi du SMS. Veuillez réessayer.");
+                return View();
             }
+        }
+
+        private string GenerateRandomPassword(int length = 10)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+            var random = new Random();
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+     
+
+        private void SendPasswordViaSMS(string phoneNumber, string newPassword)
+        {
+            MessageResource.Create(
+                body: $"Votre nouveau mot de passe est : {newPassword}. Veuillez vous connecter et le changer immédiatement.",
+                from: new PhoneNumber(_twilioPhoneNumber),
+                to: new PhoneNumber(phoneNumber)
+            );
         }
     }
 }

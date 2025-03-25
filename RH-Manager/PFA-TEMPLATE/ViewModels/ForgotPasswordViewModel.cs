@@ -7,6 +7,6 @@ namespace PFA_TEMPLATE.ViewModels
         [Required(ErrorMessage = "Email address is required")]
         [EmailAddress(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email Address")]
-        public string Email { get; set; }
+        public string Telephone { get; set; }
     }
 }
