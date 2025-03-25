@@ -854,13 +854,10 @@ C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\b
 C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\top\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
-C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.dll
-C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\refint\PFA-TEMPLATE.dll
-C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.pdb
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\appsettings.json
-C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\PFA-TEMPLATE.staticwebassets.endpoints.json
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\PFA-TEMPLATE.staticwebassets.runtime.json
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\PFA-TEMPLATE.staticwebassets.endpoints.json
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\PFA-TEMPLATE.exe
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\PFA-TEMPLATE.deps.json
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\PFA-TEMPLATE.runtimeconfig.json
@@ -967,7 +964,10 @@ C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PFA-TEMPLATE.props
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PFA-TEMPLATE.props
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMP.2A54887C.Up2Date
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\refint\PFA-TEMPLATE.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.pdb
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.genruntimeconfig.cache
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\ref\PFA-TEMPLATE.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -47,16 +47,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcTWFuYWdlVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/souf2/OneDrive/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/AdminIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEFkbWluSW5kZXguY3NodG1s
+[C:/Users/souf2/OneDrive/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/CongesAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VzQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/souf2/OneDrive/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/CreateConge.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXENyZWF0ZUNvbmdlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/souf2/OneDrive/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/DemandeConge/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZUNvbmdlXEluZGV4LmNzaHRtbA==
+[C:/Users/souf2/OneDrive/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Conges/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZ2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/souf2/OneDrive/Desktop/RH-feature-facial-recognition-fix/RH-Manager/PFA-TEMPLATE/Views/Home/Index.cshtml]

@@ -9,5 +9,6 @@ namespace PFA_TEMPLATE.Services
         Task<UserVM> CreateUserAsync(UserVM userVM);
         Task<bool> UpdateUserAsync(UserVM userVM);
         Task<bool> DeleteUserAsync(int id);
+
     }
 }

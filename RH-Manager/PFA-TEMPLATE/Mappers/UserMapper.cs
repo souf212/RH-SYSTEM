@@ -1,6 +1,6 @@
 ﻿using PFA_TEMPLATE.viewModels;
 using PFA_TEMPLATE.ViewModels;
-
+using PFA_TEMPLATE.Models;
 
 namespace PFA_TEMPLATE.Mappers
 {
@@ -9,6 +9,9 @@ namespace PFA_TEMPLATE.Mappers
         // Map Utilisateur (Model) to UserVM (ViewModel)
         public static UserVM MapToUserVM(Utilisateur user)
         {
+            if (user == null)
+                return null;
+
             return new UserVM
             {
                 Id = user.Id,
@@ -16,6 +19,7 @@ namespace PFA_TEMPLATE.Mappers
                 Prenom = user.Prenom,
                 Adresse = user.Adresse,
                 CIN = user.CIN,
+                Email = user.Email, // Added this line
                 Login = user.Login,
                 Password = user.Password,
                 Telephone = user.Telephone,
@@ -26,6 +30,9 @@ namespace PFA_TEMPLATE.Mappers
         // Map UserVM (ViewModel) to Utilisateur (Model)
         public static Utilisateur MapToUtilisateur(UserVM userVM)
         {
+            if (userVM == null)
+                return null;
+
             return new Utilisateur
             {
                 Id = userVM.Id,
@@ -33,6 +40,7 @@ namespace PFA_TEMPLATE.Mappers
                 Prenom = userVM.Prenom,
                 Adresse = userVM.Adresse,
                 CIN = userVM.CIN,
+                Email = userVM.Email ?? throw new ArgumentNullException(nameof(userVM.Email)), // Added with validation
                 Login = userVM.Login,
                 Password = userVM.Password,
                 Telephone = userVM.Telephone,

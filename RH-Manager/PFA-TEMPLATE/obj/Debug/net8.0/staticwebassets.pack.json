@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PFA-TEMPLATE.bundle.scp.css",
-      "PackagePath": "staticwebassets\\PFA-TEMPLATE.lkn1tu4jgs.bundle.scp.css"
+      "PackagePath": "staticwebassets\\PFA-TEMPLATE.3299rzwoi1.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\css\\StyleSheet.css",
@@ -387,6 +387,14 @@
     {
       "Id": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\material-dashboard.min.js",
       "PackagePath": "staticwebassets\\js\\material-dashboard.min.js"
+    },
+    {
+      "Id": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js",
+      "PackagePath": "staticwebassets\\js\\password.js"
+    },
+    {
+      "Id": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js.cs",
+      "PackagePath": "staticwebassets\\js\\password.js.cs"
     },
     {
       "Id": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\plugins\\Chart.extension.js",

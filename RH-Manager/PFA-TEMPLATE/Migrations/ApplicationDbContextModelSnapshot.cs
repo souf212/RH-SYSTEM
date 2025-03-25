@@ -546,7 +546,7 @@ namespace PFA_TEMPLATE.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Login")
                         .IsRequired()
@@ -578,6 +578,9 @@ namespace PFA_TEMPLATE.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CIN")
+                        .IsUnique();
+
+                    b.HasIndex("Email")
                         .IsUnique();
 
                     b.HasIndex("Login")

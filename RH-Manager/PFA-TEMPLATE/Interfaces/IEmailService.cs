@@ -1,4 +1,5 @@
-﻿namespace PFA_TEMPLATE.Interfaces
+﻿
+namespace PFA_TEMPLATE.Interfaces
 {
     public interface IEmailService
     {

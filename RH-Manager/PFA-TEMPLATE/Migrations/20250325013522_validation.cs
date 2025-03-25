@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PFA_TEMPLATE.Migrations
 {
     /// <inheritdoc />
-    public partial class email : Migration
+    public partial class validation : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +56,7 @@ namespace PFA_TEMPLATE.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password = table.Column<string>(type: "VARCHAR(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "longtext", nullable: false)
+                    Email = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Telephone = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -593,6 +593,12 @@ namespace PFA_TEMPLATE.Migrations
                 name: "IX_Utilisateurs_CIN",
                 table: "Utilisateurs",
                 column: "CIN",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Utilisateurs_Email",
+                table: "Utilisateurs",
+                column: "Email",
                 unique: true);
 
             migrationBuilder.CreateIndex(

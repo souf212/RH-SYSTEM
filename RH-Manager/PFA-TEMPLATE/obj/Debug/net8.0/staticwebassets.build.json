@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qt2CLRthmi2BwAAFBc7MPHQTS9jdFAbNs1hSqgAABGw=",
+  "Hash": "DyIxuvDPBuZAGcqwWPnzvrd5suEuXa3T37JXu824K40=",
   "Source": "PFA-TEMPLATE",
   "BasePath": "_content/PFA-TEMPLATE",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "lkn1tu4jgs",
-      "Integrity": "laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8=",
+      "Fingerprint": "3299rzwoi1",
+      "Integrity": "5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PFA-TEMPLATE.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "lkn1tu4jgs",
-      "Integrity": "laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8=",
+      "Fingerprint": "3299rzwoi1",
+      "Integrity": "5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PFA-TEMPLATE.bundle.scp.css"
@@ -2073,6 +2073,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Notif.js"
+    },
+    {
+      "Identity": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js",
+      "SourceId": "PFA-TEMPLATE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\",
+      "BasePath": "_content/PFA-TEMPLATE",
+      "RelativePath": "js/password#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l39bnw1gvs",
+      "Integrity": "0QmcmfxYDH9uzLnMkjoXE+/f3TUApAZrtrdensBEz4w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\password.js"
+    },
+    {
+      "Identity": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js.cs",
+      "SourceId": "PFA-TEMPLATE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\",
+      "BasePath": "_content/PFA-TEMPLATE",
+      "RelativePath": "js/password.js#[.{fingerprint}]?.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ej5i7fqmoe",
+      "Integrity": "ig9xnVperwJ/J8PP2WGp7RKNz7Jre2aBCUIQwAdknuE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\password.js.cs"
     },
     {
       "Identity": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\plugins\\bootstrap-notify.js",
@@ -16039,6 +16081,170 @@
       ]
     },
     {
+      "Route": "js/password.js",
+      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0QmcmfxYDH9uzLnMkjoXE+/f3TUApAZrtrdensBEz4w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 02:13:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0QmcmfxYDH9uzLnMkjoXE+/f3TUApAZrtrdensBEz4w="
+        }
+      ]
+    },
+    {
+      "Route": "js/password.js.cs",
+      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js.cs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ig9xnVperwJ/J8PP2WGp7RKNz7Jre2aBCUIQwAdknuE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 23:37:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ig9xnVperwJ/J8PP2WGp7RKNz7Jre2aBCUIQwAdknuE="
+        }
+      ]
+    },
+    {
+      "Route": "js/password.js.ej5i7fqmoe.cs",
+      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js.cs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ig9xnVperwJ/J8PP2WGp7RKNz7Jre2aBCUIQwAdknuE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 23:37:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ej5i7fqmoe"
+        },
+        {
+          "Name": "label",
+          "Value": "js/password.js.cs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ig9xnVperwJ/J8PP2WGp7RKNz7Jre2aBCUIQwAdknuE="
+        }
+      ]
+    },
+    {
+      "Route": "js/password.l39bnw1gvs.js",
+      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\password.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0QmcmfxYDH9uzLnMkjoXE+/f3TUApAZrtrdensBEz4w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 02:13:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l39bnw1gvs"
+        },
+        {
+          "Name": "label",
+          "Value": "js/password.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0QmcmfxYDH9uzLnMkjoXE+/f3TUApAZrtrdensBEz4w="
+        }
+      ]
+    },
+    {
       "Route": "js/plugins/bootstrap-notify.js",
       "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\wwwroot\\js\\plugins\\bootstrap-notify.js",
       "Selectors": [],
@@ -21369,6 +21575,96 @@
       ]
     },
     {
+      "Route": "PFA-TEMPLATE.3299rzwoi1.bundle.scp.css",
+      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PFA-TEMPLATE.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1130"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 00:14:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3299rzwoi1"
+        },
+        {
+          "Name": "label",
+          "Value": "PFA-TEMPLATE.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc="
+        }
+      ]
+    },
+    {
+      "Route": "PFA-TEMPLATE.3299rzwoi1.styles.css",
+      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PFA-TEMPLATE.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1130"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 00:14:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3299rzwoi1"
+        },
+        {
+          "Name": "label",
+          "Value": "PFA-TEMPLATE.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc="
+        }
+      ]
+    },
+    {
       "Route": "PFA-TEMPLATE.bundle.scp.css",
       "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PFA-TEMPLATE.bundle.scp.css",
       "Selectors": [],
@@ -21387,11 +21683,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8=\""
+          "Value": "\"5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 22:32:49 GMT"
+          "Value": "Tue, 25 Mar 2025 00:14:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21401,97 +21697,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8="
-        }
-      ]
-    },
-    {
-      "Route": "PFA-TEMPLATE.lkn1tu4jgs.bundle.scp.css",
-      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PFA-TEMPLATE.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1130"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 22:32:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lkn1tu4jgs"
-        },
-        {
-          "Name": "label",
-          "Value": "PFA-TEMPLATE.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8="
-        }
-      ]
-    },
-    {
-      "Route": "PFA-TEMPLATE.lkn1tu4jgs.styles.css",
-      "AssetFile": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PFA-TEMPLATE.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1130"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 22:32:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lkn1tu4jgs"
-        },
-        {
-          "Name": "label",
-          "Value": "PFA-TEMPLATE.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8="
+          "Value": "sha256-5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc="
         }
       ]
     },
@@ -21514,11 +21720,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8=\""
+          "Value": "\"5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 22:32:49 GMT"
+          "Value": "Tue, 25 Mar 2025 00:14:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21528,7 +21734,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-laJyPezluNYujzwCvWTIwsHlrzzbjTNB2O/RfJUr6u8="
+          "Value": "sha256-5QKzGGab0c3JuUYTlCUOIHLlSVJGvYXgD64OYrxa9Qc="
         }
       ]
     },

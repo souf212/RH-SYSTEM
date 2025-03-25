@@ -1,19 +1,41 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using PFA_TEMPLATE.Data;
 using PFA_TEMPLATE.Mappers;
 using PFA_TEMPLATE.Models;
 using PFA_TEMPLATE.viewModels;
 using PFA_TEMPLATE.ViewModels;
-
+using PFA_TEMPLATE.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 namespace PFA_TEMPLATE.Services
 {
     public class UserService : IUserService
     {
-        private readonly ApplicationDbContext _context;
 
-        public UserService(ApplicationDbContext context)
+        private readonly ApplicationDbContext _context;
+        private readonly IPasswordHasher _passwordHasher;
+        private readonly ILogger<UserService> _logger;
+
+        public UserService(
+            ApplicationDbContext context,
+            IPasswordHasher passwordHasher,
+            ILogger<UserService> logger)
         {
             _context = context;
+            _passwordHasher = passwordHasher;
+            _logger = logger;
+        }
+
+        public class UserCreationException : Exception
+        {
+            public UserCreationException(string message, Exception innerException)
+                : base(message, innerException) { }
+        }
+
+        public class InvalidRoleException : Exception
+        {
+            public InvalidRoleException(string message) : base(message) { }
         }
 
         public async Task<UserVM> GetUserByIdAsync(int id)
@@ -30,192 +52,267 @@ namespace PFA_TEMPLATE.Services
 
         public async Task<UserVM> CreateUserAsync(UserVM userVM)
         {
-            // Hash the password
-            userVM.Password = HasherProgram.HashPassword(userVM.Password);
+            if (string.IsNullOrWhiteSpace(userVM.Email))
+                throw new ArgumentException("L'email est obligatoire");
 
-            // Begin transaction
-            using var transaction = await _context.Database.BeginTransactionAsync();
+            if (string.IsNullOrWhiteSpace(userVM.Login))
+                throw new ArgumentException("Le login est obligatoire");
 
-            try
+            if (string.IsNullOrWhiteSpace(userVM.CIN))
+                throw new ArgumentException("Le CIN est obligatoire");
+
+            // Check for existing email (case insensitive)
+            var emailExists = await _context.Utilisateurs
+                .AnyAsync(u => u.Email.ToLower() == userVM.Email.ToLower());
+            if (emailExists)
+                throw new InvalidOperationException("Un utilisateur avec cet email existe déjà");
+
+            // Check for existing login (case insensitive)
+            var loginExists = await _context.Utilisateurs
+                .AnyAsync(u => u.Login.ToLower() == userVM.Login.ToLower());
+            if (loginExists)
+                throw new InvalidOperationException("Un utilisateur avec ce login existe déjà");
+
+            // Check for existing CIN (case insensitive)
+            var cinExists = await _context.Utilisateurs
+                .AnyAsync(u => u.CIN.ToLower() == userVM.CIN.ToLower());
+            if (cinExists)
+                throw new InvalidOperationException("Un utilisateur avec ce CIN existe déjà");
+
+            ValidateUser(userVM);
+
+            // Get the execution strategy
+            var executionStrategy = _context.Database.CreateExecutionStrategy();
+
+            return await executionStrategy.ExecuteAsync(async () =>
             {
-                // Create user
-                var utilisateur = UserMapper.MapToUtilisateur(userVM);
-                _context.Utilisateurs.Add(utilisateur);
-                await _context.SaveChangesAsync();
+                using var transaction = await _context.Database.BeginTransactionAsync();
 
-                // Get the new user ID
-                int userId = utilisateur.Id;
-
-                // Based on role, add to the appropriate table
-                if (userVM.Role == "Admin")
+                try
                 {
-                    var admin = new Administrateur
-                    {
-                        IdAdmin = userId, // Set the Id to match the Utilisateur Id
-                        IdUtilisateur = userId
-                    };
-                    _context.Administrateurs.Add(admin);
+                    // Create user
+                    var utilisateur = UserMapper.MapToUtilisateur(userVM);
+                    utilisateur.Password = _passwordHasher.HashPassword(userVM.Password);
+
+                    _context.Utilisateurs.Add(utilisateur);
+                    await _context.SaveChangesAsync();
+
+                    // Create role-specific entities
+                    await CreateRoleSpecificEntities(userVM.Role, utilisateur.Id);
+
+                    await transaction.CommitAsync();
+
+                    userVM.Id = utilisateur.Id;
+                    return userVM;
                 }
-                else if (userVM.Role == "Employes")
+                catch (Exception ex)
                 {
-                    var employe = new Employes
-                    {
-                        IdEmploye = userId, // Set the Id to match the Utilisateur Id
-                        IdUtilisateur = userId
-                    };
-                    _context.Employes.Add(employe);
+                    await transaction.RollbackAsync();
+                    // Log the error (consider using ILogger)
+                    throw new UserCreationException("Failed to create user", ex);
                 }
-
-                await _context.SaveChangesAsync();
-                await transaction.CommitAsync();
-
-                // Update the ID from the database
-                userVM.Id = userId;
-                return userVM;
-            }
-            catch (Exception)
+            });
+        }
+        private async Task CreateRoleSpecificEntities(string role, int userId)
+        {
+            switch (role)
             {
-                await transaction.RollbackAsync();
-                throw;
+                case "Admin":
+                    await CreateAdmin(userId);
+                    break;
+                case "Employes":
+                    await CreateEmployee(userId);
+                    break;
+                default:
+                    throw new InvalidRoleException($"Invalid role specified: {role}");
             }
         }
 
+        private async Task CreateAdmin(int userId)
+        {
+            var admin = new Administrateur
+            {
+                IdAdmin = userId,
+                IdUtilisateur = userId
+            };
+            _context.Administrateurs.Add(admin);
+            await _context.SaveChangesAsync();
+        }
+
+        private async Task CreateEmployee(int userId)
+        {
+            var employe = new Employes
+            {
+                IdEmploye = userId,
+                IdUtilisateur = userId
+            };
+            _context.Employes.Add(employe);
+            await _context.SaveChangesAsync();
+
+            await InitializeLeaveBalance(employe.IdEmploye);
+        }
+
+        private async Task InitializeLeaveBalance(int employeeId)
+        {
+            var congeBalance = new CongeBalance
+            {
+                IdEmploye = employeeId,
+                Annee = DateTime.Now.Year,
+                JoursCongesPayesTotal = 30,
+                JoursCongesPayesUtilises = 0,
+                JoursMaladieTotal = 10,
+                JoursMaladieUtilises = 0
+            };
+
+            _context.CongeBalances.Add(congeBalance);
+            await _context.SaveChangesAsync();
+        }
+
+        private void ValidateUser(UserVM userVM)
+        {
+            if (userVM == null)
+                throw new ArgumentNullException(nameof(userVM));
+
+            if (string.IsNullOrWhiteSpace(userVM.Role))
+                throw new ArgumentException("Role is required");
+
+            // Add other validations as needed
+        }
         public async Task<bool> UpdateUserAsync(UserVM userVM)
         {
-            var existingUser = await _context.Utilisateurs.FindAsync(userVM.Id);
-            if (existingUser == null)
-            {
-                return false;
-            }
+            var executionStrategy = _context.Database.CreateExecutionStrategy();
 
-            // Begin transaction
-            using var transaction = await _context.Database.BeginTransactionAsync();
+            return await executionStrategy.ExecuteAsync(async () =>
+            {
+                var existingUser = await _context.Utilisateurs.FindAsync(userVM.Id);
+                if (existingUser == null)
+                {
+                    return false;
+                }
+
+                // Use the execution strategy's built-in transaction handling
+                await using var transaction = await _context.Database.BeginTransactionAsync();
+
+                try
+                {
+                    // Check if role has changed
+                    string oldRole = existingUser.Role;
+                    string newRole = userVM.Role;
+
+                    // Check if password has changed before hashing
+                    if (!string.IsNullOrEmpty(userVM.Password))
+                    {
+                        existingUser.Password = HasherProgram.HashPassword(userVM.Password);
+                    }
+
+                    // Update user properties
+                    existingUser.Nom = userVM.Nom;
+                    existingUser.Prenom = userVM.Prenom;
+                    existingUser.Adresse = userVM.Adresse;
+                    existingUser.CIN = userVM.CIN;
+                    existingUser.Login = userVM.Login;
+                    existingUser.Email = userVM.Email;
+                    existingUser.Telephone = userVM.Telephone;
+                    existingUser.Role = userVM.Role;
+
+                    await _context.SaveChangesAsync();
+
+                    // If role changed, update role-specific tables
+                    if (oldRole != newRole)
+                    {
+                        // If old role was Admin, remove from Admin table
+                        if (oldRole == "Admin")
+                        {
+                            var admin = await _context.Administrateurs
+                                .FirstOrDefaultAsync(a => a.IdUtilisateur == existingUser.Id);
+                            if (admin != null)
+                            {
+                                _context.Administrateurs.Remove(admin);
+                            }
+                        }
+                        // If old role was User, remove from Employes table
+                        else if (oldRole == "Employes")
+                        {
+                            var employe = await _context.Employes
+                                .FirstOrDefaultAsync(e => e.IdUtilisateur == existingUser.Id);
+                            if (employe != null)
+                            {
+                                _context.Employes.Remove(employe);
+                            }
+                        }
+
+                        // If new role is Admin, add to Admin table
+                        if (newRole == "Admin")
+                        {
+                            var admin = new Administrateur
+                            {
+                                IdAdmin = existingUser.Id,
+                                IdUtilisateur = existingUser.Id
+                            };
+                            _context.Administrateurs.Add(admin);
+                        }
+                        // If new role is User, add to Employes table
+                        else if (newRole == "Employes")
+                        {
+                            var employe = new Employes
+                            {
+                                IdEmploye = existingUser.Id,
+                                IdUtilisateur = existingUser.Id
+                            };
+                            _context.Employes.Add(employe);
+                        }
+
+                        await _context.SaveChangesAsync();
+                    }
+
+                    await transaction.CommitAsync();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    await transaction.RollbackAsync();
+                    throw;
+                }
+            });
+        }
+        public async Task<bool> DeleteUserAsync(int id)
+        {
+            var user = await _context.Utilisateurs.FindAsync(id);
+            if (user == null) return false;
+
+            await using var transaction = await _context.Database.BeginTransactionAsync();
 
             try
             {
-                // Check if role has changed
-                string oldRole = existingUser.Role;
-                string newRole = userVM.Role;
-
-                // Check if password has changed before hashing
-                if (!string.IsNullOrEmpty(userVM.Password))
-                {
-                    existingUser.Password = HasherProgram.HashPassword(userVM.Password);
-                }
-
-                // Update user properties
-                existingUser.Nom = userVM.Nom;
-                existingUser.Prenom = userVM.Prenom;
-                existingUser.Adresse = userVM.Adresse;
-                existingUser.CIN = userVM.CIN;
-                existingUser.Login = userVM.Login;
-                existingUser.Telephone = userVM.Telephone;
-                existingUser.Role = userVM.Role;
+                await RemoveRoleSpecificEntities(user.Role, id);
+                _context.Utilisateurs.Remove(user);
 
                 await _context.SaveChangesAsync();
-
-                // If role changed, update role-specific tables
-                if (oldRole != newRole)
-                {
-                    // If old role was Admin, remove from Admin table
-                    if (oldRole == "Admin")
-                    {
-                        var admin = await _context.Administrateurs
-                            .FirstOrDefaultAsync(a => a.IdUtilisateur == existingUser.Id);
-                        if (admin != null)
-                        {
-                            _context.Administrateurs.Remove(admin);
-                        }
-                    }
-                    // If old role was User, remove from Employes table
-                    else if (oldRole == "Employes")
-                    {
-                        var employe = await _context.Employes
-                            .FirstOrDefaultAsync(e => e.IdUtilisateur == existingUser.Id);
-                        if (employe != null)
-                        {
-                            _context.Employes.Remove(employe);
-                        }
-                    }
-
-                    // If new role is Admin, add to Admin table
-                    if (newRole == "Admin")
-                    {
-                        var admin = new Administrateur
-                        {
-                            IdAdmin = existingUser.Id, // Set the Id to match the Utilisateur Id
-                            IdUtilisateur = existingUser.Id
-                        };
-                        _context.Administrateurs.Add(admin);
-                    }
-                    // If new role is User, add to Employes table
-                    else if (newRole == "Employes")
-                    {
-                        var employe = new Employes
-                        {
-                            IdEmploye = existingUser.Id, // Set the Id to match the Utilisateur Id
-                            IdUtilisateur = existingUser.Id
-                        };
-                        _context.Employes.Add(employe);
-                    }
-
-                    await _context.SaveChangesAsync();
-                }
-
                 await transaction.CommitAsync();
+
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await transaction.RollbackAsync();
+                _logger.LogError(ex, "Error deleting user {UserId}", id);
                 throw;
             }
         }
 
-        public async Task<bool> DeleteUserAsync(int id)
+        private async Task RemoveRoleSpecificEntities(string role, int userId)
         {
-            var utilisateur = await _context.Utilisateurs.FindAsync(id);
-            if (utilisateur == null)
+            if (role == "Admin")
             {
-                return false;
+                var admin = await _context.Administrateurs
+                    .FirstOrDefaultAsync(a => a.IdUtilisateur == userId);
+                if (admin != null) _context.Administrateurs.Remove(admin);
             }
-
-            // Begin transaction
-            using var transaction = await _context.Database.BeginTransactionAsync();
-
-            try
+            else if (role == "Employes")
             {
-                // Delete from role-specific tables first
-                if (utilisateur.Role == "Admin")
-                {
-                    var admin = await _context.Administrateurs
-                        .FirstOrDefaultAsync(a => a.IdUtilisateur == id);
-                    if (admin != null)
-                    {
-                        _context.Administrateurs.Remove(admin);
-                    }
-                }
-                else if (utilisateur.Role == "Employes")
-                {
-                    var employe = await _context.Employes
-                        .FirstOrDefaultAsync(e => e.IdUtilisateur == id);
-                    if (employe != null)
-                    {
-                        _context.Employes.Remove(employe);
-                    }
-                }
-
-                // Then delete the user
-                _context.Utilisateurs.Remove(utilisateur);
-                await _context.SaveChangesAsync();
-
-                await transaction.CommitAsync();
-                return true;
-            }
-            catch (Exception)
-            {
-                await transaction.RollbackAsync();
-                return false;
+                var employe = await _context.Employes
+                    .FirstOrDefaultAsync(e => e.IdUtilisateur == userId);
+                if (employe != null) _context.Employes.Remove(employe);
             }
         }
     }

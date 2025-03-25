@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using PFA_TEMPLATE.Models;
 using PFA_TEMPLATE.viewModels;
 
@@ -6,10 +7,12 @@ namespace PFA_TEMPLATE.Data
 {
     public class ApplicationDbContext : DbContext
     {
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
+              : base(options)
         {
         }
+
 
         // ✅ DbSets for each table
         public DbSet<Notification> Notifications { get; set; }
@@ -34,24 +37,20 @@ namespace PFA_TEMPLATE.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Notification>()
-      .HasOne(n => n.Tache)
-      .WithMany() // Replace with your navigation property if it exists
-      .HasForeignKey(n => n.IdTache)
-      .OnDelete(DeleteBehavior.Cascade);
-            base.OnModelCreating(modelBuilder); // ✅ Ensure base method is called
-
+          .HasOne(n => n.Tache)
+          .WithMany() // Replace with your navigation property if it exists
+          .HasForeignKey(n => n.IdTache)
+          .OnDelete(DeleteBehavior.Cascade);
             // ✅ Utilisateur
-            modelBuilder.Entity<Utilisateur>()
-                .HasKey(u => u.Id);
-
-            modelBuilder.Entity<Utilisateur>()
-                .HasIndex(u => u.Login)
-                .IsUnique();
-
-            modelBuilder.Entity<Utilisateur>()
-                .HasIndex(u => u.CIN)
-                .IsUnique();
+            modelBuilder.Entity<Utilisateur>(entity =>
+            {
+                entity.HasKey(u => u.Id);
+                entity.HasIndex(u => u.Email).IsUnique();
+                entity.HasIndex(u => u.Login).IsUnique();
+                entity.HasIndex(u => u.CIN).IsUnique(); // Add this if needed
+            });
 
             // ✅ Employes (One-to-One with Utilisateur)
             modelBuilder.Entity<Employes>()

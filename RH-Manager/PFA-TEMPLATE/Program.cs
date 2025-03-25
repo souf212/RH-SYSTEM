@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PFA_TEMPLATE.Data; // For ApplicationDbContext
@@ -15,14 +16,12 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         var allowedOrigins = builder.Configuration.GetSection("CorsSettings:AllowedOrigins").Get<string[]>();
-
-        // Add services to the container
-        builder.Services.AddSignalR();
-        builder.Services.AddAuthorization();
+         
 
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<IPlanningRepository, PlanningRepository>();
-        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IUserService,UserService>(); 
+        builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>();
         builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddScoped<ITacheService, TacheService>();
         builder.Services.AddScoped<GenerationEmploiService>();
@@ -37,10 +36,15 @@ public class Program
             });
         // Configure Entity Framework and connect to the database
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(8, 0, 33))).EnableSensitiveDataLogging());
-
-
+       options.UseMySql(
+           builder.Configuration.GetConnectionString("DefaultConnection"),
+           new MySqlServerVersion(new Version(8, 0, 33)),
+           mysqlOptions =>
+           {
+               mysqlOptions.EnableRetryOnFailure();
+           })
+       .EnableSensitiveDataLogging()
+       .EnableDetailedErrors());
         // Configure authentication using cookies
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
@@ -82,7 +86,7 @@ public class Program
         // Middleware for authentication and session management
         app.UseAuthentication();
         app.UseAuthorization();
-        app.UseSession();
+        app.UseSession(); 
         // Enable MVC routes and API controllers
 
 
@@ -93,4 +97,16 @@ public class Program
             pattern: "{controller=Account}/{action=Login}/{id?}"); 
         app.Run();
     }
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+       Host.CreateDefaultBuilder(args)
+           .ConfigureLogging(logging =>
+           {
+               logging.ClearProviders();
+               logging.AddConsole();
+               logging.AddDebug();
+           })
+           .ConfigureWebHostDefaults(webBuilder =>
+           {
+               webBuilder.UseStartup<Program>();
+           });
 }
