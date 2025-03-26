@@ -992,3 +992,8 @@ C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.pdb
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\PFA-TEMPLATE.genruntimeconfig.cache
 C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\obj\Debug\net8.0\ref\PFA-TEMPLATE.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\MailKit.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\MimeKit.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\souf2\OneDrive\Desktop\RH-feature-facial-recognition-fix\RH-Manager\PFA-TEMPLATE\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

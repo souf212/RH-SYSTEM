@@ -29,6 +29,7 @@ public class Program
         builder.Services.AddScoped<IUserService,UserService>(); 
         builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>(); 
         builder.Services.AddScoped<ITacheService, TacheService>();
+        builder.Services.AddScoped<IEmailService, GmailEmailService>();
         builder.Services.AddScoped<GenerationEmploiService>(); 
         builder.Services.AddHttpContextAccessor();
         builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
@@ -88,11 +89,12 @@ public class Program
                                   .AllowAnyMethod()
                                   .AllowAnyHeader());
         });
-
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())
-        {
+        { 
             app.UseExceptionHandler("/Home/Error");
             app.UseHsts();
         }

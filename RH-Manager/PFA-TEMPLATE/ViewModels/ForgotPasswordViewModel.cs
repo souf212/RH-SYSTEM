@@ -4,9 +4,9 @@ namespace PFA_TEMPLATE.ViewModels
 {
     public class ForgotPasswordViewModel
     {
-        [Required(ErrorMessage = "Email address is required")]
-        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
-        [Display(Name = "Email Address")]
-        public string Telephone { get; set; }
+        [Required(ErrorMessage = "L'adresse email est obligatoire")]
+        [EmailAddress(ErrorMessage = "Veuillez entrer une adresse email valide")]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
     }
 }

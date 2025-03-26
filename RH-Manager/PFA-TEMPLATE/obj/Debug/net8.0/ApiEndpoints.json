@@ -1,5 +1,36 @@
 [
   {
+    "ContainingType": "MS_Contact.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "api/Email/send-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipientName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "recipientEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "subject",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "body",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PFA_TEMPLATE.Controllers.PointageController",
     "Method": "RegisterPointage",
     "RelativePath": "api/pointage",
