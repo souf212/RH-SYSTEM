@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Net;
 using Vonage;
 using Vonage.Request;
-using Vonage.Messaging; 
+using Vonage.Messaging;
 namespace PFA_TEMPLATE.Controllers
 {
     public class AccountController : Controller
@@ -26,7 +26,7 @@ namespace PFA_TEMPLATE.Controllers
 
         {
             _vonageClient = vonageClient;
-            _context = context;  
+            _context = context;
         }
 
         [HttpGet]
@@ -178,42 +178,43 @@ namespace PFA_TEMPLATE.Controllers
             throw new ArgumentException("Invalid Moroccan phone number format");
         }
 
-      private async Task SendPasswordViaSMS(string phoneNumber, string newPassword)
-{
-    try
-    {
-        string formattedPhoneNumber = NormalizePhoneNumber(phoneNumber);
-        
-        // Use the SMS API client instead of direct SendSmsAsync method
-        var smsClient = _vonageClient.SmsClient;
-        
-        var request = new SendSmsRequest
+        private async Task SendPasswordViaSMS(string phoneNumber, string newPassword)
         {
-            From = "YourCompanyName",
-            To = formattedPhoneNumber,
-            Text = $"Votre nouveau mot de passe est : {newPassword}."
-        };
-        
-        // Use the SMS client to send the message
-        var response = await smsClient.SendSmsAsync(request);
-        
-        // Log the SMS send result
-        if (response.Messages[0].Status == "0")
-        {
-            Console.WriteLine($"SMS sent successfully. Message ID: {response.Messages[0].MessageId}");
-        }
-        else
-        {
-            Console.WriteLine($"SMS send failed. Error: {response.Messages[0].ErrorText}");
-            throw new Exception($"SMS send failed: {response.Messages[0].ErrorText}");
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"SMS Send Error: {ex.Message}");
-        throw;
-    }
+            try
+            {
+                string formattedPhoneNumber = NormalizePhoneNumber(phoneNumber);
+
+                // Use the SMS API client instead of direct SendSmsAsync method
+                var smsClient = _vonageClient.SmsClient;
+
+                var request = new SendSmsRequest
+                {
+                    From = "YourCompanyName",
+                    To = formattedPhoneNumber,
+                    Text = $"Votre nouveau mot de passe est : {newPassword}."
+                };
+            }
+            // Use the SMS client to send the message
+            /*  var response = await smsClient.SendSmsAsync(request);
+
+              // Log the SMS send result
+              if (response.Messages[0].Status == "0")
+              {
+                  Console.WriteLine($"SMS sent successfully. Message ID: {response.Messages[0].MessageId}");
+              }
+              else
+              {
+                  Console.WriteLine($"SMS send failed. Error: {response.Messages[0].ErrorText}");
+                  throw new Exception($"SMS send failed: {response.Messages[0].ErrorText}");
+              }
+          }*/
+            catch (Exception ex)
+            {
+                Console.WriteLine($"SMS Send Error: {ex.Message}");
+                throw;
+            }
+          }
+            }
 }
-    }
-}
+    
 

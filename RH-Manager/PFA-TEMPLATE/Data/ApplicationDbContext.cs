@@ -15,6 +15,7 @@ namespace PFA_TEMPLATE.Data
 
 
         // ✅ DbSets for each table
+        public DbSet<TaskExchange> TaskExchanges { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Employes> Employes { get; set; }
@@ -38,6 +39,31 @@ namespace PFA_TEMPLATE.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+
+            modelBuilder.Entity<TaskExchange>()
+              .HasOne(te => te.RequestorTask)
+              .WithMany()
+              .HasForeignKey(te => te.RequestorTaskId)
+              .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskExchange>()
+                .HasOne(te => te.ReceiverTask)
+                .WithMany()
+                .HasForeignKey(te => te.ReceiverTaskId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskExchange>()
+                .HasOne(te => te.Requestor)
+                .WithMany()
+                .HasForeignKey(te => te.RequestorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TaskExchange>()
+                .HasOne(te => te.Receiver)
+                .WithMany()
+                .HasForeignKey(te => te.ReceiverId)
+                .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Notification>()
           .HasOne(n => n.Tache)
           .WithMany() // Replace with your navigation property if it exists

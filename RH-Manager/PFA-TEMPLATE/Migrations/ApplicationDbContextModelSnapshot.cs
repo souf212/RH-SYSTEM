@@ -198,6 +198,9 @@ namespace PFA_TEMPLATE.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IdEmploye");
@@ -277,6 +280,52 @@ namespace PFA_TEMPLATE.Migrations
                     b.HasIndex("IdEmploye");
 
                     b.ToTable("Taches");
+                });
+
+            modelBuilder.Entity("PFA_TEMPLATE.Models.TaskExchange", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReceiverTaskId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("RequestDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("RequestorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RequestorTaskId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ResponseDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("ReceiverTaskId");
+
+                    b.HasIndex("RequestorId");
+
+                    b.HasIndex("RequestorTaskId");
+
+                    b.ToTable("TaskExchanges");
                 });
 
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.Absences", b =>
@@ -679,6 +728,41 @@ namespace PFA_TEMPLATE.Migrations
                         .IsRequired();
 
                     b.Navigation("Employe");
+                });
+
+            modelBuilder.Entity("PFA_TEMPLATE.Models.TaskExchange", b =>
+                {
+                    b.HasOne("PFA_TEMPLATE.Models.Employes", "Receiver")
+                        .WithMany()
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PFA_TEMPLATE.Models.Taches", "ReceiverTask")
+                        .WithMany()
+                        .HasForeignKey("ReceiverTaskId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PFA_TEMPLATE.Models.Employes", "Requestor")
+                        .WithMany()
+                        .HasForeignKey("RequestorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PFA_TEMPLATE.Models.Taches", "RequestorTask")
+                        .WithMany()
+                        .HasForeignKey("RequestorTaskId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("ReceiverTask");
+
+                    b.Navigation("Requestor");
+
+                    b.Navigation("RequestorTask");
                 });
 
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.Absences", b =>

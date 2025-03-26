@@ -33,5 +33,6 @@ namespace PFA_TEMPLATE.Models
         [ForeignKey("IdEmploye")]
         public virtual Employes? Employe { get; set; }
 
+
     }
 }

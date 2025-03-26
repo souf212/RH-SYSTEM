@@ -39,5 +39,7 @@ namespace PFA_TEMPLATE.viewModels
         public string Telephone { get; set; }
 
         public string Role { get; set; } // e.g., Admin, Employee
+        [NotMapped]
+        public string NomComplet => $"{Nom} {Prenom}";
     }
 }

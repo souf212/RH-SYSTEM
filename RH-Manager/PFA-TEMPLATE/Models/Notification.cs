@@ -24,5 +24,16 @@ namespace PFA_TEMPLATE.Models
 
         [ForeignKey("IdTache")]
         public virtual Taches? Tache { get; set; }
+        public NotificationType Type { get; set; }
+    }
+    public enum NotificationType
+    {
+        TaskExchangeRequest,
+        TaskExchangeApproved,
+        TaskExchangeRejected,
+        TaskExchangeCancelled,
+        General,
+        TaskAssigned,
+        TaskCompleted
     }
 }

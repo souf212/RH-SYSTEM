@@ -1,0 +1,75 @@
+﻿@model PFA_TEMPLATE.Models.TaskExchange
+@using System.Security.Claims
+
+@using PFA_TEMPLATE.Models
+@{
+    ViewData["Title"] = "Details D'echange";
+}
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="d-flex justify-content-between">
+                <h5>Request Details</h5>
+                <span class="badge @GetStatusBadgeClass(Model.Status)">@Model.Status</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Request Date:</dt>
+                <dd class="col-sm-9">@Model.RequestDate.ToString("g")</dd>
+
+                <dt class="col-sm-3">Your Task:</dt>
+                <dd class="col-sm-9">@Model.RequestorTask.Titre </dd>
+
+                <dt class="col-sm-3">Their Task:</dt>
+                <dd class="col-sm-9">@Model.ReceiverTask.Titre </dd>
+
+                <dt class="col-sm-3">Employee:</dt>
+                <dd class="col-sm-9">
+                    @if (Model.RequestorId == int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)))
+                    {
+                        @Model.Receiver.Utilisateur.NomComplet
+                    }
+                    else
+                    {
+                        @Model.Requestor.Utilisateur.NomComplet
+                    }
+                </dd>
+
+                <dt class="col-sm-3">Reason:</dt>
+                <dd class="col-sm-9">@Model.Reason</dd>
+
+                @if (Model.Status != TaskExchangeStatus.Pending)
+                {
+                    <dt class="col-sm-3">Response Date:</dt>
+                    <dd class="col-sm-9">@Model.ResponseDate?.ToString("g")</dd>
+                }
+            </dl>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
+
+@functions {
+    public string GetStatusBadgeClass(TaskExchangeStatus status)
+    {
+        switch (status)
+        {
+            case TaskExchangeStatus.Pending:
+                return "bg-warning text-dark";
+            case TaskExchangeStatus.Approved:
+                return "bg-success";
+            case TaskExchangeStatus.Rejected:
+                return "bg-danger";
+            case TaskExchangeStatus.Cancelled:
+                return "bg-secondary";
+            default:
+                return "bg-info";
+        }
+    }
+}

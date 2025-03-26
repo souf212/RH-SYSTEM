@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PFA_TEMPLATE.Migrations
 {
     /// <inheritdoc />
-    public partial class validation : Migration
+    public partial class all : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -466,7 +466,8 @@ namespace PFA_TEMPLATE.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     IsRead = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     IdEmploye = table.Column<int>(type: "int", nullable: false),
-                    IdTache = table.Column<int>(type: "int", nullable: true)
+                    IdTache = table.Column<int>(type: "int", nullable: true),
+                    Type = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -483,6 +484,52 @@ namespace PFA_TEMPLATE.Migrations
                         principalTable: "Taches",
                         principalColumn: "IdTaches",
                         onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "TaskExchanges",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    RequestorTaskId = table.Column<int>(type: "int", nullable: false),
+                    ReceiverTaskId = table.Column<int>(type: "int", nullable: false),
+                    RequestorId = table.Column<int>(type: "int", nullable: false),
+                    ReceiverId = table.Column<int>(type: "int", nullable: false),
+                    Reason = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    RequestDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    ResponseDate = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TaskExchanges", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TaskExchanges_Employes_ReceiverId",
+                        column: x => x.ReceiverId,
+                        principalTable: "Employes",
+                        principalColumn: "IdEmploye",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TaskExchanges_Employes_RequestorId",
+                        column: x => x.RequestorId,
+                        principalTable: "Employes",
+                        principalColumn: "IdEmploye",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TaskExchanges_Taches_ReceiverTaskId",
+                        column: x => x.ReceiverTaskId,
+                        principalTable: "Taches",
+                        principalColumn: "IdTaches",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TaskExchanges_Taches_RequestorTaskId",
+                        column: x => x.RequestorTaskId,
+                        principalTable: "Taches",
+                        principalColumn: "IdTaches",
+                        onDelete: ReferentialAction.Restrict);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -590,6 +637,26 @@ namespace PFA_TEMPLATE.Migrations
                 column: "IdEmploye");
 
             migrationBuilder.CreateIndex(
+                name: "IX_TaskExchanges_ReceiverId",
+                table: "TaskExchanges",
+                column: "ReceiverId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TaskExchanges_ReceiverTaskId",
+                table: "TaskExchanges",
+                column: "ReceiverTaskId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TaskExchanges_RequestorId",
+                table: "TaskExchanges",
+                column: "RequestorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TaskExchanges_RequestorTaskId",
+                table: "TaskExchanges",
+                column: "RequestorTaskId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Utilisateurs_CIN",
                 table: "Utilisateurs",
                 column: "CIN",
@@ -645,6 +712,9 @@ namespace PFA_TEMPLATE.Migrations
                 name: "Salaires");
 
             migrationBuilder.DropTable(
+                name: "TaskExchanges");
+
+            migrationBuilder.DropTable(
                 name: "Contrats");
 
             migrationBuilder.DropTable(
@@ -654,10 +724,10 @@ namespace PFA_TEMPLATE.Migrations
                 name: "Conges");
 
             migrationBuilder.DropTable(
-                name: "Taches");
+                name: "EmploiDuTemps");
 
             migrationBuilder.DropTable(
-                name: "EmploiDuTemps");
+                name: "Taches");
 
             migrationBuilder.DropTable(
                 name: "ContraintesPlanning");

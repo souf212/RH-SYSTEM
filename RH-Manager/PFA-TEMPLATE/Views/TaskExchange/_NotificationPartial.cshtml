@@ -1,0 +1,64 @@
+﻿@using PFA_TEMPLATE.Models
+@model IEnumerable<Notification>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-bell"></i>
+        <span class="badge bg-danger" id="notificationCounter">@Model.Count(n => !n.IsRead)</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+        @if (Model.Any())
+        {
+            <li><h6 class="dropdown-header">Recent Notifications</h6></li>
+            @foreach (var notification in Model.OrderByDescending(n => n.CreatedAt).Take(5))
+            {
+                <li>
+                    <a class="dropdown-item @(!notification.IsRead ? "fw-bold" : "")"
+                       href="@GetNotificationLink(notification)"
+                       onclick="markAsRead('@notification.Id')">
+                        <div class="d-flex justify-content-between">
+                            <span>@notification.Message</span>
+                            <small class="text-muted">@notification.CreatedAt.ToString("g")</small>
+                        </div>
+                    </a>
+                </li>
+            }
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center" asp-controller="Notification" asp-action="Index">View All</a></li>
+            <li><a class="dropdown-item text-center" href="#" onclick="markAllAsRead()">Mark All as Read</a></li>
+        }
+        else
+        {
+            <li><a class="dropdown-item">No new notifications</a></li>
+        }
+    </ul>
+</div>
+
+<script>
+    function markAsRead(notificationId) {
+        $.post('/Notification/MarkAsRead', { id: notificationId });
+    }
+
+    function markAllAsRead() {
+        $.post('@Url.Action("MarkAllAsRead", "Notification")', function() {
+            $('#notificationCounter').text('0');
+            $('.dropdown-item').removeClass('fw-bold');
+        });
+    }
+</script>
+
+@functions {
+    public string GetNotificationLink(Notification notification)
+    {
+        switch (notification.Type)
+        {
+            case NotificationType.TaskExchangeRequest:
+            case NotificationType.TaskExchangeApproved:
+            case NotificationType.TaskExchangeRejected:
+            case NotificationType.TaskExchangeCancelled:
+                return Url.Action("Index", "TaskExchange");
+            default:
+                return "#";
+        }
+    }
+}
