@@ -8,6 +8,11 @@ using PFA_TEMPLATE.Repositories;
 using PFA_TEMPLATE.Services;
 using PFA_TEMPLATE.ViewModels;
 using System.Text.Json.Serialization;
+using Vonage;
+using Vonage.Request;
+using Vonage.Messaging;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace PFA_TEMPLATE;
 
@@ -24,9 +29,23 @@ public class Program
         builder.Services.AddScoped<IUserService,UserService>(); 
         builder.Services.AddScoped<IPasswordHasher, PasswordHasherService>(); 
         builder.Services.AddScoped<ITacheService, TacheService>();
-        builder.Services.AddScoped<GenerationEmploiService>();
+        builder.Services.AddScoped<GenerationEmploiService>(); 
         builder.Services.AddHttpContextAccessor();
         builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+        builder.Services.Configure<VonageSettings>(builder.Configuration.GetSection("Vonage"));
+         
+
+        // Register VonageClient
+        builder.Services.AddSingleton<VonageClient>(provider =>
+        {
+            var settings = provider.GetRequiredService<IOptions<VonageSettings>>().Value;
+            var credentials = Vonage.Request.Credentials.FromApiKeyAndSecret(
+                settings.ApiKey,
+                settings.ApiSecret
+            );
+            return new VonageClient(credentials);
+        });
+        // Add this to your services configuration
         // API configuration
         builder.Services.AddControllers()
             .AddJsonOptions(options =>

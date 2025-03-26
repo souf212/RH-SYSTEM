@@ -4,27 +4,29 @@ using Microsoft.AspNetCore.Mvc;
 using PFA_TEMPLATE.Data;
 using PFA_TEMPLATE.ViewModels;
 using PFA_TEMPLATE.Services;
-using System.Security.Claims;
-using PFA_TEMPLATE.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using Twilio; 
-using Twilio.Types;
-using Twilio.Rest.Api.V2010.Account; 
+using System.Security.Claims; 
+using Microsoft.EntityFrameworkCore;   
+using System.Net;
+using Vonage;
+using Vonage.Request;
+using Vonage.Messaging; 
 namespace PFA_TEMPLATE.Controllers
 {
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly string _twilioAccountSid;
-        private readonly string _twilioAuthToken;
-        private readonly string _twilioPhoneNumber;
-        public AccountController(ApplicationDbContext context, IConfiguration configuration)
+        private readonly string _vonageApiKey;
+        private readonly string _vonageApiSecret;
+        private readonly VonageClient _vonageClient;
+
+        public AccountController(
+            ApplicationDbContext context,
+            IConfiguration configuration,
+    VonageClient vonageClient)
+
         {
-            _context = context;
-            _twilioAccountSid = configuration["Twilio:AccountSid"];
-            _twilioAuthToken = configuration["Twilio:AuthToken"];
-            _twilioPhoneNumber = configuration["Twilio:PhoneNumber"];
-            TwilioClient.Init(_twilioAccountSid, _twilioAuthToken);
+            _vonageClient = vonageClient;
+            _context = context;  
         }
 
         [HttpGet]
@@ -138,7 +140,7 @@ namespace PFA_TEMPLATE.Controllers
             // Send SMS with new password
             try
             {
-                SendPasswordViaSMS(user.Telephone, newPassword);
+                await SendPasswordViaSMS(user.Telephone, newPassword);
                 return View("PasswordResetConfirmation");
             }
             catch (Exception ex)
@@ -157,15 +159,61 @@ namespace PFA_TEMPLATE.Controllers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-     
-
-        private void SendPasswordViaSMS(string phoneNumber, string newPassword)
+        private string NormalizePhoneNumber(string phoneNumber)
         {
-            MessageResource.Create(
-                body: $"Votre nouveau mot de passe est : {newPassword}. Veuillez vous connecter et le changer immédiatement.",
-                from: new PhoneNumber(_twilioPhoneNumber),
-                to: new PhoneNumber(phoneNumber)
-            );
+            // Strict Moroccan number validation
+            var digitsOnly = new string(phoneNumber.Where(char.IsDigit).ToArray());
+
+            // Ensure it's a valid Moroccan number
+            if (digitsOnly.Length == 9 && digitsOnly.StartsWith("6"))
+            {
+                return $"212{digitsOnly}";
+            }
+
+            if (digitsOnly.Length == 10 && digitsOnly.StartsWith("06"))
+            {
+                return $"212{digitsOnly.Substring(1)}";
+            }
+
+            throw new ArgumentException("Invalid Moroccan phone number format");
+        }
+
+      private async Task SendPasswordViaSMS(string phoneNumber, string newPassword)
+{
+    try
+    {
+        string formattedPhoneNumber = NormalizePhoneNumber(phoneNumber);
+        
+        // Use the SMS API client instead of direct SendSmsAsync method
+        var smsClient = _vonageClient.SmsClient;
+        
+        var request = new SendSmsRequest
+        {
+            From = "YourCompanyName",
+            To = formattedPhoneNumber,
+            Text = $"Votre nouveau mot de passe est : {newPassword}."
+        };
+        
+        // Use the SMS client to send the message
+        var response = await smsClient.SendSmsAsync(request);
+        
+        // Log the SMS send result
+        if (response.Messages[0].Status == "0")
+        {
+            Console.WriteLine($"SMS sent successfully. Message ID: {response.Messages[0].MessageId}");
+        }
+        else
+        {
+            Console.WriteLine($"SMS send failed. Error: {response.Messages[0].ErrorText}");
+            throw new Exception($"SMS send failed: {response.Messages[0].ErrorText}");
         }
     }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"SMS Send Error: {ex.Message}");
+        throw;
+    }
 }
+    }
+}
+
