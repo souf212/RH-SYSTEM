@@ -51,12 +51,7 @@ namespace PFA_TEMPLATE.Controllers
                 return View(model);
             }
 
-            // Verify password (use password hasher in real applications)
-            if (user.Password != model.Password) // Replace with proper password hashing
-            {
-                ModelState.AddModelError(string.Empty, "Invalid username or password");
-                return View(model);
-            }
+            
 
             // Hachage du mot de passe entré
             using (var sha256 = System.Security.Cryptography.SHA256.Create())

@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\services\\gmailemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\gmailemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,8 +15,16 @@
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\passwordhasher\\passwordhasher\\hasherprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\passwordhasher\\passwordhasher\\hasherprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\services\\gmailemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\services\\gmailemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\viewmodels\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|c:\\users\\souf2\\onedrive\\desktop\\rh-feature-facial-recognition-fix\\rh-manager\\pfa-template\\passwordhasher\\passwordhasher\\hasherprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|PFA-TEMPLATE\\PFA-TEMPLATE.csproj|solutionrelative:pfa-template\\passwordhasher\\passwordhasher\\hasherprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +42,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "GmailEmailService.cs",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Services\\GmailEmailService.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Services\\GmailEmailService.cs",
               "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Services\\GmailEmailService.cs",
               "RelativeToolTip": "PFA-TEMPLATE\\Services\\GmailEmailService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T15:37:19.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T15:37:19.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EmailController.cs",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\EmailController.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\EmailController.cs",
@@ -67,55 +70,50 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\EmailController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T15:36:38.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2025-03-26T15:36:38.772Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAIwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEMAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-26T15:27:58.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAASwFoAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T15:06:39.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Controllers\\AccountController.cs",
               "RelativeToolTip": "PFA-TEMPLATE\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAgwK0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwDUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T15:03:59.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "PFA-TEMPLATE\\Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T15:06:39.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ForgotPasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\ViewModels\\ForgotPasswordViewModel.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\ViewModels\\ForgotPasswordViewModel.cs",
@@ -123,25 +121,24 @@
               "RelativeToolTip": "PFA-TEMPLATE\\ViewModels\\ForgotPasswordViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T15:27:26.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T15:27:26.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "HasherProgram.cs",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
               "ToolTip": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
               "RelativeToolTip": "PFA-TEMPLATE\\PasswordHasher\\PasswordHasher\\HasherProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T15:04:42.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\souf2\\OneDrive\\Desktop\\RH-feature-facial-recognition-fix\\RH-Manager\\PFA-TEMPLATE\\Views\\Account\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "PFA-TEMPLATE\\Views\\Account\\ResetPassword.cshtml",
@@ -149,8 +146,7 @@
               "RelativeToolTip": "PFA-TEMPLATE\\Views\\Account\\ResetPassword.cshtml",
               "ViewState": "AgIAAF4AAAAAAAAAAAAiwGUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T15:15:17.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T15:15:17.013Z"
             }
           ]
         }
