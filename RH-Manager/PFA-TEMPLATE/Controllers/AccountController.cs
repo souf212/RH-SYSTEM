@@ -146,17 +146,17 @@ namespace PFA_TEMPLATE.Controllers
 
             // Send email with reset link
             string emailBody = $@"
-Bonjour {user.Prenom} {user.Nom},
+            Bonjour {user.Prenom} {user.Nom},
 
-Vous avez demandé une réinitialisation de mot de passe. 
-Cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe :
+            Vous avez demandé une réinitialisation de mot de passe. 
+            Cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe :
 
-{resetLink}
+            {resetLink}
 
-Si vous n'avez pas demandé cette réinitialisation, ignorez simplement cet email.
+            Si vous n'avez pas demandé cette réinitialisation, ignorez simplement cet email.
 
-Cordialement,
-Votre Équipe";
+            Cordialement,
+            Votre Équipe";
 
             try
             {
