@@ -1,0 +1,79 @@
+﻿@model PFA_TEMPLATE.ViewModels.ContratVM
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Créer un contrat";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h3 class="mb-4 text-primary fw-bold">
+                        <i class="material-symbols-rounded align-middle me-2">description</i> Nouveau contrat
+                    </h3>
+
+                    <form asp-action="Create" method="post" id="contratForm">
+                        <div class="form-floating mb-3">
+                            <input asp-for="SalaireDeBase" class="form-control" placeholder="Salaire de base" />
+                            <label asp-for="SalaireDeBase">💰 Salaire de base</label>
+                            <span asp-validation-for="SalaireDeBase" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="DateDebut" type="date" class="form-control" placeholder="Date de début" />
+                            <label asp-for="DateDebut">📅 Date de début</label>
+                            <span asp-validation-for="DateDebut" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3" id="dateFinContainer">
+                            <input asp-for="DateFin" type="date" class="form-control" placeholder="Date de fin" />
+                            <label asp-for="DateFin">📅 Date de fin (optionnelle)</label>
+                            <span asp-validation-for="DateFin" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <select asp-for="TypeContrat" class="form-select" id="typeContratSelect">
+                                <option value="">-- Choisir le type --</option>
+                                <option value="CDI">CDI (indéterminé)</option>
+                                <option value="CDD">CDD (déterminé)</option>
+                            </select>
+                            <label asp-for="TypeContrat">📄 Type de contrat</label>
+                            <span asp-validation-for="TypeContrat" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a asp-action="Index" class="btn btn-outline-secondary rounded-pill">
+                                <i class="material-symbols-rounded align-middle">arrow_back</i> Retour
+                            </a>
+                            <button type="submit" class="btn btn-primary rounded-pill px-4">
+                                <i class="material-symbols-rounded align-middle">save</i> Enregistrer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const typeSelect = document.getElementById("typeContratSelect");
+            const dateFinContainer = document.getElementById("dateFinContainer");
+
+            function toggleDateFin() {
+                if (typeSelect.value === "CDI") {
+                    dateFinContainer.style.display = "none";
+                } else {
+                    dateFinContainer.style.display = "block";
+                }
+            }
+
+            typeSelect.addEventListener("change", toggleDateFin);
+            toggleDateFin(); // appel initial
+        });
+    </script>
+}

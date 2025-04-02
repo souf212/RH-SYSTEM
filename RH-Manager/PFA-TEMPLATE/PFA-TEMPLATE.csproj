@@ -11,6 +11,8 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Views\PointageMvc\" />
+    <None Remove="Views\Contrats\" />
+    <None Remove="Views\MonContrat\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PasswordHasher\PasswordHasher.csproj" />
@@ -43,5 +45,7 @@
 
   <ItemGroup>
     <Folder Include="Views\PointageMvc\" />
+    <Folder Include="Views\Contrats\" />
+    <Folder Include="Views\MonContrat\" />
   </ItemGroup>
 </Project>

@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\PFA-TEMPLATE.props" />
+  <Import Project="../build/PFA-TEMPLATE.props" />
 </Project>

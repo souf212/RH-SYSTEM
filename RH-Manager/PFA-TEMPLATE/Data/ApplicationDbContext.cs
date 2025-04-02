@@ -154,14 +154,16 @@ namespace PFA_TEMPLATE.Data
                 .WithOne()
                 .HasForeignKey<Administrateur>(a => a.IdUtilisateur);
 
-            // ✅ Contrats (One-to-Many with Employes)
+            // ✅ Contrats (One-to-Many with Utilisateurs)
             modelBuilder.Entity<Contrat>()
                 .HasKey(c => c.IdContrat);
 
             modelBuilder.Entity<Contrat>()
-                .HasOne(c => c.Employe)
-                .WithMany(e => e.Contrats)
-                .HasForeignKey(c => c.IdEmploye);
+                .HasOne(c => c.Utilisateur)
+                .WithMany(u => u.Contrats)
+                .HasForeignKey(c => c.IdUtilisateur)
+                .OnDelete(DeleteBehavior.Cascade); // facultatif selon ta logique métier
+
 
             // ✅ Absences (One-to-Many with Employes)
             modelBuilder.Entity<Absences>()

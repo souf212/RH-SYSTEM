@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using PFA_TEMPLATE.Models;
+
 namespace PFA_TEMPLATE.viewModels
 {
     public class Utilisateur
@@ -41,5 +43,8 @@ namespace PFA_TEMPLATE.viewModels
         public string Role { get; set; } // e.g., Admin, Employee
         [NotMapped]
         public string NomComplet => $"{Nom} {Prenom}";
+
+        public virtual ICollection<Contrat> Contrats { get; set; } = new List<Contrat>();
+
     }
 }

@@ -132,6 +132,41 @@ namespace PFA_TEMPLATE.Migrations
                     b.ToTable("ContraintesPlanning");
                 });
 
+            modelBuilder.Entity("PFA_TEMPLATE.Models.Contrat", b =>
+                {
+                    b.Property<int>("IdContrat")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdContrat"));
+
+                    b.Property<DateTime>("DateDebut")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime?>("DateFin")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("EtatContrat")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("IdUtilisateur")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("SalaireDeBase")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<string>("TypeContrat")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("IdContrat");
+
+                    b.HasIndex("IdUtilisateur");
+
+                    b.ToTable("Contrats");
+                });
+
             modelBuilder.Entity("PFA_TEMPLATE.Models.EmploiDuTemps", b =>
                 {
                     b.Property<int>("Id")
@@ -172,6 +207,30 @@ namespace PFA_TEMPLATE.Migrations
                         .IsUnique();
 
                     b.ToTable("Employes");
+                });
+
+            modelBuilder.Entity("PFA_TEMPLATE.Models.FicheDePaie", b =>
+                {
+                    b.Property<int>("IdFicheDePaie")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdFicheDePaie"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("IdContrat")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("SalaireNet")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.HasKey("IdFicheDePaie");
+
+                    b.HasIndex("IdContrat");
+
+                    b.ToTable("FichesDePaie");
                 });
 
             modelBuilder.Entity("PFA_TEMPLATE.Models.Notification", b =>
@@ -366,61 +425,6 @@ namespace PFA_TEMPLATE.Migrations
                         .IsUnique();
 
                     b.ToTable("Administrateurs");
-                });
-
-            modelBuilder.Entity("PFA_TEMPLATE.viewModels.Contrat", b =>
-                {
-                    b.Property<int>("IdContrat")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdContrat"));
-
-                    b.Property<DateTime>("DateDebut")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime?>("DateFin")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("IdEmploye")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("SalaireDeBase")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.Property<string>("TypeContrat")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("IdContrat");
-
-                    b.HasIndex("IdEmploye");
-
-                    b.ToTable("Contrats");
-                });
-
-            modelBuilder.Entity("PFA_TEMPLATE.viewModels.FicheDePaie", b =>
-                {
-                    b.Property<int>("IdFicheDePaie")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdFicheDePaie"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("IdContrat")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("SalaireNet")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.HasKey("IdFicheDePaie");
-
-                    b.HasIndex("IdContrat");
-
-                    b.ToTable("FichesDePaie");
                 });
 
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.HistoriqueAbsences", b =>
@@ -660,6 +664,16 @@ namespace PFA_TEMPLATE.Migrations
                     b.Navigation("Employe");
                 });
 
+            modelBuilder.Entity("PFA_TEMPLATE.Models.Contrat", b =>
+                {
+                    b.HasOne("PFA_TEMPLATE.viewModels.Utilisateur", "Utilisateur")
+                        .WithMany("Contrats")
+                        .HasForeignKey("IdUtilisateur")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Utilisateur");
+                });
+
             modelBuilder.Entity("PFA_TEMPLATE.Models.EmploiDuTemps", b =>
                 {
                     b.HasOne("PFA_TEMPLATE.Models.ContraintesPlanning", "ContraintesPlanning")
@@ -688,6 +702,17 @@ namespace PFA_TEMPLATE.Migrations
                         .IsRequired();
 
                     b.Navigation("Utilisateur");
+                });
+
+            modelBuilder.Entity("PFA_TEMPLATE.Models.FicheDePaie", b =>
+                {
+                    b.HasOne("PFA_TEMPLATE.Models.Contrat", "Contrat")
+                        .WithMany("FichesDePaie")
+                        .HasForeignKey("IdContrat")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contrat");
                 });
 
             modelBuilder.Entity("PFA_TEMPLATE.Models.Notification", b =>
@@ -787,28 +812,6 @@ namespace PFA_TEMPLATE.Migrations
                     b.Navigation("Utilisateur");
                 });
 
-            modelBuilder.Entity("PFA_TEMPLATE.viewModels.Contrat", b =>
-                {
-                    b.HasOne("PFA_TEMPLATE.Models.Employes", "Employe")
-                        .WithMany("Contrats")
-                        .HasForeignKey("IdEmploye")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Employe");
-                });
-
-            modelBuilder.Entity("PFA_TEMPLATE.viewModels.FicheDePaie", b =>
-                {
-                    b.HasOne("PFA_TEMPLATE.viewModels.Contrat", "Contrat")
-                        .WithMany("FichesDePaie")
-                        .HasForeignKey("IdContrat")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Contrat");
-                });
-
             modelBuilder.Entity("PFA_TEMPLATE.viewModels.HistoriqueAbsences", b =>
                 {
                     b.HasOne("PFA_TEMPLATE.viewModels.Absences", "Absence")
@@ -879,6 +882,11 @@ namespace PFA_TEMPLATE.Migrations
                     b.Navigation("Employe");
                 });
 
+            modelBuilder.Entity("PFA_TEMPLATE.Models.Contrat", b =>
+                {
+                    b.Navigation("FichesDePaie");
+                });
+
             modelBuilder.Entity("PFA_TEMPLATE.Models.EmploiDuTemps", b =>
                 {
                     b.Navigation("PlagesHoraires");
@@ -890,8 +898,6 @@ namespace PFA_TEMPLATE.Migrations
 
                     b.Navigation("Conges");
 
-                    b.Navigation("Contrats");
-
                     b.Navigation("Pointages");
 
                     b.Navigation("ReconnaissanceFaciales");
@@ -901,9 +907,9 @@ namespace PFA_TEMPLATE.Migrations
                     b.Navigation("Taches");
                 });
 
-            modelBuilder.Entity("PFA_TEMPLATE.viewModels.Contrat", b =>
+            modelBuilder.Entity("PFA_TEMPLATE.viewModels.Utilisateur", b =>
                 {
-                    b.Navigation("FichesDePaie");
+                    b.Navigation("Contrats");
                 });
 #pragma warning restore 612, 618
         }

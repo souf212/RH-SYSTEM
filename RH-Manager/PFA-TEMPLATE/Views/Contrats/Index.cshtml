@@ -1,0 +1,47 @@
+﻿@model List<PFA_TEMPLATE.Models.Contrat>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Liste des Contrats";
+}
+
+<h2 class="mb-4">📄 Liste des contrats</h2>
+
+<table class="table table-bordered table-hover shadow-sm bg-white rounded">
+    <thead class="table-light">
+        <tr>
+            <th>Type</th>
+            <th>Salaire</th>
+            <th>Début</th>
+            <th>Fin</th>
+            <th>État</th>
+            <th>Utilisateur</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contrat in Model)
+        {
+            <tr>
+                <td>@contrat.TypeContrat</td>
+                <td>@contrat.SalaireDeBase €</td>
+                <td>@contrat.DateDebut.ToShortDateString()</td>
+                <td>@(contrat.DateFin?.ToShortDateString() ?? "—")</td>
+                <td><span class="badge bg-secondary">@contrat.EtatContrat</span></td>
+                <td>@(contrat.Utilisateur?.NomComplet ?? "Non affecté")</td>
+                <td>
+                    @if (contrat.IdUtilisateur == null)
+                    {
+                        <a asp-action="Affecter" asp-route-id="@contrat.IdContrat" class="btn btn-sm btn-outline-primary">
+                            <i class="material-symbols-rounded">person_add</i> Affecter
+                        </a>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Affecté</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

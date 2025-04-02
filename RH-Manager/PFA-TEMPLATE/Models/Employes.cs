@@ -24,7 +24,7 @@ namespace PFA_TEMPLATE.Models
 
         // ✅ Collections
         public virtual ICollection<Taches> Taches { get; set; }
-        public virtual ICollection<Contrat> Contrats { get; set; }
+        
         public virtual ICollection<Conges> Conges { get; set; }
         public virtual ICollection<Absences> Absences { get; set; }
         public virtual ICollection<ReconnaissanceFaciale> ReconnaissanceFaciales { get; set; }
@@ -35,7 +35,7 @@ namespace PFA_TEMPLATE.Models
         public Employes()
         {
             Taches = new HashSet<Taches>();
-            Contrats = new HashSet<Contrat>();
+            
             Conges = new HashSet<Conges>();
             Absences = new HashSet<Absences>();
             ReconnaissanceFaciales = new HashSet<ReconnaissanceFaciale>();

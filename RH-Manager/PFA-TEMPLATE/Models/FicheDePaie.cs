@@ -1,6 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// 📁 Models/FicheDePaie.cs
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using PFA_TEMPLATE.Models;
 
-namespace PFA_TEMPLATE.viewModels
+namespace PFA_TEMPLATE.Models
 {
     public class FicheDePaie
     {
@@ -8,10 +12,13 @@ namespace PFA_TEMPLATE.viewModels
         public int IdFicheDePaie { get; set; }
 
         public DateTime Date { get; set; }
+
         public decimal SalaireNet { get; set; }
 
-        // Foreign Key
+        // FK vers Contrat
         public int IdContrat { get; set; }
+
+        [ForeignKey("IdContrat")]
         public Contrat Contrat { get; set; } = null!;
     }
 }

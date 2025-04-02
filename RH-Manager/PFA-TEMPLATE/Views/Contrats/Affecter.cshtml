@@ -1,0 +1,38 @@
+﻿@model PFA_TEMPLATE.ViewModels.AffectationContratVM
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Affecter un contrat";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h4 class="mb-4 text-primary fw-bold">
+                        <i class="material-symbols-rounded align-middle me-2">person_add</i> Affecter un contrat
+                    </h4>
+
+                    <form asp-action="Affecter" method="post">
+                        <input type="hidden" asp-for="ContratId" />
+
+                        <div class="form-group mb-3">
+                            <label for="UtilisateurId" class="form-label">Sélectionner un utilisateur</label>
+                            <select asp-for="UtilisateurId" class="form-select" asp-items="@(new SelectList(ViewBag.Utilisateurs, "Id", "NomComplet"))">
+                                <option value="">-- Choisir un utilisateur --</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-success rounded-pill">
+                            <i class="material-symbols-rounded align-middle">check_circle</i> Valider l'affectation
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary ms-2 rounded-pill">
+                            <i class="material-symbols-rounded align-middle">arrow_back</i> Retour
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

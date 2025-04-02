@@ -1,6 +1,11 @@
-﻿using PFA_TEMPLATE.Models;
+﻿// 📁 Models/Contrat.cs
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace PFA_TEMPLATE.viewModels
+using System.ComponentModel.DataAnnotations.Schema;
+using PFA_TEMPLATE.viewModels;
+
+namespace PFA_TEMPLATE.Models
 {
     public class Contrat
     {
@@ -8,15 +13,22 @@ namespace PFA_TEMPLATE.viewModels
         public int IdContrat { get; set; }
 
         public decimal SalaireDeBase { get; set; }
+
         public DateTime DateDebut { get; set; }
+
         public DateTime? DateFin { get; set; }
-        public string TypeContrat { get; set; } = string.Empty;
 
-        // Foreign Key
-        public int IdEmploye { get; set; }
-        public Employes Employe { get; set; } = null!;
+        [Required]
+        public string TypeContrat { get; set; } = string.Empty; // "CDI" ou "CDD"
 
-        // Navigation Property
+        public string EtatContrat { get; set; } = "En attente"; // En attente, Affecté, Expiré
+
+        public int? IdUtilisateur { get; set; }
+
+        [ForeignKey("IdUtilisateur")]
+        public Utilisateur? Utilisateur { get; set; }
+
         public ICollection<FicheDePaie> FichesDePaie { get; set; } = new List<FicheDePaie>();
     }
+
 }

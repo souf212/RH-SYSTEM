@@ -42,5 +42,7 @@ namespace PFA_TEMPLATE.ViewModels
         [Required(ErrorMessage = "Le rôle est requis")]
         [StringLength(50, ErrorMessage = "Le rôle ne peut pas dépasser 50 caractères")]
         public string Role { get; set; }
+
+        public int? ContratId { get; set; }
     }
 }
