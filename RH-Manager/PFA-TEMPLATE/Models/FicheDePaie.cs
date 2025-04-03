@@ -1,8 +1,6 @@
-﻿// 📁 Models/FicheDePaie.cs
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using PFA_TEMPLATE.Models;
 
 namespace PFA_TEMPLATE.Models
 {
@@ -11,11 +9,11 @@ namespace PFA_TEMPLATE.Models
         [Key]
         public int IdFicheDePaie { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
 
         public decimal SalaireNet { get; set; }
 
-        // FK vers Contrat
+        // 🔗 Lien avec le contrat
         public int IdContrat { get; set; }
 
         [ForeignKey("IdContrat")]

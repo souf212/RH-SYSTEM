@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PFA_TEMPLATE.Models.FicheDePaie>
+
+@{
+    ViewData["Title"] = "Fiches de Paie";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container py-4">
+    <h3 class="mb-4"><i class="fas fa-money-check-alt me-2 text-success"></i> Fiches de Paie</h3>
+
+    <a asp-action="GenererTout" class="btn btn-success mb-3">
+        <i class="fas fa-cogs me-1"></i> Générer les fiches de ce mois
+    </a>
+
+    @if (TempData["success"] != null)
+    {
+        <div class="alert alert-success">@TempData["success"]</div>
+    }
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Employé</th>
+                <th>Mois</th>
+                <th>Salaire Net</th>
+                <th>Contrat</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fiche in Model)
+            {
+                <tr>
+                    <td>@fiche.Contrat?.Utilisateur?.NomComplet</td>
+                    <td>@fiche.Date.ToString("MMMM yyyy")</td>
+                    <td>@fiche.SalaireNet.ToString("0.00") DH</td>
+                    <td>@fiche.Contrat?.TypeContrat</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
