@@ -19,6 +19,7 @@ else
             <th>Employé</th>
             <th>Motif</th>
             <th>Dates</th>
+            <th>Justificatif</th>
             <th>Statut</th>
             <th>Commentaire</th>
             <th>Actions</th>
@@ -40,6 +41,20 @@ else
                         @demande.Status
                     </span>
                 </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(demande.JustificatifPath))
+                    {
+                        <a href="~/justificatifs/@demande.JustificatifPath" target="_blank">
+                             Voir justificatif
+                        </a>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Aucun</span>
+                    }
+                </td>
+
+
                 <td>
                     <textarea name="commentaire" class="form-control mb-2" rows="2">@demande.AdminComment</textarea>
                 </td>

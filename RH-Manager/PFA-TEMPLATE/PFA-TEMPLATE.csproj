@@ -13,6 +13,8 @@
     <None Remove="Views\PointageMvc\" />
     <None Remove="Views\Contrats\" />
     <None Remove="Views\MonContrat\" />
+    <None Remove="Views\FichesPaie\" />
+    <None Remove="Views\MonSalaire\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PasswordHasher\PasswordHasher.csproj" />
@@ -47,5 +49,11 @@
     <Folder Include="Views\PointageMvc\" />
     <Folder Include="Views\Contrats\" />
     <Folder Include="Views\MonContrat\" />
+    <Folder Include="Views\FichesPaie\" />
+    <Folder Include="Views\MonSalaire\" />
+    <Folder Include="wwwroot\justificatifs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\justificatifs\" />
   </ItemGroup>
 </Project>

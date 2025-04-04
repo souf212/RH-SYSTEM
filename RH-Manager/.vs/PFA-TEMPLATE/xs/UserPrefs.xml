@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{E4DDD30B-2E5B-484C-AAD3-0C6067D26EE6}|https">
+  <MonoDevelop.Ide.ItemProperties.PFA-TEMPLATE PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PFA-TEMPLATE/Controllers/MonSalaireController.cs">
+    <Files>
+      <File FileName="PFA-TEMPLATE/Models/Contrat.cs" Line="8" Column="16" />
+      <File FileName="PFA-TEMPLATE/Controllers/FichesPaieController.cs" Line="27" Column="27" />
+      <File FileName="PFA-TEMPLATE/Controllers/MonSalaireController.cs" Line="112" Column="1" />
+      <File FileName="PFA-TEMPLATE/Views/MonSalaire/Index.cshtml" Line="28" Column="1" />
+      <File FileName="PFA-TEMPLATE/appsettings.json" Line="35" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PFA-TEMPLATE" expanded="True">
+            <Node name="PFA-TEMPLATE" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="MonSalaire" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

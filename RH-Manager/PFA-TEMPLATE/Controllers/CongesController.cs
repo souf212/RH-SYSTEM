@@ -45,13 +45,23 @@ namespace PFA_TEMPLATE.Controllers
                 ListeDemandes = demandes
             };
 
+            // ✅ ➕ Ajout du solde de congés dans le ViewModel
+            var balance = await _context.CongeBalances
+                .FirstOrDefaultAsync(b => b.IdEmploye == employe.IdEmploye && b.Annee == DateTime.Now.Year);
+
+            if (balance != null)
+            {
+                model.SoldeCongesPayesRestants = balance.JoursCongesPayesRestants;
+                model.SoldeMaladieRestants = balance.JoursMaladieRestants;
+            }
+
             return View(model);
         }
 
+
         [HttpPost]
-        public async Task<IActionResult> DemanderConge(DemandeCongeViewModel model)
+        public async Task<IActionResult> DemanderConge(DemandeCongeViewModel model, IFormFile Justificatif)
         {
-            // Get user ID from claims
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
                 return RedirectToAction("Login", "Account");
@@ -66,7 +76,6 @@ namespace PFA_TEMPLATE.Controllers
 
             if (!ModelState.IsValid)
             {
-                // Reload the list of requests if validation fails
                 model.ListeDemandes = await _context.Conges
                     .Where(c => c.IdEmploye == employe.IdEmploye)
                     .OrderByDescending(c => c.DateDebut)
@@ -129,12 +138,29 @@ namespace PFA_TEMPLATE.Controllers
                 Status = "En attente"
             };
 
+            // 📁 Si un justificatif est fourni
+            if (Justificatif != null && Justificatif.Length > 0)
+            {
+                var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "justificatifs");
+                Directory.CreateDirectory(uploads); // Assure que le dossier existe
+
+                var extension = Path.GetExtension(Justificatif.FileName).ToLower();
+                var fileName = $"{Guid.NewGuid()}{extension}";
+                var filePath = Path.Combine(uploads, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await Justificatif.CopyToAsync(stream);
+                }
+
+                conge.JustificatifPath = fileName;
+            }
+
             _context.Conges.Add(conge);
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Votre demande a été soumise avec succès.";
 
-            // Reload the view with updated data
             var nouveauModel = new DemandeCongeViewModel
             {
                 IdEmploye = employe.IdEmploye,
@@ -146,5 +172,6 @@ namespace PFA_TEMPLATE.Controllers
 
             return View("Index", nouveauModel);
         }
+
     }
 }

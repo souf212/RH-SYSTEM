@@ -28,5 +28,9 @@ namespace PFA_TEMPLATE.ViewModels
 
         public List<Conges>? ListeDemandes { get; set; }
 
+        public decimal? SoldeCongesPayesRestants { get; set; }
+        public decimal? SoldeMaladieRestants { get; set; }
+
+
     }
 }

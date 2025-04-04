@@ -5,14 +5,30 @@
 }
 
 <div class="container mt-4">
-
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">Demande de congé</h4>
-                </div>
 
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">🧾 Mon solde de congés</h5>
+                </div>
+                <div class="card-body">
+                    <p>
+                        <strong>Congés payés restants :</strong>
+                        <span class="badge bg-success">@Model.SoldeCongesPayesRestants?.ToString("0.##") jour(s)</span>
+                    </p>
+                    <p>
+                        <strong>Congés maladie restants :</strong>
+                        <span class="badge bg-info">@Model.SoldeMaladieRestants?.ToString("0.##") jour(s)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 📝 Formulaire demande -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">📩 Faire une demande de congé</h5>
+                </div>
                 <div class="card-body">
                     @if (TempData["Success"] != null)
                     {
@@ -21,44 +37,49 @@
 
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                    <form asp-action="DemanderConge" method="post">
-                        <input type="hidden" asp-for="IdEmploye" />
+                <form asp-action="DemanderConge" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="IdEmploye" />
 
-                        <div class="mb-3">
-                            <label asp-for="Motif" class="form-label"></label>
-                            <input asp-for="Motif" class="form-control" placeholder="Ex: Maladie, Vacances..." />
-                            <span asp-validation-for="Motif" class="text-danger"></span>
-                        </div>
+                    <div class="mb-3">
+                        <label asp-for="Motif" class="form-label">Motif</label>
+                        <input asp-for="Motif" class="form-control" placeholder="Ex: Maladie, Vacances..." />
+                        <span asp-validation-for="Motif" class="text-danger"></span>
+                    </div>
 
-                        <div class="mb-3">
-                            <label asp-for="DateDebut" class="form-label"></label>
-                            <input asp-for="DateDebut" type="date" class="form-control" />
-                            <span asp-validation-for="DateDebut" class="text-danger"></span>
-                        </div>
+                    <div class="mb-3">
+                        <label asp-for="DateDebut" class="form-label">Date début</label>
+                        <input asp-for="DateDebut" type="date" class="form-control" />
+                        <span asp-validation-for="DateDebut" class="text-danger"></span>
+                    </div>
 
-                        <div class="mb-3">
-                            <label asp-for="DateFin" class="form-label"></label>
-                            <input asp-for="DateFin" type="date" class="form-control" />
-                            <span asp-validation-for="DateFin" class="text-danger"></span>
-                        </div>
+                    <div class="mb-3">
+                        <label asp-for="DateFin" class="form-label">Date fin</label>
+                        <input asp-for="DateFin" type="date" class="form-control" />
+                        <span asp-validation-for="DateFin" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="justificatif">Certificat médical (PDF ou image) :</label>
+                        <input type="file" name="Justificatif" accept=".pdf,.jpg,.jpeg,.png" class="form-control" />
+                    </div>
 
-                        <button type="submit" class="btn btn-primary w-100">📩 Envoyer la demande</button>
-                    </form>
+                    <button type="submit" class="btn btn-primary w-100">📨 Envoyer la demande</button>
+                </form>
 
                     @if (Model?.PeriodeSuggeree == true)
                     {
                         <div class="alert alert-warning mt-4">
-                            <strong>Un autre employé est déjà en congé sur cette période.</strong><br />
-                            <span>Période suggérée : <strong>@Model.SuggestionDateDebut?.ToString("dd/MM/yyyy") → @Model.SuggestionDateFin?.ToString("dd/MM/yyyy")</strong></span>
+                            <strong>⚠️ Un autre employé est déjà en congé sur cette période.</strong><br />
+                            Période suggérée :
+                            <strong>@Model.SuggestionDateDebut?.ToString("dd/MM/yyyy") → @Model.SuggestionDateFin?.ToString("dd/MM/yyyy")</strong>
                         </div>
                     }
                 </div>
             </div>
 
-            <!-- Liste des demandes -->
+            <!-- 📋 Liste des demandes -->
             <div class="card mt-5 shadow-sm">
                 <div class="card-header bg-light">
-                    <h5 class="mb-0">📋 Mes demandes de congé</h5>
+                    <h5 class="mb-0">📂 Mes demandes de congé</h5>
                 </div>
 
                 <div class="card-body table-responsive">
@@ -99,6 +120,7 @@
                     }
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -124,6 +146,13 @@
         .badge-warning {
             background-color: #ffc107;
             color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .badge-info {
+            background-color: #17a2b8;
+            color: white;
             padding: 5px 10px;
             border-radius: 5px;
         }

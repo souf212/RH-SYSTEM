@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PFA-TEMPLATE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74b24af954350148da9e3f0548faa9a17cbccee4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cacaf806bcdf0eda4899bdb360d12fb580155710")]
 [assembly: System.Reflection.AssemblyProductAttribute("PFA-TEMPLATE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PFA-TEMPLATE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

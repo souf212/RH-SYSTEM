@@ -76,6 +76,9 @@ namespace PFA_TEMPLATE.Migrations
                     b.Property<int>("IdEmploye")
                         .HasColumnType("int");
 
+                    b.Property<string>("JustificatifPath")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Motif")
                         .IsRequired()
                         .HasColumnType("longtext");

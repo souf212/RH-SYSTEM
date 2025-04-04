@@ -3,3 +3,4 @@ face-recognition
 numpy
 requests
 pillow
+mysql-connector-python

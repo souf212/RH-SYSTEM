@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2HvTavlD7z0zhljRdezD2EsgxdjutF1ZPnMORrGs0bM=",
+  "Hash": "867t4kxw/NFFDUJ07LI1yMp4D7YHHo1UFEndXsQldb0=",
   "Source": "PFA-TEMPLATE",
   "BasePath": "_content/PFA-TEMPLATE",
   "Mode": "Default",
@@ -2067,6 +2067,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/Users/minfo/pfa1/RH-SYSTEM/RH-Manager/PFA-TEMPLATE/wwwroot/justificatifs/9b49fb9f-bb26-4162-b4e1-2cebbc8de61e.png",
+      "SourceId": "PFA-TEMPLATE",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/minfo/pfa1/RH-SYSTEM/RH-Manager/PFA-TEMPLATE/wwwroot/",
+      "BasePath": "_content/PFA-TEMPLATE",
+      "RelativePath": "justificatifs/9b49fb9f-bb26-4162-b4e1-2cebbc8de61e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/justificatifs/9b49fb9f-bb26-4162-b4e1-2cebbc8de61e.png"
     },
     {
       "Identity": "/Users/minfo/pfa1/RH-SYSTEM/RH-Manager/PFA-TEMPLATE/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

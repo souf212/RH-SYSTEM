@@ -21,5 +21,8 @@ namespace PFA_TEMPLATE.Models
         public virtual Employes Employe { get; set; } = null!;
         public string Status { get; internal set; } = "En attente";
         public string? AdminComment { get; internal set; }
+
+        public string? JustificatifPath { get; set; } // Chemin vers le fichier
+
     }
 }

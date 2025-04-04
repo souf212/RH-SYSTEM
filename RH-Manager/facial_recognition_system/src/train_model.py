@@ -11,8 +11,8 @@ def get_employee_mapping():
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="zxcvbnm",
-            database="HR_Management_System1"
+            password="Mohamed*",
+            database="HR_Management_System"
         )
         cursor = conn.cursor()
         # Fetch from utilisateurs table and join with Employes

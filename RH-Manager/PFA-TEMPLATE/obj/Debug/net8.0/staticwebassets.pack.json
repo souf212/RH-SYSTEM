@@ -429,6 +429,10 @@
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
+      "Id": "/Users/minfo/pfa1/RH-SYSTEM/RH-Manager/PFA-TEMPLATE/wwwroot/justificatifs/9b49fb9f-bb26-4162-b4e1-2cebbc8de61e.png",
+      "PackagePath": "staticwebassets/justificatifs/9b49fb9f-bb26-4162-b4e1-2cebbc8de61e.png"
+    },
+    {
       "Id": "/Users/minfo/pfa1/RH-SYSTEM/RH-Manager/PFA-TEMPLATE/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
