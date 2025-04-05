@@ -1,0 +1,68 @@
+<svg width="800" height="1100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header {
+      fill: white;
+      font: bold 26px sans-serif;
+    }
+    .section-title {
+      font: bold 18px sans-serif;
+      fill: #4e73df;
+    }
+    .label {
+      font: bold 14px sans-serif;
+      fill: #333;
+    }
+    .value {
+      font: 14px sans-serif;
+      fill: #000;
+    }
+    .box {
+      fill: #f8f9fc;
+      stroke: #d1d3e2;
+      stroke-width: 1;
+    }
+    .signature {
+      font: italic 14px sans-serif;
+      fill: #666;
+    }
+  </style>
+
+  <!-- Background Header -->
+  <rect x="0" y="0" width="800" height="100" fill="#4e73df" />
+  <text x="50" y="60" class="header">CONTRAT DE TRAVAIL</text>
+
+  <!-- Section Employé -->
+  <text x="50" y="140" class="section-title">Informations sur l'employé</text>
+
+  <rect x="45" y="150" width="700" height="150" class="box"/>
+  <text x="60" y="180" class="label">Nom :</text>
+  <text x="250" y="180" class="value">{{ Nom }}</text>
+
+  <text x="60" y="210" class="label">Email :</text>
+  <text x="250" y="210" class="value">{{ Email }}</text>
+
+  <text x="60" y="240" class="label">CIN :</text>
+  <text x="250" y="240" class="value">{{ CIN }}</text>
+
+  <!-- Section Contrat -->
+  <text x="50" y="330" class="section-title">Détails du contrat</text>
+
+  <rect x="45" y="340" width="700" height="160" class="box"/>
+  <text x="60" y="370" class="label">Type de Contrat :</text>
+  <text x="250" y="370" class="value">{{ TypeContrat }}</text>
+
+  <text x="60" y="400" class="label">Date de Début :</text>
+  <text x="250" y="400" class="value">{{ DateDebut }}</text>
+
+  <text x="60" y="430" class="label">Date de Fin :</text>
+  <text x="250" y="430" class="value">{{ DateFin }}</text>
+
+  <text x="60" y="460" class="label">Salaire de Base :</text>
+  <text x="250" y="460" class="value">{{ Salaire }} €</text>
+
+  <!-- Signatures -->
+  <text x="50" y="600" class="section-title">Signatures</text>
+  <text x="100" y="660" class="signature">Employeur : _________________________</text>
+  <text x="500" y="660" class="signature">Employé : _________________________</text>
+
+</svg>

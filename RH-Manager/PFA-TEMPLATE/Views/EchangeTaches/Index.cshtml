@@ -1,0 +1,215 @@
+﻿@model PFA_TEMPLATE.ViewModels.EchangeTachesVM
+@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+
+    ViewData["Title"] = "Échange de tâches";
+    var mesTaches = ViewBag.MesTaches as List<PFA_TEMPLATE.Models.Taches>;
+    var autresTaches = ViewBag.AutresTaches as List<PFA_TEMPLATE.Models.Taches>;
+    var demandesEchange = ViewBag.DemandesEchange as List<PFA_TEMPLATE.Models.EchangeTaches>;
+    var idEmploye = ViewBag.IdEmploye;
+}
+
+<div class="container-fluid">
+    <h2 class="mb-4">Échange de tâches</h2>
+
+    <div class="row">
+        <!-- Section pour demander un échange -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Demander un échange de tâche</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="DemanderEchange" method="post">
+                        <div class="form-group mb-3">
+                            <label class="form-label">Ma tâche à échanger :</label>
+                            <select asp-for="IdTacheDemandeur" class="form-control" required>
+                                <option value="">Sélectionner une tâche</option>
+                                @foreach (var tache in mesTaches)
+                                {
+                                    <option value="@tache.IdTaches">@tache.Titre</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Tâche souhaitée :</label>
+                            <select asp-for="IdTacheDestinataire" class="form-control" required>
+                                <option value="">Sélectionner une tâche</option>
+                                @foreach (var tache in autresTaches)
+                                {
+                                    <option value="@tache.IdTaches">
+                                        @tache.Titre (@(tache.Employe?.Prenom + " " + tache.Employe?.Nom))
+                                    </option>
+
+                                }
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Demander l'échange</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section pour les demandes en attente -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0">Demandes en attente</h5>
+                </div>
+                <div class="card-body">
+                    @if (demandesEchange != null && demandesEchange.Any(e => e.Statut == "EnAttente"))
+                    {
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Tâche proposée</th>
+                                        <th>Tâche demandée</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var echange in demandesEchange.Where(e => e.Statut == "EnAttente"))
+                                    {
+                                        <tr>
+                                            <td>
+                                                @if (echange.IdEmployeDemandeur == idEmploye)
+                                                {
+                                                    <span class="badge bg-info">Envoyée</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-warning">Reçue</span>
+                                                }
+                                            </td>
+                                            <td>@echange.TacheDemandeur?.Titre</td>
+                                            <td>@echange.TacheDestinataire?.Titre</td>
+                                            <td>@echange.DateDemande.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                @if (echange.IdEmployeDestinataire == idEmploye)
+                                                {
+                                                    <div class="btn-group">
+                                                        <form asp-action="AccepterEchange" method="post" class="me-2">
+                                                            <input type="hidden" name="idEchange" value="@echange.IdEchange" />
+                                                            <button type="submit" class="btn btn-sm btn-success">Accepter</button>
+                                                        </form>
+                                                        
+                                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#refuserModal@(echange.IdEchange)">
+                                                            Refuser
+                                                        </button>
+                                                    </div>
+                                                    
+                                                    <!-- Modal pour refuser avec raison -->
+                                                    <div class="modal fade" id="refuserModal@(echange.IdEchange)" tabindex="-1" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Refuser l'échange</h5>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <form asp-action="RefuserEchange" method="post">
+                                                                    <div class="modal-body">
+                                                                        <input type="hidden" name="idEchange" value="@echange.IdEchange" />
+                                                                        <div class="form-group">
+                                                                            <label>Raison du refus (optionnel) :</label>
+                                                                            <textarea name="raisonRefus" class="form-control" rows="3"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                                        <button type="submit" class="btn btn-danger">Confirmer le refus</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">En attente de réponse</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Aucune demande d'échange en attente.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Historique des échanges -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Historique des échanges</h5>
+                </div>
+                <div class="card-body">
+                    @if (demandesEchange != null && demandesEchange.Any(e => e.Statut != "EnAttente"))
+                    {
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Tâche proposée</th>
+                                        <th>Tâche demandée</th>
+                                        <th>Date demande</th>
+                                        <th>Date réponse</th>
+                                        <th>Statut</th>
+                                        <th>Raison refus</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var echange in demandesEchange.Where(e => e.Statut != "EnAttente").OrderByDescending(e => e.DateReponse))
+                                    {
+                                        <tr>
+                                            <td>
+                                                @if (echange.IdEmployeDemandeur == idEmploye)
+                                                {
+                                                    <span class="badge bg-info">Envoyée</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-warning">Reçue</span>
+                                                }
+                                            </td>
+                                            <td>@echange.TacheDemandeur?.Titre</td>
+                                            <td>@echange.TacheDestinataire?.Titre</td>
+                                            <td>@echange.DateDemande.ToString("dd/MM/yyyy")</td>
+                                            <td>@(echange.DateReponse?.ToString("dd/MM/yyyy") ?? "-")</td>
+                                            <td>
+                                                @if (echange.Statut == "Accepte")
+                                                {
+                                                    <span class="badge bg-success">Acceptée</span>
+                                                }
+                                                else if (echange.Statut == "Refuse")
+                                                {
+                                                    <span class="badge bg-danger">Refusée</span>
+                                                }
+                                            </td>
+                                            <td>@(string.IsNullOrEmpty(echange.RaisonRefus) ? "-" : echange.RaisonRefus)</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Aucun historique d'échange disponible.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

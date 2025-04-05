@@ -1,0 +1,69 @@
+@model IEnumerable<PFA_TEMPLATE.ViewModels.TachesVM>
+@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0"><i class="fas fa-calendar-check"></i> Employee - Votre Taches</h5>
+       
+    </div>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-info text-center mt-2">
+            <i class="fas fa-info-circle"></i> @ViewBag.Message
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive mt-3">
+            <table class="table table-hover align-middle">
+                <thead class="bg-light">
+                    <tr>
+                        <th>Task Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>
+                                @if (item.Status == "Active")
+                                {
+                                    <span class="badge bg-warning text-dark">
+                                        <i class="fas fa-exclamation-circle"></i> @item.Status
+                                    </span>
+                                }
+                                else if (item.Status == "Completed")
+                                {
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-check-circle"></i> @item.Status
+                                    </span>
+                                }
+                                else if (item.Status == "Pending")
+                                {
+                                    <span class="badge bg-danger">
+                                        <i class="fas fa-clock"></i> @item.Status
+                                    </span>
+                                }
+                            </td>
+                            <td class="text-center">
+                                <a asp-action="EditStatus" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-sync-alt"></i> Update Status
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+<link href="~/css/taches.css" rel="stylesheet" asp-append-version="true" />

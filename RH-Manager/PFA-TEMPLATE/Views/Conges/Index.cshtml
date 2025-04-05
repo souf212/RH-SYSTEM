@@ -1,0 +1,173 @@
+﻿@model PFA_TEMPLATE.ViewModels.DemandeCongeViewModel
+
+@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">🧾 Mon solde de congés</h5>
+                </div>
+                <div class="card-body">
+                    <p>
+                        <strong>Congés payés restants :</strong>
+                        <span class="badge bg-success">@Model.SoldeCongesPayesRestants?.ToString("0.##") jour(s)</span>
+                    </p>
+                    <p>
+                        <strong>Congés maladie restants :</strong>
+                        <span class="badge bg-info">@Model.SoldeMaladieRestants?.ToString("0.##") jour(s)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 📝 Formulaire demande -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">📩 Faire une demande de congé</h5>
+                </div>
+                <div class="card-body">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Success"]</div>
+                    }
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <form asp-action="DemanderConge" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="IdEmploye" />
+
+                    <div class="mb-3">
+                        <label asp-for="Motif" class="form-label">Motif</label>
+                        <input asp-for="Motif" class="form-control" placeholder="Ex: Maladie, Vacances..." />
+                        <span asp-validation-for="Motif" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="DateDebut" class="form-label">Date début</label>
+                        <input asp-for="DateDebut" type="date" class="form-control" />
+                        <span asp-validation-for="DateDebut" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="DateFin" class="form-label">Date fin</label>
+                        <input asp-for="DateFin" type="date" class="form-control" />
+                        <span asp-validation-for="DateFin" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="justificatif">Certificat médical (PDF ou image) :</label>
+                        <input type="file" name="Justificatif" accept=".pdf,.jpg,.jpeg,.png" class="form-control" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">📨 Envoyer la demande</button>
+                </form>
+
+                    @if (Model?.PeriodeSuggeree == true)
+                    {
+                        <div class="alert alert-warning mt-4">
+                            <strong>⚠️ Un autre employé est déjà en congé sur cette période.</strong><br />
+                            Période suggérée :
+                            <strong>@Model.SuggestionDateDebut?.ToString("dd/MM/yyyy") → @Model.SuggestionDateFin?.ToString("dd/MM/yyyy")</strong>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- 📋 Liste des demandes -->
+            <div class="card mt-5 shadow-sm">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">📂 Mes demandes de congé</h5>
+                </div>
+
+                <div class="card-body table-responsive">
+                    @if (Model.ListeDemandes != null && Model.ListeDemandes.Any())
+                    {
+                        <table class="table table-hover table-bordered align-middle">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date début</th>
+                                    <th>Date fin</th>
+                                    <th>Statut</th>
+                                    <th>Commentaire Admin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.ListeDemandes.Count; i++)
+                                {
+                                    var demande = Model.ListeDemandes[i];
+                                    <tr>
+                                        <td>@(i + 1)</td>
+                                        <td>@demande.DateDebut.ToString("yyyy-MM-dd")</td>
+                                        <td>@demande.DateFin.ToString("yyyy-MM-dd")</td>
+                                        <td>
+                                            <span class="badge @GetBadgeClass(demande.Status)">
+                                                @demande.Status
+                                            </span>
+                                        </td>
+                                        <td>@demande.AdminComment</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Aucune demande de congé soumise pour le moment.</p>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <style>
+        .badge-success {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .badge-danger {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .badge-warning {
+            background-color: #ffc107;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .badge-info {
+            background-color: #17a2b8;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+}
+
+@functions {
+    public string GetBadgeClass(string status)
+    {
+        return status switch
+        {
+            "Accepté" => "badge-success",
+            "Refusé" => "badge-danger",
+            "En attente" => "badge-warning",
+            _ => "badge-secondary"
+        };
+    }
+}

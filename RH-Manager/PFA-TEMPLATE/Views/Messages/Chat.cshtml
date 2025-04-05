@@ -1,0 +1,214 @@
+﻿@model List<PFA_TEMPLATE.Models.Message>
+@{
+    ViewData["Title"] = "Chat with " + ViewBag.TargetEmploye.NomComplet;
+    Layout = "_UserLayout"; // Adjust this to match your layout
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar with employee list -->
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column">
+                <div class="p-2 border-bottom">
+                    <h4>Conversations</h4>
+                </div>
+                @foreach (var employe in ViewBag.AllEmployes)
+                {
+                    <a href="@Url.Action("Chat", new { employeId = employe.IdEmploye })"
+                       class="p-2 border-bottom d-flex align-items-center @(employe.IdEmploye == ViewBag.TargetEmploye.IdEmploye ? "bg-light" : "")">
+                        <div class="mr-2">
+                            <div class="avatar">
+                                @employe.NomComplet.Substring(0, 1)
+                            </div>
+                        </div>
+                        <div>
+                            <div>@employe.NomComplet</div>
+                            <small class="text-muted unread-badge-@employe.IdEmploye">0 unread</small>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+
+        <!-- Main chat area -->
+        <div class="col-md-9">
+            <div class="d-flex flex-column h-100">
+                <!-- Chat header -->
+                <div class="p-2 border-bottom d-flex align-items-center">
+                    <div class="mr-2">
+                        <div class="avatar">
+                            @ViewBag.TargetEmploye.NomComplet.Substring(0, 1)
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="mb-0">@ViewBag.TargetEmploye.NomComplet</h5>
+                    </div>
+                </div>
+
+                <!-- Messages area -->
+                <div class="flex-grow-1 p-3" id="messages-container" style="height: 400px; overflow-y: auto;">
+                    @foreach (var message in Model)
+                    {
+                        bool isCurrentUserMessage = message.SenderId == ViewBag.CurrentEmploye.IdEmploye;
+                        <div class="message-wrapper @(isCurrentUserMessage ? "text-right" : "")">
+                            <div class="message @(isCurrentUserMessage ? "message-sent" : "message-received")">
+                                <div class="message-content">@message.Content</div>
+                                <div class="message-time">
+                                    <small>@message.SentAt.ToString("HH:mm")</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Message input -->
+                <div class="p-2 border-top">
+                    <form id="message-form" class="d-flex">
+                        <input type="hidden" id="receiver-id" value="@ViewBag.TargetEmploye.IdEmploye" />
+                        <input type="text" id="message-input" class="form-control mr-2" placeholder="Type a message..." />
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .message-wrapper {
+            margin-bottom: 15px;
+        }
+
+        .message {
+            display: inline-block;
+            max-width: 70%;
+            padding: 8px 12px;
+            border-radius: 12px;
+        }
+
+        .message-sent {
+            background-color: #dcf8c6;
+        }
+
+        .message-received {
+            background-color: #f1f0f0;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 2px;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Connect to Pusher
+            const pusher = new Pusher('@ViewBag.PusherKey', {
+                cluster: '@ViewBag.PusherCluster',
+                encrypted: true,
+                authEndpoint: '/pusher/auth'
+            });
+
+            const currentEmployeId = @ViewBag.CurrentEmploye.IdEmploye;
+            const targetEmployeId = @ViewBag.TargetEmploye.IdEmploye;
+
+            // Create a unique channel name for this conversation (always use the smaller ID first)
+            const channelName = `private-chat-${Math.min(currentEmployeId, targetEmployeId)}-${Math.max(currentEmployeId, targetEmployeId)}`;
+
+            // Subscribe to the channel
+            const channel = pusher.subscribe(channelName);
+
+            // Listen for new messages
+            channel.bind('new-message', function(data) {
+                const isCurrentUserMessage = data.senderId === currentEmployeId;
+
+                const messageHtml = `
+                    <div class="message-wrapper ${isCurrentUserMessage ? 'text-right' : ''}">
+                        <div class="message ${isCurrentUserMessage ? 'message-sent' : 'message-received'}">
+                            <div class="message-content">${data.content}</div>
+                            <div class="message-time">
+                                <small>${new Date(data.sentAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</small>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                $('#messages-container').append(messageHtml);
+                scrollToBottom();
+            });
+
+            // Handle message form submission
+            $('#message-form').on('submit', function(e) {
+                e.preventDefault();
+
+                const content = $('#message-input').val().trim();
+                if (!content) return;
+
+                // Send message to server
+                $.ajax({
+                    url: '@Url.Action("Send", "Messages")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        receiverId: $('#receiver-id').val(),
+                        content: content
+                    }),
+                    success: function() {
+                        $('#message-input').val('');
+                    },
+                    error: function(err) {
+                        console.error('Error sending message:', err);
+                        alert('Failed to send message. Please try again.');
+                    }
+                });
+            });
+
+            // Function to scroll to bottom of messages
+            function scrollToBottom() {
+                const container = document.getElementById('messages-container');
+                container.scrollTop = container.scrollHeight;
+            }
+
+            // Scroll to bottom on page load
+            scrollToBottom();
+
+            // Fetch unread message counts
+            function updateUnreadCounts() {
+                $.ajax({
+                    url: '@Url.Action("GetUnreadCount", "Messages")',
+                    type: 'GET',
+                    success: function(data) {
+                        // Reset all badges
+                        $('.unread-badge').text('0 unread');
+
+                        // Update badges with unread counts
+                        data.forEach(function(item) {
+                            $(`.unread-badge-${item.senderId}`).text(`${item.count} unread`);
+                        });
+                    }
+                });
+            }
+
+            // Update unread counts every 30 seconds
+            setInterval(updateUnreadCounts, 30000);
+            updateUnreadCounts(); // Initial fetch
+        });
+    </script>
+}

@@ -1,0 +1,37 @@
+<svg width="800" height="550" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { fill: #2c3e50; font: bold 28px 'Segoe UI', sans-serif; }
+    .label { fill: #555; font: 16px 'Segoe UI', sans-serif; }
+    .value { fill: #000; font: bold 16px 'Segoe UI', sans-serif; }
+    .box { fill: #ecf0f1; stroke: #bdc3c7; stroke-width: 1px; rx: 10; ry: 10; }
+  </style>
+
+  <!-- Background box -->
+  <rect x="30" y="30" width="740" height="490" class="box" />
+
+  <text x="60" y="70" class="header">Fiche de Paie</text>
+  <text x="600" y="70" class="label">{{ mois }}</text>
+
+  <text x="60" y="120" class="label">Nom :</text>
+  <text x="250" y="120" class="value">{{ nom }}</text>
+
+  <text x="60" y="160" class="label">Type de contrat :</text>
+  <text x="250" y="160" class="value">{{ type_contrat }}</text>
+
+  <text x="60" y="200" class="label">Salaire Net :</text>
+  <text x="250" y="200" class="value">{{ salaire }} DH</text>
+
+  <text x="60" y="240" class="label">Heures travaillées :</text>
+  <text x="250" y="240" class="value">{{ heures }} h</text>
+
+  <text x="60" y="280" class="label">Date de génération :</text>
+  <text x="250" y="280" class="value">{{ date }}</text>
+
+  <line x1="60" y1="320" x2="760" y2="320" stroke="#ccc" stroke-width="1"/>
+
+  <text x="60" y="360" class="label">Signature RH :</text>
+  <rect x="250" y="340" width="200" height="40" fill="white" stroke="#bbb" stroke-dasharray="5,5"/>
+
+  <text x="60" y="410" class="label">Cachet :</text>
+  <circle cx="270" cy="395" r="25" fill="none" stroke="#bbb" stroke-dasharray="5,5"/>
+</svg>

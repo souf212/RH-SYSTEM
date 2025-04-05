@@ -1,0 +1,306 @@
+﻿@model IEnumerable<PFA_TEMPLATE.ViewModels.TachesVM>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="page-title">Task Management</h1>
+        <div class="action-buttons">
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> New Task
+            </a>
+            <button class="btn btn-outline">
+                <i class="fas fa-file-export"></i> Export
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="filters">
+                <div class="filter-item">
+                    <input type="text" class="filter-input" id="searchInput" placeholder="Search tasks...">
+                </div>
+                <div class="filter-item">
+                    <select class="filter-input form-select" id="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option value="Active">Active</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <select class="filter-input form-select" id="assigneeFilter">
+                        <option value="">All Assignees</option>
+                        @foreach (var assignee in Model.Select(t => t.AssignedTo).Distinct())
+                        {
+                            <option value="@assignee">@assignee</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="toggle-view">
+                <button class="view-button active" data-view="grid">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-button" data-view="list">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Grid View -->
+        <div class="task-grid">
+            @foreach (var item in Model)
+            {
+                <div class="task-card">
+                    <div class="task-header">
+                        <h3 class="task-title">@item.Title</h3>
+                        @if (item.Status == "Active")
+                        {
+                            <span class="task-status status-active">
+                                <i class="fas fa-exclamation-circle"></i> @item.Status
+                            </span>
+                        }
+                        else if (item.Status == "Completed")
+                        {
+                            <span class="task-status status-completed">
+                                <i class="fas fa-check-circle"></i> @item.Status
+                            </span>
+                        }
+                        else if (item.Status == "Pending")
+                        {
+                            <span class="task-status status-pending">
+                                <i class="fas fa-clock"></i> @item.Status
+                            </span>
+                        }
+                        else if (item.Status == "In Progress")
+                        {
+                            <span class="task-status status-progress">
+                                <i class="fas fa-spinner fa-spin"></i> @item.Status
+                            </span>
+                        }
+                    </div>
+                    <div class="task-assignee">
+                        <div class="avatar">@(item.AssignedTo != null ? item.AssignedTo.Substring(0, 2) : "NA")</div>
+                        <span>@item.AssignedTo</span>
+                    </div>
+                    <div class="task-description">
+                        @item.Description
+                    </div>
+                    <div class="task-footer">
+                       
+                        <div class="task-actions">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="icon-button edit" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="icon-button delete" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+            @if (!Model.Any())
+            {
+                <div class="empty-state">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <p class="empty-state-text">No tasks found. Create a new task to get started.</p>
+                    <a asp-action="Create" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Create New Task
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- List View -->
+        <div class="task-list">
+            <table class="task-table">
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-heading"></i> Title</th>
+                        <th><i class="fas fa-user"></i> Assigned To</th>
+                        <th class="responsive-hide"><i class="fas fa-file-alt"></i> Description</th>
+                        <th><i class="fas fa-flag"></i> Status</th> 
+                        <th><i class="fas fa-calendar-alt"></i> Due Date</th>
+                        <th><i class="fas fa-tools"></i> Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>
+                                <div class="task-assignee">
+                                    <div class="avatar">@(item.AssignedTo != null ? item.AssignedTo.Substring(0, 2) : "NA")</div>
+                                    <span>@item.AssignedTo</span>
+                                </div>
+                            </td>
+                            <td class="responsive-hide">@item.Description</td>
+                            <td>
+                                @if (item.Status == "Active")
+                                {
+                                    <span class="task-status status-active">
+                                        <i class="fas fa-exclamation-circle"></i> @item.Status
+                                    </span>
+                                }
+                                else if (item.Status == "Completed")
+                                {
+                                    <span class="task-status status-completed">
+                                        <i class="fas fa-check-circle"></i> @item.Status
+                                    </span>
+                                }
+                                else if (item.Status == "Pending")
+                                {
+                                    <span class="task-status status-pending">
+                                        <i class="fas fa-clock"></i> @item.Status
+                                    </span>
+                                }
+                                else if (item.Status == "In Progress")
+                                {
+                                    <span class="task-status status-progress">
+                                        <i class="fas fa-spinner fa-spin"></i> @item.Status
+                                    </span>
+                                }
+                            </td> 
+                            <td>
+                                <div class="task-actions">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="icon-button edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="icon-button delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @if (!Model.Any())
+            {
+                <div class="empty-state">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <p class="empty-state-text">No tasks found. Create a new task to get started.</p>
+                    <a asp-action="Create" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Create New Task
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- Pagination if needed -->
+        @if (Model.Count() > 10)
+        {
+            <div class="pagination">
+                <div class="page-item">
+                    <a href="#" class="page-link active">1</a>
+                </div>
+                <div class="page-item">
+                    <a href="#" class="page-link">2</a>
+                </div>
+                <div class="page-item">
+                    <a href="#" class="page-link">3</a>
+                </div>
+                <div class="page-item">
+                    <a href="#" class="page-link">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+ 
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
+    <link href="~/css/taches.css" rel="stylesheet" asp-append-version="true" />
+}
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script> 
+  
+
+
+<!-- Add JavaScript for toggling between grid and list views -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle between grid and list views
+        const viewButtons = document.querySelectorAll('.view-button');
+        const cardContainer = document.querySelector('.card');
+
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                viewButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const viewType = this.getAttribute('data-view');
+                if (viewType === 'list') {
+                    cardContainer.classList.add('list-view');
+                } else {
+                    cardContainer.classList.remove('list-view');
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const statusFilter = document.getElementById('statusFilter');
+        const assigneeFilter = document.getElementById('assigneeFilter');
+
+        const filterTasks = () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const statusTerm = statusFilter.value;
+            const assigneeTerm = assigneeFilter.value;
+
+            const cards = document.querySelectorAll('.task-card');
+            const rows = document.querySelectorAll('.task-table tbody tr');
+
+            // Filter grid items
+            cards.forEach(card => {
+                const title = card.querySelector('.task-title').textContent.toLowerCase();
+                const status = card.querySelector('.task-status').textContent.trim();
+                const assignee = card.querySelector('.task-assignee span').textContent;
+
+                const matchesSearch = title.includes(searchTerm);
+                const matchesStatus = statusTerm === '' || status.includes(statusTerm);
+                const matchesAssignee = assigneeTerm === '' || assignee === assigneeTerm;
+
+                if (matchesSearch && matchesStatus && matchesAssignee) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Filter table rows
+            rows.forEach(row => {
+                const title = row.cells[0].textContent.toLowerCase();
+                const assignee = row.cells[1].textContent.trim();
+                const status = row.cells[3].textContent.trim();
+
+                const matchesSearch = title.includes(searchTerm);
+                const matchesStatus = statusTerm === '' || status.includes(statusTerm);
+                const matchesAssignee = assigneeTerm === '' || assignee.includes(assigneeTerm);
+
+                if (matchesSearch && matchesStatus && matchesAssignee) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        };
+
+        searchInput.addEventListener('input', filterTasks);
+        statusFilter.addEventListener('change', filterTasks);
+        assigneeFilter.addEventListener('change', filterTasks);
+    });
+</script>}

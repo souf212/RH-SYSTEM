@@ -1,0 +1,62 @@
+﻿@model List<PFA_TEMPLATE.Models.Contrat>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Liste des Contrats";
+}
+
+<h2 class="mb-4">📄 Liste des contrats</h2>
+
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="material-symbols-rounded align-middle">add</i> Créer un contrat
+    </a>
+</div>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover shadow-sm bg-white rounded">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Salaire</th>
+                <th scope="col">Début</th>
+                <th scope="col">Fin</th>
+                <th scope="col">État</th>
+                <th scope="col">Utilisateur</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contrat in Model)
+            {
+                <tr>
+                    <td>@contrat.TypeContrat</td>
+                    <td>@contrat.SalaireDeBase €</td>
+                    <td>@contrat.DateDebut.ToShortDateString()</td>
+                    <td>@(contrat.DateFin?.ToShortDateString() ?? "—")</td>
+                    <td><span class="badge bg-secondary">@contrat.EtatContrat</span></td>
+                    <td>@(contrat.Utilisateur?.NomComplet ?? "Non affecté")</td>
+                    <td>
+                        @if (contrat.IdUtilisateur == null)
+                        {
+                            <a asp-action="Affecter" asp-route-id="@contrat.IdContrat" class="btn btn-sm btn-outline-primary">
+                                <i class="material-symbols-rounded">person_add</i> Affecter
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Affecté</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        Aucun contrat trouvé.
+    </div>
+}
