@@ -5,6 +5,7 @@ using PFA_TEMPLATE.Data;
 using PFA_TEMPLATE.Models;
 using PFA_TEMPLATE.Services;
 using PFA_TEMPLATE.ViewModels;
+using PusherServer;
 using System;
 using System.Linq;
 using System.Security.Claims;
@@ -113,19 +114,14 @@ namespace PFA_TEMPLATE.Controllers
 
         // POST: Messages/Send
         [HttpPost]
-        public async Task<IActionResult> Send([FromBody] SendMessageViewModel model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SendMessage([FromBody] SendMessageViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             // Get current user ID from claims
             int currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
             // Get the employee information for the current user
             var currentEmploye = await _context.Employes
-                .Include(e => e.Utilisateur)
                 .FirstOrDefaultAsync(e => e.IdUtilisateur == currentUserId);
 
             if (currentEmploye == null)
@@ -133,35 +129,45 @@ namespace PFA_TEMPLATE.Controllers
                 return NotFound("Employee profile not found for current user");
             }
 
-            // Create and save the message
+            // Create the message
             var message = new Message
             {
                 SenderId = currentEmploye.IdEmploye,
-                ReceiverId = model.ReceiverId,
-                Content = model.Content,
-                SentAt = DateTime.UtcNow,
+                ReceiverId = model.ReceiverId,  // Use model.ReceiverId instead of receiverId
+                Content = model.Content,         // Use model.Content instead of content
+                SentAt = DateTime.Now,
                 IsRead = false
             };
 
+            // Save to database
             _context.Messages.Add(message);
             await _context.SaveChangesAsync();
 
-            // Broadcast the message via Pusher
-            await _pusherService.TriggerAsync(
-                $"private-chat-{Math.Min(message.SenderId, message.ReceiverId)}-{Math.Max(message.SenderId, message.ReceiverId)}",
-                "new-message",
-                new
-                {
-                    id = message.Id,
-                    senderId = message.SenderId,
-                    receiverId = message.ReceiverId,
-                    content = message.Content,
-                    sentAt = message.SentAt,
-                    senderName = currentEmploye.NomComplet
-                }
-            );
+            // Trigger Pusher event
+            var options = new PusherOptions
+            {
+                Cluster = _configuration["Pusher:Cluster"],
+                Encrypted = true
+            };
 
-            return Ok(new { status = "Message sent" });
+            var pusher = new Pusher(
+                _configuration["Pusher:AppId"],
+                _configuration["Pusher:AppKey"],
+                _configuration["Pusher:AppSecret"],
+                options);
+
+            // Trigger to both users' channels to update in real-time
+            await pusher.TriggerAsync(
+                $"private-chat-{currentEmploye.IdEmploye}-{model.ReceiverId}",  // Use model.ReceiverId
+                "new-message",
+                new { message = message });
+
+            await pusher.TriggerAsync(
+                $"private-chat-{model.ReceiverId}-{currentEmploye.IdEmploye}",  // Use model.ReceiverId
+                "new-message",
+                new { message = message });
+
+            return Ok(new { message });
         }
 
         // GET: Messages/GetUnreadCount
